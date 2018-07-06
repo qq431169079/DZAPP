@@ -10,6 +10,7 @@
 #import <BMKLocationkit/BMKLocationComponent.h>
 @interface DZBMKLocationTool : NSObject
 @property (nonatomic, strong) BMKLocation *curLocation;
+@property (nonatomic, strong) NSString *coordinateStr;
 
 +(DZBMKLocationTool *)sharedInstance;
 
@@ -18,7 +19,7 @@
  *  @param withReGeocode 是否带有逆地理信息(获取逆地理信息需要联网)
  *  @param withNetWorkState 是否带有移动热点识别状态(需要联网)
  *  @param completionBlock 单次定位完成后的Block
- *  @return 是否成功添加单次定位Request
+
  */
 - (void)requestLocationWithReGeocode:(BOOL)withReGeocode withNetworkState:(BOOL)withNetWorkState completionBlock:(BMKLocatingCompletionBlock _Nonnull)completionBlock;
 @end

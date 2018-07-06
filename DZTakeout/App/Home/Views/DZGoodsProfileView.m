@@ -47,10 +47,10 @@
     @weakify(self);
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
-        make.top.equalTo(self).offset(100);
+        make.centerY.equalTo(self.mas_centerY);
         make.left.equalTo(self).offset(50);
         make.right.equalTo(self).offset(-50);
-        make.bottom.equalTo(self).offset(-100);
+//        make.bottom.equalTo(self).offset(-100);
     }];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
@@ -74,13 +74,14 @@
     [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.left.equalTo(self.contentView).offset(15);
-        make.bottom.equalTo(self.contentView).offset(-15);
+        make.top.equalTo(self.commentsLabel.mas_bottom).offset(15);
     }];
     [self.addOrRemoveBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.right.equalTo(self.contentView).offset(-15);
         make.bottom.equalTo(self.contentView).offset(-15);
         make.size.mas_equalTo(CGSizeMake(80, 20));
+        make.top.equalTo(self.commentsLabel.mas_bottom).offset(15);
     }];
 }
 
@@ -141,7 +142,7 @@
     self.nameLabel.text = _model.name;
     self.priceLabel.text = [NSString stringWithFormat:@"¥%.2f", _model.price];
     self.classifyLabel.text = _model.ificationName;
-    self.commentsLabel.text = [NSString stringWithFormat:@"好评率%%%.2f", ((1 - _model.svg_price) * 100)];
+    self.commentsLabel.text = [NSString stringWithFormat:@"好评率%.2f%%", ((1 - _model.svg_price) * 100)];
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:_model.zoom_url]];
     if (_model.hasSelectedCount > 0) {
         self.addOrRemoveBtn.currentNumber = _model.hasSelectedCount;

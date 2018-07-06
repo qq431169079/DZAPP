@@ -49,6 +49,13 @@
 			<key>api</key>
 			<string>http://118.190.149.109:8081/Dz/search?doSearch</string>
 		</dict>
+		<key>RHToken</key>
+		<dict>
+			<key>dessc</key>
+			<string>融云token</string>
+			<key>api</key>
+			<string>http://api.cn.ronghub.com/user/getToken.json</string>
+		</dict>
 		<key>SearchHotTip</key>
 		<dict>
 			<key>desc</key>

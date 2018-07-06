@@ -13,7 +13,7 @@
 #import "DZSearchViewController.h"
 
 #import "DZBMKLocationTool.h"
-
+#import "DZLoadingView.h"
 @interface HomeViewController ()<
 DZFakeNavigationBarDelegate,
 UIScrollViewDelegate,
@@ -26,6 +26,7 @@ BMKLocationManagerDelegate
 @property (nonatomic, strong) DZFakeNavigationBar *navBar;
 @property (nonatomic, strong) JSContext *context;
 @property (nonatomic, strong) BMKLocationManager *locationManager;
+@property (nonatomic, weak) DZLoadingView *loadingView;
 @end
 
 @implementation HomeViewController
@@ -75,7 +76,7 @@ BMKLocationManagerDelegate
 }
 -(void)loadWebViewWithLocation:(BMKLocation *)location{
     
-    NSString *homeURL = [NSString stringWithFormat:@"http://118.190.149.109:8081/DzClient/index/index.html?lng=%f,%f",location.location.coordinate.latitude,location.location.coordinate.longitude];
+    NSString *homeURL = [NSString stringWithFormat:@"http://118.190.149.109:8081/DzClient/index/index.html?lng=%@",[DZBMKLocationTool sharedInstance].coordinateStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:homeURL]];
     [self.webView loadRequest:request];
 }
@@ -87,6 +88,7 @@ BMKLocationManagerDelegate
         self.navBar.title = locationPoi.name;
     }
 }
+
 
 #pragma mark - DZFakeNavigationBarDelegate
 - (void)navBar:(DZFakeNavigationBar *)navBar onClickMessageButton:(UIButton *)messageBtn {
@@ -151,16 +153,51 @@ BMKLocationManagerDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     [self.navBar gradation_scrollViewDidScroll:scrollView];
+    CGFloat offset = scrollView.contentOffset.y;
+    NSLog(@"offset___%f",offset);
+    if (offset<0) {
+        [self reloadWebViewWithOffset:offset];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     [self.navBar gradation_scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset<-50) {
+        [self resetWebView];
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self.navBar gradation_scrollViewDidEndDecelerating:scrollView];
 }
+#pragma mark - 其他
+-(void)reloadWebViewWithOffset:(CGFloat)offset{
+    if (self.loadingView.isloading) {
+        return;
+    }
+    CGFloat scale = ABS(offset)/50.0;
+    if (scale>1) {
+        scale =1;
 
+        
+    }
+    CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
+    transform = CGAffineTransformRotate(transform, M_PI * ABS(offset)/50.0 *4);
+    self.loadingView.transform = transform;
+}
+-(void)resetWebView{
+    [self.loadingView startLoadingAnimation];
+    //重新定位
+    DZWeakSelf(self)
+    [[DZBMKLocationTool sharedInstance] requestLocationWithReGeocode:YES withNetworkState:NO completionBlock:^(BMKLocation * _Nullable location, BMKLocationNetworkState state, NSError * _Nullable error) {
+        [self.loadingView endLoadingAnimaton];
+        if (error == nil) {
+            [weakSelf loadWebViewWithLocation:location];
+            [weakSelf getLocationName:location];
+        }
+    }];
+}
 #pragma mark - Getter & Setter
 - (UIWebView *)webView {
     if (!_webView) {
@@ -187,6 +224,16 @@ BMKLocationManagerDelegate
         };
     }
     return _navBar;
+}
+
+-(DZLoadingView *)loadingView{
+    if (_loadingView == nil) {
+        DZLoadingView *loadingView = [DZLoadingView DZLoadingViewWithType:DZLoadingViewMiniType];
+        [self.webView addSubview:loadingView];
+        loadingView.center = CGPointMake(SCREEN_WIDTH*0.5, 25);
+        _loadingView = loadingView;
+    }
+    return _loadingView;
 }
 
 - (void)didReceiveMemoryWarning {

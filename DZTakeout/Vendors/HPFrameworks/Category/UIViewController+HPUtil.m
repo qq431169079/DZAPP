@@ -23,6 +23,11 @@
                                   normalColor:normalColor highlightColor:highlightColor selectedColor:nil disableColor:nil
                                   normalImage:normalImage highlightImage:highlightImage selectedImage:nil disableImage:nil
                                        target:target action:action event:UIControlEventTouchUpInside];
+    CGRect frame = button.frame;
+    if (frame.size.width<30) {
+        frame.size = CGSizeMake(30, 30);
+    }
+    button.frame = frame;
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 

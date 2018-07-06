@@ -146,6 +146,11 @@ UIKIT_EXTERN CGFloat MyTreasureHeaderViewHeight(void) {
     }];
 }
 
+-(void)resetHeaderViewWithUserModel:(UserModel *)userModel{
+    
+    
+}
+
 #pragma mark - Event Response
 - (void)onTouchUpInsideQRBtn:(UIButton *)sender {
     if ([self.delegate respondsToSelector:@selector(headerView:touchUpInsideQRButton:)]) {

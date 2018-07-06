@@ -87,6 +87,7 @@
         self.checkPermisionBlock = ^{
             [__weak_self__.locationManager requestLocationWithReGeocode:withReGeocode withNetworkState:withNetWorkState completionBlock:^(BMKLocation * _Nullable location, BMKLocationNetworkState state, NSError * _Nullable error) {
                 __weak_self__.curLocation = location;
+                __weak_self__.coordinateStr = [NSString stringWithFormat:@"%f,%f",location.location.coordinate.latitude,location.location.coordinate.longitude];
                 if (completionBlock) {
                     completionBlock(location,state,error);
                 }

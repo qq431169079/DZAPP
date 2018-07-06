@@ -170,7 +170,7 @@
     [self.salesVolumeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         @strongify(self);
         make.left.equalTo(self.logoImgView.mas_right).offset(20);
-        make.bottom.equalTo(self.logoImgView);
+        make.top.equalTo(self.serviceLabel.mas_bottom).offset(5);
         make.width.mas_equalTo(0); make.top.equalTo(self.logoImgView.mas_centerY).offset(20).priorityMedium();
     }];
     [self.logoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -205,8 +205,10 @@
     [self.logoImgView sd_setImageWithURL:[NSURL URLWithString:_model.logo]];
     
     CGFloat width = [self.logisticsBtn.titleOfNormal sizeWithMaxWidth:CGFLOAT_MAX font:self.logisticsBtn.titleLabel.font].width + 10;
+    CGFloat height = [self.logisticsBtn.titleOfNormal sizeWithMaxWidth:CGFLOAT_MAX font:self.logisticsBtn.titleLabel.font].height;
     [self.logisticsBtn mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(width);
+        make.height.mas_equalTo(height);
     }];
     width = [self.salesVolumeBtn.titleOfNormal sizeWithMaxWidth:CGFLOAT_MAX font:self.logisticsBtn.titleLabel.font].width + 10;
     [self.salesVolumeBtn mas_updateConstraints:^(MASConstraintMaker *make) {

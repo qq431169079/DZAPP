@@ -132,7 +132,7 @@
     BMKLocation *location = [DZBMKLocationTool sharedInstance].curLocation;
         NSString *coordinate = [NSString stringWithFormat:@"%f,%f",location.location.coordinate.latitude,location.location.coordinate.longitude];
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:
-                                coordinate,@"location",
+                                @"25.260103,110.203504",@"location",
                                 [NSString stringWithFormat:@"%ld",(long)self.curPage],@"start",
                                 @"10",@"limit",
                                 @"score",@"sort",

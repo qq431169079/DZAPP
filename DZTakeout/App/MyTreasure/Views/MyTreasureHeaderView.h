@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UserModel.h"
 UIKIT_EXTERN CGFloat MyTreasureHeaderViewHeight(void);
 
 @class MyTreasureHeaderView;
@@ -25,5 +25,5 @@ UIKIT_EXTERN CGFloat MyTreasureHeaderViewHeight(void);
 @interface MyTreasureHeaderView : UIView
 
 @property (nonatomic, weak) id<MyTreasureHeaderViewDelegate> delegate;
-
+-(void)resetHeaderViewWithUserModel:(UserModel*)userModel;
 @end
