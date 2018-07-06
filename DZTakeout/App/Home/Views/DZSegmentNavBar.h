@@ -15,4 +15,5 @@
 @property (nonatomic, copy) void(^returnBackHandler) (UIButton *sender);
 @property (nonatomic, copy) void(^onSelectedIndexHandler) (NSInteger selectedIndex);
 - (void)setSelectedIndex:(NSInteger)selectedIndex;
+-(void)hiddenBackBtn:(BOOL)hidden;
 @end

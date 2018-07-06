@@ -18,10 +18,10 @@
                  success:(void (^)(NSString *userId))successBlock
                    error:(void (^)(RCConnectErrorCode status))errorBlock
           tokenIncorrect:(void (^)(void))tokenIncorrectBlock;
-//通讯录
-+ (void)loadAddressListWithToken:(NSString *)token
-                 success:(void (^)(NSString *userId))successBlock
-                   error:(void (^)(RCConnectErrorCode status))errorBlock
-          tokenIncorrect:(void (^)(void))tokenIncorrectBlock;
+////通讯录
+//+ (void)loadAddressListWithToken:(NSString *)token
+//                 success:(void (^)(NSString *userId))successBlock
+//                   error:(void (^)(RCConnectErrorCode status))errorBlock
+//          tokenIncorrect:(void (^)(void))tokenIncorrectBlock;
 
 @end

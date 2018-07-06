@@ -96,7 +96,9 @@
     }
     return _allSubviewsContainer;
 }
-
+-(void)hiddenBackBtn:(BOOL)hidden{
+    self.backBtn.hidden = hidden;
+}
 - (UIButton *)backBtn {
     if (!_backBtn) {
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];

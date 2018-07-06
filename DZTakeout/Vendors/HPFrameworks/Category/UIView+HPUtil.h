@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (HPUtil)
+//获得当前活动的控制器
+-(UIViewController *)getCurActiveViewController;
 
 - (UIView *)subviewOfClassName:(NSString*)clsName;
 

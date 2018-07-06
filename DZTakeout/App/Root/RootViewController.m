@@ -62,10 +62,9 @@
     if (self.reloadIMTime < 3) {
         // 登录IM
         DZWeakSelf(self)
-        [HPIMManager connectWithToken:@"DyeptiSqfH9B/UAErlo9iml1Y91uwcY7BaIFrSOiSgFVzI4LM2BQZR31ncyGI4x9KGDNlu9Quur3WHyaLfgrxg==" success:^(NSString *userId) {
+        [HPIMManager connectWithToken:@"t3UwLk3xX2HdKPPTujISyK27jFyFYCGid8Bhacdkh36tCaeHVseIYmM+2IMksCgz+C7V/wHMCbM0E3UkmrFQwA==" success:^(NSString *userId) {
             NSLog(@"userId ---- > %@", userId);
-                    //消息登录成功后去登录通讯录
-//            [weakSelf loadAddressList];
+
         } error:^(RCConnectErrorCode status) {
             NSLog(@"error ---- > %zd", status);
         } tokenIncorrect:^{
@@ -75,15 +74,8 @@
         }];
     }
 }
--(void)loadAddressList{
-//    [HPIMManager loadAddressListWithToken:@"DyeptiSqfH9B/UAErlo9iml1Y91uwcY7BaIFrSOiSgFVzI4LM2BQZR31ncyGI4x9KGDNlu9Quur3WHyaLfgrxg==" success:^(NSString *userId) {
-//        NSLog(@"userId ---- > %@", userId);
-//    } error:^(RCConnectErrorCode status) {
-//        NSLog(@"error ---- > %zd", status);
-//    } tokenIncorrect:^{
-//        NSLog(@"tokenIncorrect ---- ");
-//    }];
-}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

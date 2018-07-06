@@ -7,9 +7,10 @@
 //
 
 #import "DZWKWebViewController.h"
-
+#import "DZSegmentNavBar.h"
 @interface DZSegmentNavBarController : HPViewController
 
+@property (nonatomic, strong) DZSegmentNavBar *navBar;
 #pragma mark - Override
 - (NSArray<NSString *> *)navSegmentTitles;
 - (NSArray<UIViewController *> *)switchChildControllers;

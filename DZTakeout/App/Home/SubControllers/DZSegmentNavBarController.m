@@ -7,12 +7,11 @@
 //
 
 #import "DZSegmentNavBarController.h"
-#import "DZSegmentNavBar.h"
+
 #import "SGPageContentScrollView.h"
 
 @interface DZSegmentNavBarController ()<SGPageContentScrollViewDelegate>
 
-@property (nonatomic, strong) DZSegmentNavBar *navBar;
 @property (nonatomic, strong) SGPageContentScrollView *scrollView;
 @end
 
