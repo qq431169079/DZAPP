@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+            timestampString = "552991469.8224339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-requestRegisterSuccess:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+            timestampString = "552991469.822571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-requestRegisterSuccess:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+            timestampString = "552991469.822681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-touchUpInsideRegisterBtn:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RegisterViewController touchUpInsideRegisterBtn:]"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+                  timestampString = "553600521.224862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[RegisterViewController touchUpInsideRegisterBtn:]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+                  timestampString = "553600521.2265069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.59"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Login&amp;Register/Register/RegisterViewController.m"
+                  timestampString = "553600521.22822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/HomeViewController.m"
+            timestampString = "553601443.053622"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-moreLink:first:second:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/HomeViewController.m"
+            timestampString = "553601443.054129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-orderCheck:first:second:third:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/HomeViewController.m"
+            timestampString = "553601443.054406"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-launch:withParams:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/UIKit+AFNetworking/UIImageView+AFNetworking.m"
+            timestampString = "552390529.629952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-setImageWithURL:placeholderImage:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/HomeViewController.m"
+            timestampString = "553601443.054759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "-moreLink:first:second:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeViewController moreLink:first:second:]"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.24708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[HomeViewController moreLink:first:second:]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.249168"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[HomeViewController moreLink:first:second:]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.25178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.138"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.25414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.139"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.25658"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[HomeViewController moreLink:first:second:]_block_invoke.141"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.258926"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[HomeViewController moreLink:first:second:]_block_invoke.141"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.261216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.142"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.263656"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.143"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.2661721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/HomeViewController.m"
+            timestampString = "553601443.055002"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-orderCheck:first:second:third:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeViewController orderCheck:first:second:third:]"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.27996"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[HomeViewController orderCheck:first:second:third:]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.282339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[HomeViewController orderCheck:first:second:third:]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.2848181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.145"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.286956"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.146"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.289323"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[HomeViewController orderCheck:first:second:third:]_block_invoke.148"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.291324"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[HomeViewController orderCheck:first:second:third:]_block_invoke.148"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.293469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.149"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.295398"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.150"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/HomeViewController.m"
+                  timestampString = "553600521.297383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/PaymentViewController.m"
+            timestampString = "552451194.829666"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/Foods/FoodsPaymentViewController.m"
+            timestampString = "552991469.823947"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.055445"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/Vendors/HPFrameworks/HPTools/HPPayment/HPWeChatPayment/HPWeChatPayment.m"
+            timestampString = "553502389.2794189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-doPayWithOrderId:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Discover/Message/MessageViewController.m"
+            timestampString = "552579644.409053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-getUserInfoWithUserId:completion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.0556999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.055777"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Login&amp;Register/Login/LoginViewController.m"
+            timestampString = "553601443.055865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "-autoLoagin:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/DZBaseDingingViewController.m"
+            timestampString = "553601443.055927"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-requestFoodsOrderInfoEndTime:mealNum:phoneNum:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/DZBaseDingingViewController.m"
+            timestampString = "553601443.0559731"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-requestFoodsOrderInfoEndTime:mealNum:phoneNum:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/DZBaseDingingViewController.m"
+            timestampString = "553601443.056018"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-requestFoodsOrderInfoEndTime:mealNum:phoneNum:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.056076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.056136"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZJSInteractiveRouter.m"
+            timestampString = "553601443.056196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "+instanceFromDestn:params:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/SearchView/View/SearchResult/DZSearchResultCollectionView.m"
+            timestampString = "553601443.056271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.0563231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-launch:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.056389"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-launch:withParams:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.056466"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-orderCheck:first:second:third:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.056527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-moreLink:first:second:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.056601"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-valLink:final:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/SellerBusinessViewController.m"
+            timestampString = "553601443.056669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-updateUIIfNeeded"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SellerBusinessViewController updateUIIfNeeded]"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/SubControllers/SellerBusinessViewController.m"
+                  timestampString = "553600521.398363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[SellerBusinessViewController updateUIIfNeeded]_block_invoke"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/SubControllers/SellerBusinessViewController.m"
+                  timestampString = "553600521.400929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.111"
+                  moduleName = "DZTakeout"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/linhongjian/Desktop/HIMEDIA/%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6/%E5%A4%87%E4%BB%BD/DZ/DZTakeout/DZTakeout/App/Home/SubControllers/SellerBusinessViewController.m"
+                  timestampString = "553600521.40356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/Views/SellerBusinessRelatedViews.m"
+            timestampString = "553601443.056728"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "-setItems:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/FoodsBusinessDetailsViewController.m"
+            timestampString = "553601443.056787"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-backButton"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Base/DZWKWebViewController.m"
+            timestampString = "553601443.056838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-launch:withParam:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/SubControllers/PleaseOrderViewController.m"
+            timestampString = "553601443.056891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-showShoppingCart"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DZTakeout/App/Home/Views/DZMenuScrollView.m"
+            timestampString = "553601443.056945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-changedBadge:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
