@@ -153,13 +153,21 @@ static CGSize SGPagingTitleSize = {180.0f, 50.0f};
     _logisticsPrice = logisticsPrice;
     self.pleaseOrdersVc.logisticsPrice = _logisticsPrice;
 }
-
+-(void)setMinPrice:(NSString *)minPrice{
+    _minPrice = minPrice;
+    self.pleaseOrdersVc.minPrice = minPrice;
+}
 - (SellerCommentsViewController *)commentsVc {
     if (!_commentsVc) {
         _commentsVc = [SellerCommentsViewController controller];
         _commentsVc.companyId = self.companyId;
     }
     return _commentsVc;
+}
+
+- (void)setIsBusiness:(BOOL)isBusiness{
+    _isBusiness = isBusiness;
+    self.pleaseOrdersVc.isBusiness = isBusiness;
 }
 
 - (PleaseOrderViewController *)pleaseOrdersVc {

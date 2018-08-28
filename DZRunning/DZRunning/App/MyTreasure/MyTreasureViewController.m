@@ -12,6 +12,7 @@
 #import "LoginViewController.h"
 #import "DZJrmfWalletSDK.h"
 #import "UIViewController+HPUtil.h"
+#import "DZResetPWDViewController.h"
 @interface MyTreasureViewController ()<MyTreasureHeaderViewDelegate>
 
 @property (nonatomic, strong) MyTreasureHeaderView *headerView;
@@ -44,6 +45,7 @@
 
 -(void)setupNavigation{
     [self setRightBarButtonItem:[self barButtonItemWithTitle:@"退出" normalColor:[UIColor whiteColor] highlightColor:nil normalImage:nil highlightImage:nil target:self action:@selector(logout)]];
+    [self setLeftBarButtonItem:[self barButtonItemWithTitle:nil normalColor:nil highlightColor:nil normalImage:[UIImage imageNamed:@"icon_setting"] highlightImage:nil target:self action:@selector(resetPWD)]];
 }
 
 -(void)logout{
@@ -64,7 +66,12 @@
     [alertController addAction:cancelAction];
     [self presentViewController:alertController animated:YES completion:nil];
 }
-
+-(void)resetPWD{
+    DZResetPWDViewController *resetVC = [DZResetPWDViewController controller];
+    resetVC.resetPWD = YES;
+    HPNavigationController *nav = [[HPNavigationController alloc] initWithRootViewController:resetVC];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 #pragma mark - Getter & Setter
 
 - (void)didReceiveMemoryWarning {

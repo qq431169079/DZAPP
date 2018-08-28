@@ -1,28 +1,26 @@
 //
-//  BookFoodsFailureViewController.m
+//  DZActivityViewController.m
 //  DZTakeout
 //
-//  Created by HuangPan on 2018/6/19.
+//  Created by 林鸿键 on 2018/8/26.
 //  Copyright © 2018年 HuangPan. All rights reserved.
 //
 
-#import "BookFoodsFailureViewController.h"
-
-@interface BookFoodsFailureViewController ()
+#import "DZActivityViewController.h"
+#import "DZBMKLocationTool.h"
+@interface DZActivityViewController ()
 
 @end
 
-@implementation BookFoodsFailureViewController
-#pragma mark - Initialize Methods
-- (BOOL)prefersNavigationBarHidden {
-    return YES;
-}
+@implementation DZActivityViewController
 
-#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self loadWebViewWithURL:@"http://39.108.6.102:8080/DzClient/predefinedFailure/predefined-failure.html"];
+    NSMutableDictionary *activityDict = [NSMutableDictionary dictionary];
+    [activityDict setValue:self.activityId forKey:@"activityId"];
+    [activityDict setValue:[DZBMKLocationTool sharedInstance].coordinateStr forKey:@"lng"];
+    
+    [self loadWebView:DZActivityURL params:activityDict];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -31,5 +31,8 @@ JSExportAs
 (orderCheck,
  - (void)orderCheck:(JSValue *)destn first:(JSValue *)firstArg second:(JSValue *)secondArg third:(JSValue *)thirdArg
  );
-
+JSExportAs
+(moreValCheck,
+ - (void)moreValCheck:(JSValue *)destn first:(JSValue *)firstArg second:(JSValue *)secondArg third:(JSValue *)thirdArg four:(JSValue *)fourArg
+ );
 @end

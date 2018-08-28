@@ -49,7 +49,7 @@
         case DZRequestLoading:
         {
             [self addLoadingAnimation];
-            self.notiLab.text = @"可以去看看想吃点什么";
+            self.notiLab.text = @"看看能找到什么";
         }
 
             break;

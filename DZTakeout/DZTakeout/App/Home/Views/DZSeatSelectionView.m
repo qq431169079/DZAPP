@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIView *closeView;
 @property (weak, nonatomic) IBOutlet CustomDayDatePicker *datePickView;
 @property (weak, nonatomic) IBOutlet UIView *mainView;      //白色背景界面
+@property (weak, nonatomic) IBOutlet UILabel *monthLab;
+
 @property (weak, nonatomic) IBOutlet UILabel *dayLab;
 @property (weak, nonatomic) IBOutlet UILabel *hourLab;
 @property (weak, nonatomic) IBOutlet UILabel *minuteLab;
@@ -61,10 +63,8 @@
     UITapGestureRecognizer *changeTimetapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeTimetapGR:)];
     [self.timeChoiceView addGestureRecognizer:changeTimetapGR];
     DZWeakSelf(self)
-    self.datePickView.didSelectFinishBlock = ^(int day, int hour, int minute) {
-        [weakSelf setupChoiceTimeWithDay:day
-                                    hour:hour
-                                  minute:minute];
+    self.datePickView.didSelectFinishBlock = ^(int month,int day, int hour, int minute) {
+        [weakSelf setupChoiceTimeMonth:month Day:day hour:hour minute:minute];
     };
     
 
@@ -93,17 +93,39 @@
 
 -(void)reloadUIWithSeatInfo:(NSDictionary *)infoDict{
     //5分钟后
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:5*60];
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:30*60];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    //时间
-    [formatter setDateFormat:@"dd"];
-    int day = [[formatter stringFromDate:date] intValue];
     [formatter setDateFormat:@"HH"];
-    int hour = [[formatter stringFromDate:date] intValue];
-    [formatter setDateFormat:@"mm"];
-    int minute = [[formatter stringFromDate:date] intValue];
+    int curHour = [[formatter stringFromDate:date] intValue];
+    if (curHour>=21) {
+        //从第二天开始预订 ps:以当前时间往后推4个小时即可
+        date = [NSDate dateWithTimeIntervalSinceNow:60*60*4];
+    }
+        //半小时后开始预订 ,判断是否在预定时区内,非预定时区的分钟重置成00
+        if ((curHour>=12 && curHour<14)||(curHour>=18 && curHour<21)) {
+            NSLog(@"___预定时间内");
+        }else{
+            [formatter setDateFormat:@"yyyy-MM-dd-HH:mm:ss-ZZZZ"];
+            NSString *time = [formatter stringFromDate:date];
+            time = [time stringByReplacingCharactersInRange:NSMakeRange(14, 2) withString:@"00"];
+            date = [formatter dateFromString:time];
+        }
+    [formatter setDateFormat:@"MM-dd-HH:mm"];
+    NSString *timeStr = [formatter stringFromDate:date];
+    //时间
+    int month = [[timeStr substringWithRange:NSMakeRange(0, 2)]intValue];
+    int day = [[timeStr substringWithRange:NSMakeRange(3, 2)]intValue];
+
+    int hour = [[timeStr substringWithRange:NSMakeRange(6, 2)]intValue];
+    if (hour<12) {
+        hour = 12;
+    }else if (hour<18){
+        hour = 18;
+    }
+
+    int minute = [[timeStr substringWithRange:NSMakeRange(9, 2)]intValue];
     
-    [self setupChoiceTimeWithDay:day hour:hour minute:minute];
+    [self setupChoiceTimeMonth:month Day:day hour:hour minute:minute];
     NSArray *infoDictAllKeys = [infoDict allKeys];
     if ([infoDictAllKeys containsObject:@"price"]) {
         self.price = infoDict[@"price"];
@@ -127,7 +149,8 @@
 
     self.phoneNumTextField.text = [UserHelper userItem].phone;
 }
--(void)setupChoiceTimeWithDay:(int)day hour:(int)hour minute:(int)minute{
+-(void)setupChoiceTimeMonth:(int)month Day:(int)day hour:(int)hour minute:(int)minute{
+    self.monthLab.text = [NSString stringWithFormat:@"%02d",month];
     self.dayLab.text = [NSString stringWithFormat:@"%02d",day];
     self.hourLab.text = [NSString stringWithFormat:@"%02d",hour];
     self.minuteLab.text = [NSString stringWithFormat:@"%02d",minute];

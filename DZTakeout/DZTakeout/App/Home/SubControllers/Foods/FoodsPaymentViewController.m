@@ -31,7 +31,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:self.orderId forKey:@"orderId"];
     [params setObject:[UserHelper userToken] forKey:@"token"];
-    [self loadWebView:@"http://118.190.149.109:8081/DzClient/pay/pay.html" params:params];
+    [self loadWebView:@"http://39.108.6.102:8080/DzClient/pay/pay.html" params:params];
     [self setupNotifications];
 }
 

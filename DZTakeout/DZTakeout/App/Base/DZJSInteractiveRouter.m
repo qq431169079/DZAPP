@@ -18,13 +18,17 @@
 #import "MyCommentsViewController.h"
 #import "SellerBusinessViewController.h"
 #import "PaymentViewController.h"
+#import "DZActivityViewController.h"
+
+
+
 #import "HPPayment.h"
 
 /// 美食模块
 #import "SelectSeatViewController.h"
 #import "FoodsPaymentViewController.h"
 #import "FoodsOrderViewController.h"
-
+#import "Takeout_OrderDetailsViewController.h"
 @implementation DZJSInteractiveRouter
 
 + (__kindof UIViewController *)instanceFromDestn:(NSString *)destn {
@@ -61,7 +65,10 @@
     }
     else if ([destn isEqualToString:@"updateAddr"]) {
         // 修改地址
-        return [EditUserAddressViewController controller];
+        EditUserAddressViewController *editUserAddressVC = [EditUserAddressViewController controller];
+        NSString *adID = [params firstObject];
+        editUserAddressVC.addressID = [NSString stringWithFormat:@"%ld",(long)[adID integerValue]];
+        return editUserAddressVC;
     }
     else if ([destn isEqualToString:@"selectAddr"]) {
         // 选中地址
@@ -157,7 +164,16 @@
     }
     else if ([destn isEqualToString:@"forword"]) {
         // 订单跟踪
-
+        Takeout_OrderDetailsViewController *orderDetails = [Takeout_OrderDetailsViewController controller];
+        orderDetails.orderId = [params firstObject];
+//        orderDetails.orderNo = [params lastObject];
+        return orderDetails;
+    }
+    else if ([destn isEqualToString:@"activity"]) {
+        // 订单跟踪
+        DZActivityViewController *activityViewController = [DZActivityViewController controller];
+        activityViewController.activityId = [params firstObject];
+        return activityViewController;
     }
     return nil;
 }

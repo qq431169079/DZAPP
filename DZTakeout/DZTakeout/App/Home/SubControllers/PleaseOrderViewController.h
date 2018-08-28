@@ -15,6 +15,7 @@
 
 /// 物流费
 @property (nonatomic, assign) CGFloat logisticsPrice;
+@property (nonatomic, copy) NSString *minPrice;
 @property (nonatomic, copy) NSString *companyId;
-
+@property (nonatomic, assign) BOOL isBusiness;
 @end

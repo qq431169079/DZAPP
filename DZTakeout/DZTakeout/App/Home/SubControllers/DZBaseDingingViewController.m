@@ -12,6 +12,7 @@
 @interface DZBaseDingingViewController ()
 @property (nonatomic,weak) DZSeatSelectionView *selectionView;
 @property (nonatomic,strong) NSString *tableNO;
+@property (nonatomic,strong) NSString *tableID;
 @property (nonatomic,strong) NSString *tableName;
 @end
 
@@ -27,27 +28,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-- (void)launch:(NSString *)destn withParams:(NSArray<NSString *> *)params {
-    if ([destn isEqualToString:@"select"]) {
-        self.tableNO = [params firstObject];
-        self.tableName = [params lastObject];
-        //获取预定信息
-        [self requestSeatInfo];
+- (void)moreValCheck:(JSValue *)destn first:(JSValue *)firstArg second:(JSValue *)secondArg third:(JSValue *)thirdArg four:(JSValue *)fourArg{
+    if ([destn isString] && [[destn toString] isEqualToString:@"select"]) {
+        NSString *state = [thirdArg toString];
+        self.tableNO = [firstArg toString];
+        NSString *name = @"大厅";
+        if ([[secondArg toString]isEqualToString:@"dt"]){
+            name = @"大厅";
+        }else{
+            name = @"包厢";
+        }
+        self.tableName = name;
+        self.tableID = [fourArg toString];
+        switch ([state integerValue]) {
+            case 0:
+                {
+                    //获取预定信息
+                    [self requestSeatInfo];
+                }
+                break;
+            default:
+            {
+//弹提示框
+                [self requestSeatNotiInfo];
+            }
+                break;
+        }
+      
         
-    }else{
-        UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:destn params:params];
-        [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
     }
-    
 }
 
 #pragma mark - Network
 - (void)requestSeatInfo{
     DZWeakSelf(self)
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            self.tableNO,@"tableNo",
-                            self.companyId,@"cid",
+                            self.tableID,@"id",
                             nil];
     [DZRequests post:@"seatInfo" parameters:params success:^(id record) {
         if ([record isKindOfClass:[NSDictionary class]]) {
@@ -59,6 +75,25 @@
         occasionalHint(error.localizedDescription);
     }];
 }
+
+-(void)requestSeatNotiInfo{
+    
+    DZWeakSelf(self)
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            self.tableID,@"reservesId",
+                            nil];
+    [DZRequests post:@"BookTime" parameters:params success:^(id record) {
+        if ([record isKindOfClass:[NSDictionary class]]) {
+            NSDictionary *recordDict = (NSDictionary *)record;
+            [weakSelf showSeatSelectionViewWithInfo:recordDict];
+        }
+        
+    } failure:^(HPRequestsError type, NSError *error) {
+        occasionalHint(error.localizedDescription);
+    }];
+}
+
+
 - (void)requestFoodsOrderInfoEndTime:(NSString *)endTime mealNum:(NSString *)mealNum phoneNum:(NSString *)phoneNum{
     DZWeakSelf(self)
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:

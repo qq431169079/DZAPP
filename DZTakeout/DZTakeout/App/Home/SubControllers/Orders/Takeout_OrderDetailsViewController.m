@@ -17,7 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebView:@"http://118.190.149.109:8081/DzClient/orderDetail/orderindex.html" params:@{@"orderId":self.orderId, @"orderNo":self.orderNo}];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:self.orderId forKey:@"orderId"];
+    if (self.orderNo) {
+        [params setValue:self.orderNo forKey:@"orderNo"];
+    }
+    [params setValue:[UserHelper userToken] forKey:@"token"];
+    [self loadWebView:@"http://39.108.6.102:8080/DzClient/orderDetail/orderindex.html" params:params];
 }
 
 - (void)onReturnBackComplete:(void (^)(void))complete {

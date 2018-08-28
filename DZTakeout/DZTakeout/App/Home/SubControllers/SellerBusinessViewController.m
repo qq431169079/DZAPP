@@ -14,6 +14,7 @@
 #import "NSString+HPUtil.h"
 #import "UIImage+LEAF.h"
 #import "DZSearchViewController.h"
+#import "DZBMKLocationTool.h"
 
 #define ASPECT_BLUR_HEIGHT (ASPECT_NAV_HEIGHT * 2.0f)
 
@@ -64,7 +65,6 @@
     [self addSlideGestureRecognizer];
     
     [self fetchCompanyInfoFromServer];
-    
     __weak typeof(self) wself = self;
     [UserHelper temporaryCacheObject:wself forKey:kOrderDetailsCacheKey];
 }
@@ -136,18 +136,31 @@
     self.nameLabel.text = _companyModel.name;
     
     // 更新物流费
-    self.containerViewController.logisticsPrice = _companyModel.assess;
+    self.containerViewController.logisticsPrice = [_companyModel.distributionPrice floatValue];
+    //更新最低购物费用
+    self.containerViewController.minPrice = _companyModel.miniPrice;
+    self.containerViewController.isBusiness = _companyModel.isBusiness;
 }
 
 #pragma mark - Network
 - (void)fetchCompanyInfoFromServer {
     if (self.companyId.length == 0) {return;}
     NSDictionary *params = @{@"id":self.companyId,
-                             @"location":@"22.6733000000,114.0651500000",
+                             @"location":[DZBMKLocationTool sharedInstance].coordinateStr,
                              @"find":@""
                              };
     [DZRequests post:@"FindCompany" parameters:params success:^(id record) {
         _companyModel = [CompanyModel modelWithJSON:record];
+        [self fetchCompanyActivityInfoFromServer];
+    } failure:^(HPRequestsError type, NSError *error) {
+        occasionalHint(error.localizedDescription);
+    }];
+}
+-(void)fetchCompanyActivityInfoFromServer{
+    NSDictionary *params = @{@"companyId":self.companyId
+                             };
+    [DZRequests post:@"CompanyActivity" parameters:params success:^(id record) {
+//        _companyModel = [CompanyModel modelWithJSON:record];
         [self updateUIIfNeeded];
     } failure:^(HPRequestsError type, NSError *error) {
         occasionalHint(error.localizedDescription);

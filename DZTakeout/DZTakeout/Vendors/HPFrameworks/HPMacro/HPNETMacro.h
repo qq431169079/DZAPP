@@ -9,7 +9,7 @@
 #ifndef HPNETMacro_h
 #define HPNETMacro_h
 
-#define DZBaseURL @"http://118.190.149.109:8081"
+#define DZBaseURL @"http://39.108.6.102:8080"
 //新增地址
 #define DZAddNewAddr(token) [NSString stringWithFormat:@"%@/DzClient/newAddr/new-addr.html?token=%@",DZBaseURL,token]
 //用户地址
@@ -20,5 +20,8 @@
 #define DZUserFavorite(token) [NSString stringWithFormat:@"%@/DzClient/favorite/favorite.html?token=%@",DZBaseURL,token]
 //我的评论
 #define DZUserComment(token) [NSString stringWithFormat:@"%@/DzClient/comment/comment.html?token=%@",DZBaseURL,token]
-
+//活动地址
+#define DZActivityURL [NSString stringWithFormat:@"%@/DzClient/activitySearch/ActivitySearch.html",DZBaseURL]
+//预定餐桌提示
+#define DZBookTimeURL [NSString stringWithFormat:@"%@/Dz/bookTime?view",DZBaseURL]
 #endif /* Header_h */

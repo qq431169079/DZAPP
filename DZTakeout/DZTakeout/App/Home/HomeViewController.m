@@ -81,7 +81,7 @@ BMKLocationManagerDelegate
 }
 -(void)loadWebViewWithLocation:(BMKLocation *)location{
     
-    NSString *homeURL = [NSString stringWithFormat:@"http://118.190.149.109:8081/DzClient/index/index.html?lng=%@",[DZBMKLocationTool sharedInstance].coordinateStr];
+    NSString *homeURL = [NSString stringWithFormat:@"http://39.108.6.102:8080/DzClient/index/index.html?lng=%@",[DZBMKLocationTool sharedInstance].coordinateStr];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:homeURL]];
     [self.webView loadRequest:request];

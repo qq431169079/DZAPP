@@ -17,6 +17,10 @@
 @property (nonatomic, copy) NSString *companyId;
 /// 物流费
 @property (nonatomic, assign) CGFloat logisticsPrice;
+/// 起购价
+@property (nonatomic, copy) NSString *minPrice;
+//营业
+@property (nonatomic, assign) BOOL isBusiness;
 /// 准备结算
 @property (nonatomic, copy) void(^onPrepareCommitHandler) (void);
 @property (nonatomic, copy) void(^onChangedBadgeHanlder) (NSInteger count, CompanyGoodModel *model);

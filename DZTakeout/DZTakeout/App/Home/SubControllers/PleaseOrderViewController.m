@@ -103,6 +103,7 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
       //清空购物车
         @strongify(self);
         [self.menuView clearAllBage];
+        [self clearGoodForServer];
     };
     [shoppingCart show];
 
@@ -231,7 +232,20 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
         occasionalHint(error.localizedDescription);
     }];
 }
-
+-(void)clearGoodForServer{
+    NSDictionary *params = @{@"cid":self.companyId, @"token":[UserHelper userToken]};
+    [DZRequests post:@"clearShop" parameters:params success:^(id record) {
+        if ([record isKindOfClass:NSDictionary.class]) {
+            if ([[record allKeys]containsObject:@"message"]) {
+                occasionalHint(record[@"message"]);
+            }
+        } else {
+            occasionalHint(@"数据异常，请重试");
+        }
+    } failure:^(HPRequestsError type, NSError *error) {
+        occasionalHint(error.localizedDescription);
+    }];
+}
 - (void)gotoConfirmWithOrderId:(NSString *)orderId orderNo:(NSString *)orderNo {
     if (orderId.length > 0 && orderNo.length > 0) {
         CommitOrderViewController *vc = [CommitOrderViewController controller];
@@ -306,10 +320,10 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
     __FormatGoodsNode *n = self.formatDataDict[m.classifyId];
     CompanyGoodModel *model = [n modelAtIndex:indexPath.row];
     DZGoodsProfileView *profile = [[DZGoodsProfileView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    @weakify(self);
+    DZWeakSelf(self)
     profile.removeGoodsHandler = ^(CompanyGoodModel *model){
-        @strongify(self);
-        [self fetchServerRemoveGoodsFromCart:model complete:^{
+        DZStrongSelf(weakSelf)
+        [strongSelf fetchServerRemoveGoodsFromCart:model complete:^{
             model.indexPath = indexPath;
             [n replaceModel:model atIndex:indexPath.row];
             [self.foodsTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -317,13 +331,13 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
         }];
     };
     profile.onAddedGoodsToCartHandler = ^(CGPoint startPoint, CompanyGoodModel *model, NSUInteger count) {
-        @strongify(self);
-        [self fetchServerAddGoodsToCart:model complete:^{
+        DZStrongSelf(weakSelf)
+        [strongSelf fetchServerAddGoodsToCart:model complete:^{
             model.indexPath = indexPath;
             [n replaceModel:model atIndex:indexPath.row];
-            [self.foodsTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-            [self startNewlyAddedAnimations:model from:startPoint complete:^{
-                [self newlyAddedGoods:model toCart:count atIndex:indexPath];
+            [strongSelf.foodsTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [strongSelf startNewlyAddedAnimations:model from:startPoint complete:^{
+                [weakSelf newlyAddedGoods:model toCart:count atIndex:indexPath];
             }];
         }];
     };
@@ -400,7 +414,14 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
     _logisticsPrice = logisticsPrice;
     [DZShoppingCartView shoppingCart].logisticsPrice = _logisticsPrice;
 }
-
+-(void)setMinPrice:(NSString *)minPrice{
+    _minPrice = minPrice;
+    [DZShoppingCartView shoppingCart].minPrice = minPrice;
+}
+-(void)setIsBusiness:(BOOL)isBusiness{
+    _isBusiness = isBusiness;
+    [DZShoppingCartView shoppingCart].isBusiness = isBusiness;
+}
 - (UITableView *)foodsTableView {
     if (!_foodsTableView) {
         _foodsTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];

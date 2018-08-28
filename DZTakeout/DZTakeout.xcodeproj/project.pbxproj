@@ -124,6 +124,7 @@
 		B2157A0B20FEE1CF00218F51 /* DZResetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2157A0920FEE1CF00218F51 /* DZResetPWDViewController.m */; };
 		B2157A0C20FEE1CF00218F51 /* DZResetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */; };
 		B2157A0F20FEE38F00218F51 /* DZPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2157A0D20FEE38F00218F51 /* DZPredicate.m */; };
+		B22228832133C51400559262 /* DZActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B22228822133C51400559262 /* DZActivityViewController.m */; };
 		B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C238F20EF63200021F5ED /* DiscoverViewController.m */; };
 		B25C239720EF63200021F5ED /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C239120EF63200021F5ED /* MessageViewController.m */; };
 		B25C23A620EF64860021F5ED /* DZAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23A420EF64860021F5ED /* DZAddressBookViewController.m */; };
@@ -420,6 +421,8 @@
 		B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZResetPWDViewController.xib; sourceTree = "<group>"; };
 		B2157A0D20FEE38F00218F51 /* DZPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPredicate.m; sourceTree = "<group>"; };
 		B2157A0E20FEE38F00218F51 /* DZPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPredicate.h; sourceTree = "<group>"; };
+		B22228812133C51400559262 /* DZActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZActivityViewController.h; sourceTree = "<group>"; };
+		B22228822133C51400559262 /* DZActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZActivityViewController.m; sourceTree = "<group>"; };
 		B25C238E20EF63200021F5ED /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		B25C238F20EF63200021F5ED /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B25C239120EF63200021F5ED /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -948,6 +951,7 @@
 		15AB3F952068EAFF00A8447E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B222286D2132859100559262 /* Activity */,
 				B29ED09920EA69D300A1D044 /* SearchView */,
 				150358A020DCCBC10080AFCA /* Login&Register */,
 				15AB3F962068EAFF00A8447E /* Home */,
@@ -1289,6 +1293,39 @@
 				B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		B222286D2132859100559262 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				B22228802133C51400559262 /* Controller */,
+				B222286E2132859100559262 /* Model */,
+				B222286F2132859100559262 /* View */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		B222286E2132859100559262 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B222286F2132859100559262 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B22228802133C51400559262 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B22228812133C51400559262 /* DZActivityViewController.h */,
+				B22228822133C51400559262 /* DZActivityViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B25C238720EF63200021F5ED /* AddressBook */ = {
@@ -1661,6 +1698,7 @@
 				15BB6DCC206CCFAA00B5A63D /* UIView+HPUtil.m in Sources */,
 				15BB6DC9206CCF7300B5A63D /* UISearchBar+HPUtil.m in Sources */,
 				15AB3FCB2069148500A8447E /* UIViewController+HPUtil.m in Sources */,
+				B22228832133C51400559262 /* DZActivityViewController.m in Sources */,
 				150B5F2220E29DAD00484A5F /* DiningBoxViewController.m in Sources */,
 				150D11A920DA4E7500657506 /* EditUserAddressViewController.m in Sources */,
 				1503587A20DA8A1E0080AFCA /* SGPageTitleViewConfigure.m in Sources */,

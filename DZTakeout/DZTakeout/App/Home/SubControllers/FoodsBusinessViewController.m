@@ -9,7 +9,7 @@
 #import "FoodsBusinessViewController.h"
 #import "DZSearchNavigationBar.h"
 #import "UIButton+HPUtil.h"
-
+#import "DZBMKLocationTool.h"
 @interface FoodsBusinessViewController ()<UISearchBarDelegate> {
     @package
     NSString *_searchKey;
@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     [self __setupNavBar];
     
-    [self loadWebView:@"http://118.190.149.109:8081/DzClient/fooderSearch/fooderSearch.html" params:@{@"location":@"22.6733000000,114.0651500000"}];
+    [self loadWebView:@"http://39.108.6.102:8080/DzClient/fooderSearch/fooderSearch.html" params:@{@"lng":[DZBMKLocationTool sharedInstance].coordinateStr}];
 }
 
 - (void)__setupNavBar {

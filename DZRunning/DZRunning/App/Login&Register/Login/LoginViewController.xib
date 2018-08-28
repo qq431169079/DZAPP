@@ -96,6 +96,15 @@
                         <constraint firstAttribute="height" constant="1" id="ybj-Ck-3JF"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bh8-Db-QE4">
+                    <rect key="frame" x="283" y="420" width="62" height="30"/>
+                    <state key="normal" title="忘记密码">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="resetPassword:" destination="-1" eventType="touchUpInside" id="9MG-gh-w60"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -103,6 +112,7 @@
                 <constraint firstItem="cOv-md-9J6" firstAttribute="top" secondItem="Dck-XQ-esY" secondAttribute="bottom" constant="60" id="392-q4-djZ"/>
                 <constraint firstItem="Lad-cj-JZX" firstAttribute="leading" secondItem="cOv-md-9J6" secondAttribute="leading" id="4SH-bK-aWc"/>
                 <constraint firstItem="uNK-yR-5kz" firstAttribute="top" secondItem="Nxv-C3-Ejs" secondAttribute="bottom" constant="40" id="5br-iA-105"/>
+                <constraint firstItem="bh8-Db-QE4" firstAttribute="top" secondItem="uNK-yR-5kz" secondAttribute="bottom" constant="15" id="9bQ-XL-5hp"/>
                 <constraint firstItem="Dck-XQ-esY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AQ8-7Q-cNb"/>
                 <constraint firstItem="Nxv-C3-Ejs" firstAttribute="top" secondItem="cOv-md-9J6" secondAttribute="bottom" constant="40" id="KY9-Co-uXL"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="uNK-yR-5kz" secondAttribute="trailing" constant="30" id="L8N-7e-tIT"/>
@@ -115,6 +125,7 @@
                 <constraint firstItem="Lad-cj-JZX" firstAttribute="top" secondItem="cOv-md-9J6" secondAttribute="bottom" constant="1" id="c9h-mB-qre"/>
                 <constraint firstItem="Lad-cj-JZX" firstAttribute="trailing" secondItem="cOv-md-9J6" secondAttribute="trailing" id="fgi-ul-cN3"/>
                 <constraint firstItem="uNK-yR-5kz" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="gZv-RZ-XnK"/>
+                <constraint firstItem="bh8-Db-QE4" firstAttribute="trailing" secondItem="uNK-yR-5kz" secondAttribute="trailing" id="jjS-EE-df9"/>
                 <constraint firstItem="d3V-aR-PxF" firstAttribute="top" secondItem="uNK-yR-5kz" secondAttribute="bottom" constant="50" id="jsf-eF-Ibu"/>
                 <constraint firstItem="Nxv-C3-Ejs" firstAttribute="trailing" secondItem="cOv-md-9J6" secondAttribute="trailing" id="pbG-0N-XFM"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cOv-md-9J6" secondAttribute="trailing" constant="40" id="qMY-aC-b4e"/>

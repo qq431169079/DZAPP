@@ -15,7 +15,9 @@
 @implementation CompanyModel
 
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper {
-    return @{@"cid":@"id"};
+    return @{@"cid":@"id",
+             @"distributionPrice":@"DistributionPrice"
+             };
 }
 
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass {

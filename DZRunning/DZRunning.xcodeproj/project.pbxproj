@@ -138,6 +138,9 @@
 		B27E5E4E20F3599C007C4FCC /* DZJrmfWalletSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E5E4D20F3599C007C4FCC /* DZJrmfWalletSDK.m */; };
 		B27E607F20F5AC9E007C4FCC /* DZLoadingHoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E607E20F5AC9E007C4FCC /* DZLoadingHoldView.m */; };
 		B27E608120F5ACB0007C4FCC /* DZLoadingHoldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27E608020F5ACB0007C4FCC /* DZLoadingHoldView.xib */; };
+		B28537D42101E3F8004F2A00 /* DZResetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28537D22101E3F8004F2A00 /* DZResetPWDViewController.xib */; };
+		B28537D52101E3F8004F2A00 /* DZResetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28537D32101E3F8004F2A00 /* DZResetPWDViewController.m */; };
+		B28537D82101E469004F2A00 /* DZPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = B28537D62101E469004F2A00 /* DZPredicate.m */; };
 		B29ED0AA20EB7B7B00A1D044 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29ED0A920EB7B7B00A1D044 /* CoreLocation.framework */; };
 		B29ED0AC20EB7B8400A1D044 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29ED0AB20EB7B8400A1D044 /* SystemConfiguration.framework */; };
 		B29ED0AE20EB7B8F00A1D044 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29ED0AD20EB7B8F00A1D044 /* Security.framework */; };
@@ -441,6 +444,11 @@
 		B27E607D20F5AC9E007C4FCC /* DZLoadingHoldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZLoadingHoldView.h; sourceTree = "<group>"; };
 		B27E607E20F5AC9E007C4FCC /* DZLoadingHoldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZLoadingHoldView.m; sourceTree = "<group>"; };
 		B27E608020F5ACB0007C4FCC /* DZLoadingHoldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZLoadingHoldView.xib; sourceTree = "<group>"; };
+		B28537D12101E3F8004F2A00 /* DZResetPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZResetPWDViewController.h; sourceTree = "<group>"; };
+		B28537D22101E3F8004F2A00 /* DZResetPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZResetPWDViewController.xib; sourceTree = "<group>"; };
+		B28537D32101E3F8004F2A00 /* DZResetPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZResetPWDViewController.m; sourceTree = "<group>"; };
+		B28537D62101E469004F2A00 /* DZPredicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZPredicate.m; sourceTree = "<group>"; };
+		B28537D72101E469004F2A00 /* DZPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPredicate.h; sourceTree = "<group>"; };
 		B29ED0A920EB7B7B00A1D044 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B29ED0AB20EB7B8400A1D044 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B29ED0AD20EB7B8F00A1D044 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -645,6 +653,7 @@
 		150358A020DCCBC10080AFCA /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
+				B28537D02101E3F8004F2A00 /* ResetPassword */,
 				1554013E20E734C200831ACB /* Register */,
 				150358A120DCCBC10080AFCA /* Login */,
 			);
@@ -847,6 +856,8 @@
 		1515236E20E86E1A00B4FBBB /* HPTool */ = {
 			isa = PBXGroup;
 			children = (
+				B28537D72101E469004F2A00 /* DZPredicate.h */,
+				B28537D62101E469004F2A00 /* DZPredicate.m */,
 				1515237020E86E1A00B4FBBB /* HPTool.h */,
 				1515236F20E86E1A00B4FBBB /* HPTool.m */,
 			);
@@ -1340,6 +1351,16 @@
 			path = PickView;
 			sourceTree = "<group>";
 		};
+		B28537D02101E3F8004F2A00 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				B28537D12101E3F8004F2A00 /* DZResetPWDViewController.h */,
+				B28537D22101E3F8004F2A00 /* DZResetPWDViewController.xib */,
+				B28537D32101E3F8004F2A00 /* DZResetPWDViewController.m */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		B29ED09920EA69D300A1D044 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,6 +1544,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28537D42101E3F8004F2A00 /* DZResetPWDViewController.xib in Resources */,
 				15C71CFA20CEDD96001D32EB /* index.html in Resources */,
 				B25C23AC20EF650E0021F5ED /* DZAddressBookTableViewCell.xib in Resources */,
 				B27E5C1F20F0A21C007C4FCC /* DZSeatSelectionView.xib in Resources */,
@@ -1632,10 +1654,12 @@
 				1503588920DB501E0080AFCA /* HPAPIConfig.m in Sources */,
 				B29ED11920ECCD5100A1D044 /* UIImageView+webImage.m in Sources */,
 				1503585F20DA60100080AFCA /* SellerCommentsAndOrdersContainerController.m in Sources */,
+				B28537D82101E469004F2A00 /* DZPredicate.m in Sources */,
 				1503589F20DBB6160080AFCA /* HPAnimationTools.m in Sources */,
 				B29ED10A20ECB24900A1D044 /* JYEqualCellSpaceFlowLayout.m in Sources */,
 				15AB3FA12068EBB400A8447E /* HPBaseViewController.m in Sources */,
 				B29ED11220ECC1AE00A1D044 /* DZSearchResultCollectionViewCell.m in Sources */,
+				B28537D52101E3F8004F2A00 /* DZResetPWDViewController.m in Sources */,
 				15AB3FDA20691B2300A8447E /* HPFileManager.m in Sources */,
 				150B5F1820E29C1C00484A5F /* SelectSeatViewController.m in Sources */,
 				B25C23AB20EF650E0021F5ED /* DZAddressBookTableViewCell.m in Sources */,

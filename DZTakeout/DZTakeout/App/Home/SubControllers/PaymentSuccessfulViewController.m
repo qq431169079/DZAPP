@@ -49,7 +49,7 @@
     // Do any additional setup after loading the view.
     [self _setupSubviews];
     if ([UserHelper userToken].length > 0) {
-        [self loadWebView:@"http://118.190.149.109:8081/DzClient/paySuccess/pay-success.html" params:@{@"orderId":self.orderId, @"token":[UserHelper userToken]}];
+        [self loadWebView:@"http://39.108.6.102:8080/DzClient/paySuccess/pay-success.html" params:@{@"orderId":self.orderId, @"token":[UserHelper userToken]}];
     }
 }
 

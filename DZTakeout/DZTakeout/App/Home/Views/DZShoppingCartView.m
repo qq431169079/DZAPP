@@ -109,9 +109,14 @@ static CGFloat DetailHeaderHeight = 30;
 }
 
 - (void)onClickcommitPriceBtn:(UIButton *)sender {
-    if (self.onPrepareCommitHandler) {
-        self.onPrepareCommitHandler();
+    if (self.isBusiness) {
+        if (self.onPrepareCommitHandler) {
+            self.onPrepareCommitHandler();
+        }
+    }else{
+         occasionalHint(@"打烊了");
     }
+
 }
 
 - (NSInteger)numberOfGooods:(CompanyGoodModel *)goods {
@@ -157,8 +162,14 @@ static CGFloat DetailHeaderHeight = 30;
         _numberOfTotalGoods += number;
         _totalPrice += [n totalPrice];
     }
+    [self upShopInfo:_numberOfTotalGoods>0];
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+-(void)upShopInfo:(BOOL)canPay{
     // 更新数据
-    if (_numberOfTotalGoods > 0) {
+    if (canPay) {
         
         self.noticeLabel.hidden = YES;
         self.priceLabel.hidden = NO;
@@ -168,7 +179,12 @@ static CGFloat DetailHeaderHeight = 30;
         self.bageLabel.text = [NSString stringWithFormat:@"%zd", _numberOfTotalGoods];
         self.priceLabel.text = [NSString stringWithFormat:@"¥%.2f", _totalPrice];
         self.logisticsLabel.text = [NSString stringWithFormat:@"另需配送费¥%.2f", self.logisticsPrice]; // 配送费
-        self.commitPriceBtn.titleOfNormal = @"去结算";
+        if (_totalPrice>= [self.minPrice floatValue]) {
+            self.commitPriceBtn.titleOfNormal = @"去结算";
+            self.commitPriceBtn.enabled = YES;
+        }else{
+            self.commitPriceBtn.enabled = NO;
+        }
         self.cartStatusBtn.enabled = YES;
         self.commitPriceBtn.enabled = YES;
     } else {
@@ -180,11 +196,7 @@ static CGFloat DetailHeaderHeight = 30;
         self.logisticsLabel.hidden = YES;
         self.bageLabel.hidden = YES;
     }
-    
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
 }
-
 - (void)removeGoods:(CompanyGoodModel *)goods {
     if (!goods) { return; }
     [self.goodsDict enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, __FormatGoodsNode * _Nonnull obj, BOOL * _Nonnull stop) {
@@ -199,30 +211,8 @@ static CGFloat DetailHeaderHeight = 30;
     }];
     
     // 更新数据
-    if (_numberOfTotalGoods > 0) {
-        
-        self.noticeLabel.hidden = YES;
-        self.priceLabel.hidden = NO;
-        self.logisticsLabel.hidden = NO;
-        self.bageLabel.hidden = NO;
-        
-        self.bageLabel.text = [NSString stringWithFormat:@"%zd", _numberOfTotalGoods];
-        self.priceLabel.text = [NSString stringWithFormat:@"¥%.2f", _totalPrice];
-        self.logisticsLabel.text = [NSString stringWithFormat:@"另需配送费¥%.2f", self.logisticsPrice]; // 配送费
-        self.commitPriceBtn.titleOfNormal = @"去结算";
-        self.cartStatusBtn.enabled = YES;
-        self.commitPriceBtn.enabled = YES;
-    } else {
-        self.cartStatusBtn.enabled = NO;
-        self.commitPriceBtn.enabled = NO;
-        
-        self.noticeLabel.hidden = NO;
-        self.priceLabel.hidden = YES;
-        self.logisticsLabel.hidden = YES;
-        self.bageLabel.hidden = YES;
-        // 如果存在详情现实页，则需要隐藏
-        [self removeTableViewIfNeededComplete:nil];
-    }
+    [self upShopInfo:_numberOfTotalGoods > 0];
+
     
     [self setNeedsLayout];
     [self layoutIfNeeded];
@@ -495,6 +485,12 @@ static CGFloat DetailHeaderHeight = 30;
 }
 
 #pragma mark - Getter & Setter
+-(void)setMinPrice:(NSString *)minPrice{
+    _minPrice = minPrice;
+    _pricePlacehold = [NSString stringWithFormat:@"%@元起送",minPrice];
+    self.commitPriceBtn.titleOfDisabled = _pricePlacehold;
+}
+
 - (UILabel *)logisticsLabel {
     if (!_logisticsLabel) {
         _logisticsLabel = [UILabel new];

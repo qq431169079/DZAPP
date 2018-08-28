@@ -31,10 +31,16 @@
 @property (nonatomic, copy) NSArray<DiscountModel *> *list;
 
 @property (nonatomic, assign) BOOL success;
+@property (nonatomic, assign) BOOL isOpen;
+@property (nonatomic, assign) BOOL isBusiness;
 @property (nonatomic, assign) CGFloat assess;
 @property (nonatomic, assign) NSInteger cid;
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) NSInteger monSales;
 @property (nonatomic, assign) NSInteger totalCount;
+//配送费
+@property (nonatomic, copy) NSString *distributionPrice;
+//最低起购
+@property (nonatomic, copy) NSString *miniPrice;
 @end

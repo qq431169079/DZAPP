@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "DZResetPWDViewController.h"
 #import "RootViewController.h"
 #import "AppDelegate.h"
 #import "NSString+HPUtil.h"
@@ -128,6 +129,10 @@
 - (IBAction)passowordEditingChanged:(UITextField *)sender {
     _passwordValue = sender.text.copy;
     [self _checkMobileAndPassword];
+}
+- (IBAction)resetPassword:(id)sender {
+    DZResetPWDViewController *vc = [DZResetPWDViewController controller];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - 其他

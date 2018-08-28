@@ -12,5 +12,5 @@
  修改地址
  */
 @interface EditUserAddressViewController : DZWKWebViewController
-
+@property (nonatomic,strong) NSString *addressID;
 @end
