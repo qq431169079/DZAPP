@@ -266,40 +266,48 @@
 
 
 #import "CompanyModel.h"
-@interface PartInfo_Details ()
-
+#import "DZActivityTableViewCell.h"
+@interface PartInfo_Details ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic,strong) UITableView *activityTabView;
 @property (nonatomic ,strong) UILabel *despLabel;
 @property (nonatomic, strong) UILabel *totalDiscountLabel;
+@property (nonatomic, assign) BOOL isOpen;
 @end
 
 @implementation PartInfo_Details : UIView
-
+static NSString * const reuseIdentifier = @"DZActivityTableViewCell";
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self setupSubviews];
+        self.viewHeight = 15;
     }
     return self;
 }
 
 - (void)setupSubviews {
-    [self addSubview:self.despLabel];
-    [self addSubview:self.totalDiscountLabel];
-    
-    @weakify(self);
-    [self.despLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
+//    [self addSubview:self.despLabel];
+//    [self addSubview:self.totalDiscountLabel];
+//
+//    @weakify(self);
+//    [self.despLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        @strongify(self);
+//        make.top.equalTo(self).offset(15);
+//        make.left.equalTo(self).offset(15);
+//    }];
+//    [self.totalDiscountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        @strongify(self);
+//        make.left.equalTo(self.despLabel.mas_right).offset(5);
+//        make.top.equalTo(self).offset(15);
+//        make.right.equalTo(self).offset(-15);
+//    }];
+//    [self.totalDiscountLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+//    [self.totalDiscountLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
+    [self.activityTabView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(15);
-        make.left.equalTo(self).offset(15);
+        make.left.right.equalTo(self);
+        make.bottom.equalTo(self);
     }];
-    [self.totalDiscountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        @strongify(self);
-        make.left.equalTo(self.despLabel.mas_right).offset(5);
-        make.top.equalTo(self).offset(15);
-        make.right.equalTo(self).offset(-15);
-    }];
-    [self.totalDiscountLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
-    [self.totalDiscountLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
 }
 
 - (void)layoutSubviews {
@@ -309,23 +317,62 @@
     self.despLabel.preferredMaxLayoutWidth = (minX - 5);
 }
 
-- (void)setItems:(NSArray<DiscountModel *> *)items {
-    _items = items.copy;
-    
-    NSMutableString *string = [NSMutableString string];
-    __block NSInteger count = 0;
-    [_items enumerateObjectsUsingBlock:^(DiscountModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (obj.isOpen1) {
-            [string appendString:obj.activityName1];
-            [string appendString:@"\n"];
-            [string appendString:obj.subtraction];
-            [string appendString:@"\n"];
-            count ++;
-        }
-    }];
-    self.despLabel.text = string.copy;
-    self.totalDiscountLabel.text = [NSString stringWithFormat:@"%zd个活动", count];
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.items.count;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 40;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DZActivityTableViewCell *activityCell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    DiscountModel *model = self.items[indexPath.row];
+    [activityCell setCellWithModel:model needSelectedIcon:indexPath.row==0 selected:self.isOpen];
+    return activityCell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.isOpen = !self.isOpen;
+    CGFloat change = 40.0-(self.items.count-1)*40.0;
+    if (self.isOpen) {
+        change = -change;
+    }
+    if (self.changePartInfoDetailsViewHeightBlock) {
+        self.changePartInfoDetailsViewHeightBlock(change);
+    }
+    [tableView reloadData];
+}
+
+-(CGFloat)setupPartInfo_Details:(NSArray<DiscountModel *> *)items{
+    NSMutableArray *add = [NSMutableArray arrayWithArray:items];
+    [add addObjectsFromArray:items];
+    [add addObjectsFromArray:items];
+    [add addObjectsFromArray:items];
+    [add addObjectsFromArray:items];
+    _items = add.copy;
+    self.viewHeight = 15 +40 *items.count;
+    [self.activityTabView reloadData];
+    return self.viewHeight;
+}
+//- (void)setItems:(NSArray<DiscountModel *> *)items {
+//    _items = items.copy;
+
+//    NSMutableString *string = [NSMutableString string];
+//    __block NSInteger count = 0;
+//    [_items enumerateObjectsUsingBlock:^(DiscountModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        if (obj.isOpen1) {
+//            [string appendString:obj.activityName1];
+//            [string appendString:@"\n"];
+//            [string appendString:obj.subtraction];
+//            [string appendString:@"\n"];
+//            count ++;
+//        }
+//    }];
+//    self.despLabel.text = string.copy;
+//    self.totalDiscountLabel.text = [NSString stringWithFormat:@"%zd个活动", count];
+//}
 
 - (UILabel *)despLabel {
     if (!_despLabel) {
@@ -346,5 +393,18 @@
         _totalDiscountLabel.textAlignment = NSTextAlignmentRight;
     }
     return _totalDiscountLabel;
+}
+-(UITableView *)activityTabView{
+    if (_activityTabView == nil) {
+        _activityTabView = [[UITableView alloc] init];
+        _activityTabView.delegate = self;
+        _activityTabView.dataSource = self;
+//        _activityTabView.backgroundColor = [UIColor redColor];
+        _activityTabView.tableFooterView = [UIView new];
+        _activityTabView.scrollEnabled = NO;
+        [_activityTabView registerNib:[UINib nibWithNibName:NSStringFromClass([DZActivityTableViewCell class]) bundle:nil] forCellReuseIdentifier:reuseIdentifier];
+        [self addSubview:_activityTabView];
+    }
+    return _activityTabView;
 }
 @end

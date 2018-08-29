@@ -51,11 +51,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _maxSlideOriginY = 250;
+    _maxSlideOriginY = ASPECT_BLUR_HEIGHT + 55;
     _minSlideOriginY = ASPECT_NAV_HEIGHT;
     
     CGRect frame = self.view.bounds;
-    frame.origin.y = ASPECT_BLUR_HEIGHT + 50;
+    frame.origin.y = ASPECT_BLUR_HEIGHT + 55;
     frame.size.height -= frame.origin.y;
     [self addChildViewController:self.containerViewController];
     [self.containerViewController didMoveToParentViewController:self];
@@ -114,8 +114,8 @@
 - (void)updateUIIfNeeded {
     self.summary.model = _companyModel;;
     
-    self.details.items = _companyModel.list;
-    
+//    self.details.items = _companyModel.list;
+    [self.details setupPartInfo_Details:_companyModel.list];
     [self.blurImgView sd_setImageWithURL:[NSURL URLWithString:_companyModel.img] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             UIImage *blurImage = [image blurWithRadius:10.0f tintColor:[UIColor colorWithWhite:0.0f alpha:0.2f] saturationDeltaFactor:2.0 maskImage:nil];
@@ -263,11 +263,17 @@
     self.containerViewController.view.frame = frame;
     
     CGFloat progress = (frame.origin.y - _minSlideOriginY)/(_maxSlideOriginY - _minSlideOriginY);
-    [self.navBar setAnimationProgress:progress];
+//    [self.navBar setAnimationProgress:progress];
     [self.summary setAnimationProgress:progress];
     [self setAnimationsProgress:progress];
 }
-
+-(void)changeContainerViewFrame:(CGFloat)offset{
+//    CGRect rect = self.containerViewController.view.frame;
+//    rect.origin.y = rect.origin.y + offset;
+//    self.containerViewController.view.frame = rect;
+    _maxSlideOriginY = _maxSlideOriginY+offset;
+    [self animatingWhenPanGestureTranslatingY:offset];
+}
 #pragma mark - Private Functions
 - (void)setAnimationsProgress:(CGFloat)progress {
     if (progress < 0) { progress = 0; }
@@ -324,6 +330,11 @@
 - (PartInfo_Details *)details {
     if (!_details) {
         _details = [PartInfo_Details new];
+        DZWeakSelf(self)
+        _details.changePartInfoDetailsViewHeightBlock = ^(CGFloat offset) {
+            [weakSelf changeContainerViewFrame:offset];
+
+        };
     }
     return _details;
 }

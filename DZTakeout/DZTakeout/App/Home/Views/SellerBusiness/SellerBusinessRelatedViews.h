@@ -35,5 +35,8 @@
 @interface PartInfo_Details : UIView
 
 @property (nonatomic, copy) NSArray<DiscountModel *> *items;
+@property (nonatomic,assign) CGFloat viewHeight;
+@property (nonatomic,copy) void(^changePartInfoDetailsViewHeightBlock)(CGFloat offset);
 
+-(CGFloat)setupPartInfo_Details:(NSArray<DiscountModel *> *) items;
 @end

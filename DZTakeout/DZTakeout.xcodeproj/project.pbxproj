@@ -15,12 +15,10 @@
 		1503587820DA8A1E0080AFCA /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503586E20DA8A1E0080AFCA /* SGPageContentCollectionView.m */; };
 		1503587920DA8A1E0080AFCA /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503587020DA8A1E0080AFCA /* SGPageTitleView.m */; };
 		1503587A20DA8A1E0080AFCA /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503587120DA8A1E0080AFCA /* SGPageTitleViewConfigure.m */; };
-		1503588020DA968E0080AFCA /* SellerBusinessRelatedViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503587F20DA968E0080AFCA /* SellerBusinessRelatedViews.m */; };
 		1503588420DB4FA90080AFCA /* HPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503588320DB4FA90080AFCA /* HPRequests.m */; };
 		1503588920DB501E0080AFCA /* HPAPIConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503588720DB501E0080AFCA /* HPAPIConfig.m */; };
 		1503588A20DB501E0080AFCA /* HPAPIConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1503588820DB501E0080AFCA /* HPAPIConfig.plist */; };
 		1503588D20DB56580080AFCA /* DZRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503588C20DB56580080AFCA /* DZRequests.m */; };
-		1503589020DB73360080AFCA /* SellerBusinessRelatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503588F20DB73360080AFCA /* SellerBusinessRelatedTableViewCell.m */; };
 		1503589520DB7A300080AFCA /* HPIncreaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503589420DB7A300080AFCA /* HPIncreaseButton.m */; };
 		1503589B20DB8A820080AFCA /* DZShoppingCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503589A20DB8A820080AFCA /* DZShoppingCartView.m */; };
 		1503589F20DBB6160080AFCA /* HPAnimationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503589E20DBB6160080AFCA /* HPAnimationTools.m */; };
@@ -125,6 +123,14 @@
 		B2157A0C20FEE1CF00218F51 /* DZResetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */; };
 		B2157A0F20FEE38F00218F51 /* DZPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2157A0D20FEE38F00218F51 /* DZPredicate.m */; };
 		B22228832133C51400559262 /* DZActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B22228822133C51400559262 /* DZActivityViewController.m */; };
+		B224C06D213677BD00319FFB /* DZSeatSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C068213677BD00319FFB /* DZSeatSelectionView.m */; };
+		B224C06E213677BD00319FFB /* DZSeatReserveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C069213677BD00319FFB /* DZSeatReserveView.m */; };
+		B224C06F213677BD00319FFB /* DZSeatSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224C06B213677BD00319FFB /* DZSeatSelectionView.xib */; };
+		B224C070213677BD00319FFB /* DZSeatReserveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224C06C213677BD00319FFB /* DZSeatReserveView.xib */; };
+		B224C0792136890000319FFB /* SellerBusinessRelatedViews.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0732136890000319FFB /* SellerBusinessRelatedViews.m */; };
+		B224C07A2136890000319FFB /* SellerBusinessRelatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0752136890000319FFB /* SellerBusinessRelatedTableViewCell.m */; };
+		B224C07B2136890000319FFB /* DZActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0762136890000319FFB /* DZActivityTableViewCell.m */; };
+		B224C07C2136890000319FFB /* DZActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224C0782136890000319FFB /* DZActivityTableViewCell.xib */; };
 		B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C238F20EF63200021F5ED /* DiscoverViewController.m */; };
 		B25C239720EF63200021F5ED /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C239120EF63200021F5ED /* MessageViewController.m */; };
 		B25C23A620EF64860021F5ED /* DZAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23A420EF64860021F5ED /* DZAddressBookViewController.m */; };
@@ -132,8 +138,6 @@
 		B25C23AB20EF650E0021F5ED /* DZAddressBookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23A920EF650E0021F5ED /* DZAddressBookTableViewCell.m */; };
 		B25C23AC20EF650E0021F5ED /* DZAddressBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B25C23AA20EF650E0021F5ED /* DZAddressBookTableViewCell.xib */; };
 		B25C23AF20EF671A0021F5ED /* DZFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23AE20EF671A0021F5ED /* DZFriendModel.m */; };
-		B27E5C1D20F0A20A007C4FCC /* DZSeatSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E5C1C20F0A20A007C4FCC /* DZSeatSelectionView.m */; };
-		B27E5C1F20F0A21C007C4FCC /* DZSeatSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27E5C1E20F0A21C007C4FCC /* DZSeatSelectionView.xib */; };
 		B27E5C2520F0BC79007C4FCC /* JXAlertview.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E5C2120F0BC78007C4FCC /* JXAlertview.m */; };
 		B27E5C2620F0BC79007C4FCC /* CustomDayDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E5C2420F0BC79007C4FCC /* CustomDayDatePicker.m */; };
 		B27E5C2920F1C74D007C4FCC /* DZBaseDingingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27E5C2820F1C74D007C4FCC /* DZBaseDingingViewController.m */; };
@@ -209,8 +213,6 @@
 		1503587220DA8A1E0080AFCA /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
 		1503587320DA8A1E0080AFCA /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
 		1503587420DA8A1E0080AFCA /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
-		1503587E20DA968E0080AFCA /* SellerBusinessRelatedViews.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellerBusinessRelatedViews.h; sourceTree = "<group>"; };
-		1503587F20DA968E0080AFCA /* SellerBusinessRelatedViews.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellerBusinessRelatedViews.m; sourceTree = "<group>"; };
 		1503588220DB4FA90080AFCA /* HPRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPRequests.h; sourceTree = "<group>"; };
 		1503588320DB4FA90080AFCA /* HPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPRequests.m; sourceTree = "<group>"; };
 		1503588620DB501E0080AFCA /* HPAPIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPAPIConfig.h; sourceTree = "<group>"; };
@@ -218,8 +220,6 @@
 		1503588820DB501E0080AFCA /* HPAPIConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HPAPIConfig.plist; sourceTree = "<group>"; };
 		1503588B20DB56580080AFCA /* DZRequests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRequests.h; sourceTree = "<group>"; };
 		1503588C20DB56580080AFCA /* DZRequests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRequests.m; sourceTree = "<group>"; };
-		1503588E20DB73360080AFCA /* SellerBusinessRelatedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellerBusinessRelatedTableViewCell.h; sourceTree = "<group>"; };
-		1503588F20DB73360080AFCA /* SellerBusinessRelatedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellerBusinessRelatedTableViewCell.m; sourceTree = "<group>"; };
 		1503589320DB7A300080AFCA /* HPIncreaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPIncreaseButton.h; sourceTree = "<group>"; };
 		1503589420DB7A300080AFCA /* HPIncreaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPIncreaseButton.m; sourceTree = "<group>"; };
 		1503589920DB8A820080AFCA /* DZShoppingCartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZShoppingCartView.h; sourceTree = "<group>"; };
@@ -423,6 +423,19 @@
 		B2157A0E20FEE38F00218F51 /* DZPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZPredicate.h; sourceTree = "<group>"; };
 		B22228812133C51400559262 /* DZActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZActivityViewController.h; sourceTree = "<group>"; };
 		B22228822133C51400559262 /* DZActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZActivityViewController.m; sourceTree = "<group>"; };
+		B224C067213677BD00319FFB /* DZSeatReserveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSeatReserveView.h; sourceTree = "<group>"; };
+		B224C068213677BD00319FFB /* DZSeatSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSeatSelectionView.m; sourceTree = "<group>"; };
+		B224C069213677BD00319FFB /* DZSeatReserveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSeatReserveView.m; sourceTree = "<group>"; };
+		B224C06A213677BD00319FFB /* DZSeatSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSeatSelectionView.h; sourceTree = "<group>"; };
+		B224C06B213677BD00319FFB /* DZSeatSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZSeatSelectionView.xib; sourceTree = "<group>"; };
+		B224C06C213677BD00319FFB /* DZSeatReserveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZSeatReserveView.xib; sourceTree = "<group>"; };
+		B224C0722136890000319FFB /* SellerBusinessRelatedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellerBusinessRelatedTableViewCell.h; sourceTree = "<group>"; };
+		B224C0732136890000319FFB /* SellerBusinessRelatedViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellerBusinessRelatedViews.m; sourceTree = "<group>"; };
+		B224C0742136890000319FFB /* DZActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZActivityTableViewCell.h; sourceTree = "<group>"; };
+		B224C0752136890000319FFB /* SellerBusinessRelatedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellerBusinessRelatedTableViewCell.m; sourceTree = "<group>"; };
+		B224C0762136890000319FFB /* DZActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZActivityTableViewCell.m; sourceTree = "<group>"; };
+		B224C0772136890000319FFB /* SellerBusinessRelatedViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellerBusinessRelatedViews.h; sourceTree = "<group>"; };
+		B224C0782136890000319FFB /* DZActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZActivityTableViewCell.xib; sourceTree = "<group>"; };
 		B25C238E20EF63200021F5ED /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		B25C238F20EF63200021F5ED /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B25C239120EF63200021F5ED /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -435,9 +448,6 @@
 		B25C23AA20EF650E0021F5ED /* DZAddressBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZAddressBookTableViewCell.xib; sourceTree = "<group>"; };
 		B25C23AD20EF671A0021F5ED /* DZFriendModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFriendModel.h; sourceTree = "<group>"; };
 		B25C23AE20EF671A0021F5ED /* DZFriendModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFriendModel.m; sourceTree = "<group>"; };
-		B27E5C1B20F0A20A007C4FCC /* DZSeatSelectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZSeatSelectionView.h; sourceTree = "<group>"; };
-		B27E5C1C20F0A20A007C4FCC /* DZSeatSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZSeatSelectionView.m; sourceTree = "<group>"; };
-		B27E5C1E20F0A21C007C4FCC /* DZSeatSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZSeatSelectionView.xib; sourceTree = "<group>"; };
 		B27E5C2120F0BC78007C4FCC /* JXAlertview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXAlertview.m; sourceTree = "<group>"; };
 		B27E5C2220F0BC78007C4FCC /* JXAlertview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXAlertview.h; sourceTree = "<group>"; };
 		B27E5C2320F0BC78007C4FCC /* CustomDayDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDayDatePicker.h; sourceTree = "<group>"; };
@@ -1156,6 +1166,8 @@
 		15BB6DC0206CCE7E00B5A63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B224C0712136890000319FFB /* SellerBusiness */,
+				B224C066213677BD00319FFB /* SeatSelect */,
 				15BB6DC1206CCEEC00B5A63D /* DZSearchNavigationBar.h */,
 				15BB6DC2206CCEEC00B5A63D /* DZSearchNavigationBar.m */,
 				15BB6DD0206E881E00B5A63D /* DZFakeNavigationBar.h */,
@@ -1164,10 +1176,6 @@
 				150D231320D16DE200A5B46D /* DZFakeSearchNavBar.m */,
 				150D232120D4109500A5B46D /* DZSegmentNavBar.h */,
 				150D232220D4109500A5B46D /* DZSegmentNavBar.m */,
-				1503587E20DA968E0080AFCA /* SellerBusinessRelatedViews.h */,
-				1503587F20DA968E0080AFCA /* SellerBusinessRelatedViews.m */,
-				1503588E20DB73360080AFCA /* SellerBusinessRelatedTableViewCell.h */,
-				1503588F20DB73360080AFCA /* SellerBusinessRelatedTableViewCell.m */,
 				1503589920DB8A820080AFCA /* DZShoppingCartView.h */,
 				1503589A20DB8A820080AFCA /* DZShoppingCartView.m */,
 				1554014520E764FF00831ACB /* DZShoppingCartRelatedView.h */,
@@ -1178,9 +1186,6 @@
 				15035A0120DE41590080AFCA /* DZGoodsProfileView.m */,
 				15035A0820DE5DE90080AFCA /* DZSegment.h */,
 				15035A0920DE5DE90080AFCA /* DZSegment.m */,
-				B27E5C1B20F0A20A007C4FCC /* DZSeatSelectionView.h */,
-				B27E5C1C20F0A20A007C4FCC /* DZSeatSelectionView.m */,
-				B27E5C1E20F0A21C007C4FCC /* DZSeatSelectionView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1326,6 +1331,33 @@
 				B22228822133C51400559262 /* DZActivityViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B224C066213677BD00319FFB /* SeatSelect */ = {
+			isa = PBXGroup;
+			children = (
+				B224C06A213677BD00319FFB /* DZSeatSelectionView.h */,
+				B224C068213677BD00319FFB /* DZSeatSelectionView.m */,
+				B224C06B213677BD00319FFB /* DZSeatSelectionView.xib */,
+				B224C067213677BD00319FFB /* DZSeatReserveView.h */,
+				B224C069213677BD00319FFB /* DZSeatReserveView.m */,
+				B224C06C213677BD00319FFB /* DZSeatReserveView.xib */,
+			);
+			path = SeatSelect;
+			sourceTree = "<group>";
+		};
+		B224C0712136890000319FFB /* SellerBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				B224C0772136890000319FFB /* SellerBusinessRelatedViews.h */,
+				B224C0732136890000319FFB /* SellerBusinessRelatedViews.m */,
+				B224C0722136890000319FFB /* SellerBusinessRelatedTableViewCell.h */,
+				B224C0752136890000319FFB /* SellerBusinessRelatedTableViewCell.m */,
+				B224C0742136890000319FFB /* DZActivityTableViewCell.h */,
+				B224C0762136890000319FFB /* DZActivityTableViewCell.m */,
+				B224C0782136890000319FFB /* DZActivityTableViewCell.xib */,
+			);
+			path = SellerBusiness;
 			sourceTree = "<group>";
 		};
 		B25C238720EF63200021F5ED /* AddressBook */ = {
@@ -1577,7 +1609,7 @@
 				B2157A0C20FEE1CF00218F51 /* DZResetPWDViewController.xib in Resources */,
 				15C71CFA20CEDD96001D32EB /* index.html in Resources */,
 				B25C23AC20EF650E0021F5ED /* DZAddressBookTableViewCell.xib in Resources */,
-				B27E5C1F20F0A21C007C4FCC /* DZSeatSelectionView.xib in Resources */,
+				B224C070213677BD00319FFB /* DZSeatReserveView.xib in Resources */,
 				B25C23A720EF64860021F5ED /* DZAddressBookViewController.xib in Resources */,
 				1515236D20E8693800B4FBBB /* RegisterViewController.xib in Resources */,
 				15AB3F892068E94E00A8447E /* LaunchScreen.storyboard in Resources */,
@@ -1588,11 +1620,13 @@
 				1503599520DCD2390080AFCA /* lock_close_highlight.png in Resources */,
 				B29ED10320EC763D00A1D044 /* DZSearchTipHeadView.xib in Resources */,
 				B29ED0F520EC647400A1D044 /* DZSearchViewController.xib in Resources */,
+				B224C06F213677BD00319FFB /* DZSeatSelectionView.xib in Resources */,
 				15AB3F862068E94E00A8447E /* Assets.xcassets in Resources */,
 				1503588A20DB501E0080AFCA /* HPAPIConfig.plist in Resources */,
 				B29ED0FE20EC749300A1D044 /* DZSearchTipCollectionViewCell.xib in Resources */,
 				B27E608120F5ACB0007C4FCC /* DZLoadingHoldView.xib in Resources */,
 				1515236820E863EE00B4FBBB /* LoginViewController.xib in Resources */,
+				B224C07C2136890000319FFB /* DZActivityTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1709,6 +1743,7 @@
 				150358A620DCCBD10080AFCA /* UserHelper.m in Sources */,
 				15035A1B20E0E3200080AFCA /* SelfCheckoutViewController.m in Sources */,
 				150D119420D94E6900657506 /* SellerCommentsViewController.m in Sources */,
+				B224C0792136890000319FFB /* SellerBusinessRelatedViews.m in Sources */,
 				15AB3F8C2068E94E00A8447E /* main.m in Sources */,
 				1503599820DCD2390080AFCA /* HPCoverView.m in Sources */,
 				B27E5E4E20F3599C007C4FCC /* DZJrmfWalletSDK.m in Sources */,
@@ -1721,12 +1756,11 @@
 				15AB3FA82068ECF300A8447E /* UIButton+HPUtil.m in Sources */,
 				150D11B620DA51E300657506 /* MyCommentsViewController.m in Sources */,
 				15AB3FD520691AAB00A8447E /* NSObject+NSCoding.m in Sources */,
-				1503589020DB73360080AFCA /* SellerBusinessRelatedTableViewCell.m in Sources */,
 				15C71CEB20CC1575001D32EB /* TakeawayBusinessListViewController.m in Sources */,
 				150D231120D168E600A5B46D /* DZJSInteractiveRouter.m in Sources */,
+				B224C06D213677BD00319FFB /* DZSeatSelectionView.m in Sources */,
 				1503588420DB4FA90080AFCA /* HPRequests.m in Sources */,
 				1515238B20E8722F00B4FBBB /* NSData+Encryption.m in Sources */,
-				B27E5C1D20F0A20A007C4FCC /* DZSeatSelectionView.m in Sources */,
 				B25C239720EF63200021F5ED /* MessageViewController.m in Sources */,
 				150D11B320DA517600657506 /* MyCollectsViewController.m in Sources */,
 				B27E607F20F5AC9E007C4FCC /* DZLoadingHoldView.m in Sources */,
@@ -1740,7 +1774,6 @@
 				15035A1820E0E30B0080AFCA /* CheckoutViewController.m in Sources */,
 				150D232320D4109500A5B46D /* DZSegmentNavBar.m in Sources */,
 				B25C23AF20EF671A0021F5ED /* DZFriendModel.m in Sources */,
-				1503588020DA968E0080AFCA /* SellerBusinessRelatedViews.m in Sources */,
 				15AB3FB62068FC9800A8447E /* HPTabBarController.m in Sources */,
 				B29ED15620EDF9CD00A1D044 /* NSString+HPUtil.m in Sources */,
 				B29ED15320EDF9CD00A1D044 /* NSString+BlockHelper.m in Sources */,
@@ -1759,6 +1792,7 @@
 				1503587520DA8A1E0080AFCA /* UIButton+SGPagingView.m in Sources */,
 				150359A420DCD32F0080AFCA /* UIView+TKCategory.m in Sources */,
 				1503587820DA8A1E0080AFCA /* SGPageContentCollectionView.m in Sources */,
+				B224C06E213677BD00319FFB /* DZSeatReserveView.m in Sources */,
 				1503589520DB7A300080AFCA /* HPIncreaseButton.m in Sources */,
 				1503587720DA8A1E0080AFCA /* SGPageContentScrollView.m in Sources */,
 				B27E5C2520F0BC79007C4FCC /* JXAlertview.m in Sources */,
@@ -1779,6 +1813,7 @@
 				B29ED10E20ECC17500A1D044 /* DZSearchResultCollectionView.m in Sources */,
 				150D118820D900E400657506 /* PaymentViewController.m in Sources */,
 				15C71CF320CC2B1E001D32EB /* DZWKWebViewController.m in Sources */,
+				B224C07B2136890000319FFB /* DZActivityTableViewCell.m in Sources */,
 				150359ED20DCD8FD0080AFCA /* CompanyAllGoodsModel.m in Sources */,
 				B29ED15820EDF9CD00A1D044 /* UIImage+HPUtil.m in Sources */,
 				1515236720E863EE00B4FBBB /* LoginViewController.m in Sources */,
@@ -1813,6 +1848,7 @@
 				1503588D20DB56580080AFCA /* DZRequests.m in Sources */,
 				150D11A020DA4A1D00657506 /* SellerBusinessViewController.m in Sources */,
 				1503587620DA8A1E0080AFCA /* UIView+SGPagingView.m in Sources */,
+				B224C07A2136890000319FFB /* SellerBusinessRelatedTableViewCell.m in Sources */,
 				1580302820E5258E00A16384 /* Takeout_OrderDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

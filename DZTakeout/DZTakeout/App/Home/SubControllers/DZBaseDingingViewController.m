@@ -9,7 +9,8 @@
 #import "DZBaseDingingViewController.h"
 #import "DZSeatSelectionView.h"
 #import "FoodsOrderViewController.h"
-@interface DZBaseDingingViewController ()
+#import "DZSeatReserveView.h"
+@interface DZBaseDingingViewController ()<DZSeatReserveViewDelegate>
 @property (nonatomic,weak) DZSeatSelectionView *selectionView;
 @property (nonatomic,strong) NSString *tableNO;
 @property (nonatomic,strong) NSString *tableID;
@@ -85,7 +86,14 @@
     [DZRequests post:@"BookTime" parameters:params success:^(id record) {
         if ([record isKindOfClass:[NSDictionary class]]) {
             NSDictionary *recordDict = (NSDictionary *)record;
-            [weakSelf showSeatSelectionViewWithInfo:recordDict];
+            if ([[recordDict allKeys]containsObject:@"totalCount"]) {
+                NSInteger totalCount = [recordDict[@"totalCount"] integerValue];
+                if (totalCount >0) {
+                    [weakSelf showSeatReserveInfo:recordDict];
+                }else{
+                    [weakSelf requestSeatInfo];
+                }
+            }
         }
         
     } failure:^(HPRequestsError type, NSError *error) {
@@ -139,7 +147,10 @@
         occasionalHint(error.localizedDescription);
     }];
 }
-
+#pragma mark 代理
+-(void)continueReserve{
+    [self requestSeatInfo];
+}
 #pragma mark - 其他
 //进点菜界面
 -(void)gotoFoodsOrderViewController:(NSDictionary *)orderInfo{
@@ -175,6 +186,15 @@
     self.selectionView.hidden = NO;
     [self.selectionView reloadUIWithSeatInfo:infoDict];
 }
+
+//预定信息
+-(void)showSeatReserveInfo:(NSDictionary *)recordDict{
+    DZSeatReserveView *seatReserveView = [[NSBundle mainBundle] loadNibNamed:@"DZSeatReserveView" owner:nil options:nil].firstObject;
+    seatReserveView.frame = self.view.bounds;
+    seatReserveView.delegate = self;
+    [seatReserveView setupSeatReserveInfo:recordDict];
+    [self.view addSubview:seatReserveView];
+}
 //返回
 -(void)onReturnBackComplete:(void (^)(void))complete{
     if (_selectionView) {
@@ -193,8 +213,8 @@
         selectionView.paySecurityBlock = ^(NSString *endTime, NSString *mealNum, NSString *phoneNum) {
             [weakSelf requestPaySecurityInfoEndTime:endTime mealNum:mealNum phoneNum:phoneNum];
         };
-        selectionView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-        [[UIApplication sharedApplication].keyWindow addSubview:selectionView];
+        selectionView.frame = self.view.bounds;
+        [self.view addSubview:selectionView];
         _selectionView = selectionView;
     }
     return _selectionView;
