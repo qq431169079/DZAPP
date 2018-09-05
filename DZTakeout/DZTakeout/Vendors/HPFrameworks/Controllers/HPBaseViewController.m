@@ -83,6 +83,9 @@ void _private_hy_swizzle(Class cls, SEL originalSelector) {
 @end
 
 @implementation HPBaseViewController
+-(void)dealloc{
+    NSLog(@"%s------------------------------",__func__);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

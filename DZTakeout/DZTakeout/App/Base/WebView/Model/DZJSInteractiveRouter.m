@@ -19,9 +19,9 @@
 #import "SellerBusinessViewController.h"
 #import "PaymentViewController.h"
 #import "DZActivityViewController.h"
-
-
-
+#import "DZMenushowViewController.h"
+#import "DZFoodReservationViewController.h"
+#import "DZMapViewController.h"
 #import "HPPayment.h"
 
 /// 美食模块
@@ -153,6 +153,15 @@
         }
 
     }
+    else if ([destn isEqualToString:@"mspayFoodsOrder"]) {
+        // 点菜结算
+        if (params.count == 2 && [self validArgs:params]) {
+            DZFoodReservationViewController *controller = [DZFoodReservationViewController controller];
+            controller.orderId = params.firstObject;
+            controller.cid = params.lastObject;
+            return controller;
+        }
+    }
     else if ([destn isEqualToString:@"pay"]) {
         // 支付押金
         if (params.count == 2 && [self validArgs:params]) {
@@ -175,6 +184,13 @@
         activityViewController.activityId = [params firstObject];
         return activityViewController;
     }
+    else if ([destn isEqualToString:@"menushow"]) {
+        // 预览菜品
+        DZMenushowViewController *menushowViewController = [DZMenushowViewController controller];
+        menushowViewController.cid = [params firstObject];
+        return menushowViewController;
+    }
+
     return nil;
 }
 

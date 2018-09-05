@@ -49,6 +49,9 @@
 	<array>
 		<string>wx932fb18d44e00508</string>
 		<string>weixin</string>
+		<string>baidumap</string>
+		<string>iosamap</string>
+		<string>qqmap</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

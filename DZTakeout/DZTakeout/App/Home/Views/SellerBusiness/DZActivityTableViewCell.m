@@ -29,11 +29,14 @@
     // Configure the view for the selected state
 }
 -(void)setCellWithModel:(DiscountModel *)model needSelectedIcon:(BOOL)needIcon selected:(BOOL)selected{
-    self.activityName.text = model.activityName1;
-    self.subTitle.text =model.subtraction;
+    NSString *action = [NSString stringWithFormat:@"%@ %@",model.activityName1,model.subtraction];
+    self.activityName.text = action;
+    
 //    tabbar_discover_normal
     //tabbar_discover_highlight
     if (needIcon) {
+        self.subTitle.hidden = NO;
+        self.subTitle.text = [NSString stringWithFormat:@"%ld个活动",(long)self.totalNum];
         self.openImageView.hidden = NO;
         NSString *imageName = @"c_company_info_down";
         if (selected) {
@@ -41,6 +44,10 @@
         }
         self.openImageView.image = [UIImage imageNamed:imageName];
     }else{
+        self.subTitle.hidden = YES;
+        self.openImageView.hidden = YES;
+    }
+    if (self.totalNum == 1) {
         self.openImageView.hidden = YES;
     }
 }

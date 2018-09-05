@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebViewWithURL:@"http://39.108.6.102:8080/DzClient/checkout/cart-order-detail.html"];
+    [self loadWebViewWithURL:DZCartOrderDetailURL];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

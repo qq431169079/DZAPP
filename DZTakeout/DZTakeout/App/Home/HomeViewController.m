@@ -15,12 +15,14 @@
 #import "DZBMKLocationTool.h"
 #import "DZLoadingView.h"
 #import "DZLoadingHoldView.h"
+#import "DZJSActionRouter.h"
 @interface HomeViewController ()<
 DZFakeNavigationBarDelegate,
 UIScrollViewDelegate,
 UIWebViewDelegate,
 BMKLocationAuthDelegate,
-BMKLocationManagerDelegate
+BMKLocationManagerDelegate,
+DZJSActionRouterDelegate
 >
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -29,6 +31,7 @@ BMKLocationManagerDelegate
 @property (nonatomic, strong) BMKLocationManager *locationManager;
 @property (nonatomic, weak) DZLoadingView *loadingView;         //下拉刷新的动画
 @property (nonatomic, weak) DZLoadingHoldView *loadingHoldView;//加载的动画
+@property (nonatomic,strong) DZJSActionRouter *actionRouter;
 @end
 
 @implementation HomeViewController
@@ -81,7 +84,7 @@ BMKLocationManagerDelegate
 }
 -(void)loadWebViewWithLocation:(BMKLocation *)location{
     
-    NSString *homeURL = [NSString stringWithFormat:@"http://39.108.6.102:8080/DzClient/index/index.html?lng=%@",[DZBMKLocationTool sharedInstance].coordinateStr];
+    NSString *homeURL = [NSString stringWithFormat:@"%@?lng=%@",DZHomeURL,[DZBMKLocationTool sharedInstance].coordinateStr];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:homeURL]];
     [self.webView loadRequest:request];
@@ -113,7 +116,7 @@ BMKLocationManagerDelegate
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context[@"android"] = self;
+    self.context[@"android"] = self.actionRouter;
     [self.loadingHoldView setImageWithRequestResult:DZRequestSuccess];
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -168,7 +171,6 @@ BMKLocationManagerDelegate
     
     [self.navBar gradation_scrollViewDidScroll:scrollView];
     CGFloat offset = scrollView.contentOffset.y;
-    NSLog(@"offset___%f",offset);
     if (offset<0) {
         [self reloadWebViewWithOffset:offset];
     }
@@ -268,4 +270,11 @@ BMKLocationManagerDelegate
     // Dispose of any resources that can be recreated.
 }
 
+-(DZJSActionRouter *)actionRouter{
+    if (_actionRouter == nil) {
+        _actionRouter = [[DZJSActionRouter alloc] init];
+        _actionRouter.delegate = self;
+    }
+    return _actionRouter;
+}
 @end

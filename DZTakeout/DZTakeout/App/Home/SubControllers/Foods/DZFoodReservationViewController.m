@@ -1,28 +1,27 @@
 //
-//  BookFoodsSuccessfulViewController.m
+//  DZFoodReservationViewController.m
 //  DZTakeout
 //
-//  Created by HuangPan on 2018/6/19.
+//  Created by 林鸿键 on 2018/8/31.
 //  Copyright © 2018年 HuangPan. All rights reserved.
 //
 
-#import "BookFoodsSuccessfulViewController.h"
+#import "DZFoodReservationViewController.h"
 
-@interface BookFoodsSuccessfulViewController ()
+@interface DZFoodReservationViewController ()
 
 @end
 
-@implementation BookFoodsSuccessfulViewController
-#pragma mark - Initialize Methods
-- (BOOL)prefersNavigationBarHidden {
-    return YES;
-}
+@implementation DZFoodReservationViewController
 
-#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self loadWebViewWithURL:DZPredeFinedSuccessURL];
+    self.title = @"结算清单";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:self.cid forKey:@"cid"];
+    [params setValue:[UserHelper userToken] forKey:@"token"];
+    [params setValue:self.orderId forKey:@"orderId"];
+    [self loadWebView:DZFoodReservationURL params:params];
 }
 
 - (void)didReceiveMemoryWarning {

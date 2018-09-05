@@ -8,14 +8,15 @@
 
 #import "DZWKWebViewController.h"
 #import "DZLoadingHoldView.h"
-
-@interface DZWKWebViewController ()<UIWebViewDelegate>
+#import "DZBMKLocationTool.h"
+#import "DZJSActionRouter.h"
+@interface DZWKWebViewController ()<UIWebViewDelegate,DZJSActionRouterDelegate>
 
 
 @property (nonatomic, strong) JSContext *context;
 @property (nonatomic, weak) DZLoadingHoldView *loadingHoldView;//加载的动画
 @property (nonatomic,strong) NSString *curURL;
-
+@property (nonatomic,strong) DZJSActionRouter *actionRouter;
 @end
 
 @implementation DZWKWebViewController
@@ -52,8 +53,7 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context[@"android"] = self;
-
+    self.context[@"android"] = self.actionRouter;
     [self.loadingHoldView setImageWithRequestResult:DZRequestSuccess];
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -114,7 +114,44 @@
         }];
         [alertController addAction:cancelAction];
         [self presentViewController:alertController animated:YES completion:nil];
-    }else{
+    }else if ([destn isEqualToString:@"nav"]){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"选择导航地图" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        //百度地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"百度地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    
+                NSString *baiduURL = [[NSString stringWithFormat:@"baidumap://map/direction?&origin=name:我的位置|latlng:%@&destination=%@&mode=driving",[DZBMKLocationTool sharedInstance].coordinateStr,param] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:baiduURL]];
+            }];
+            [alertController addAction:baiduAction];
+        }
+        //高德地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"高德地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSArray *location = [param componentsSeparatedByString:@","];
+              NSString *url = [[NSString stringWithFormat:@"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&slat=%lf&slon=%lf&sname=我的位置&did=BGVIS2&dlat=%@&dlon=%@&dev=0&m=0&t=0",[DZBMKLocationTool sharedInstance].curLocation.location.coordinate.latitude,[DZBMKLocationTool sharedInstance].curLocation.location.coordinate.longitude, [location firstObject],[location lastObject]] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+            }];
+            [alertController addAction:baiduAction];
+        }
+                                          
+        //苹果地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://maps.apple.com"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"苹果地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSString *urlString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@",param] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+
+            }];
+            [alertController addAction:baiduAction];
+        }
+
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    } else{
         UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:destn param:param];
         [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
     }
@@ -154,9 +191,13 @@
 #pragma mark - Getter & Setter
 - (UIWebView *)webView {
     if (!_webView) {
+        
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _webView.delegate = self;
         _webView.backgroundColor = [UIColor whiteColor];
+        self.context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+        self.context[@"android"] = self.actionRouter;
+
     }
     return _webView;
 }
@@ -178,5 +219,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(DZJSActionRouter *)actionRouter{
+    if (_actionRouter == nil) {
+        _actionRouter = [[DZJSActionRouter alloc] init];
+        _actionRouter.delegate = self;
+    }
+    return _actionRouter;
+}
 @end

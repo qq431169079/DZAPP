@@ -23,7 +23,7 @@
         [params setValue:self.orderNo forKey:@"orderNo"];
     }
     [params setValue:[UserHelper userToken] forKey:@"token"];
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/orderDetail/orderindex.html" params:params];
+    [self loadWebView:DZOrderDetailURL params:params];
 }
 
 - (void)onReturnBackComplete:(void (^)(void))complete {

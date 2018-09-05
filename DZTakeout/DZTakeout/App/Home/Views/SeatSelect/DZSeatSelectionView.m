@@ -192,7 +192,7 @@
     NSString *phoneNum = self.phoneNumTextField.text;
     if (HPCheckValue(phoneNum, HPCheckTypePhoneNumber)) {
         if (self.orderDishesBlock) {
-            NSString *endTime = [NSString stringWithFormat:@"%@-%@-%@",self.dayLab.text,self.hourLab.text,self.minuteLab.text];
+             NSString *endTime = [NSString stringWithFormat:@"%@-%@-%@-%@",self.monthLab.text,self.dayLab.text,self.hourLab.text,self.minuteLab.text];
             
             self.orderDishesBlock(endTime,self.personNumLab.text,phoneNum);
         }
@@ -207,7 +207,7 @@
     NSString *phoneNum = self.phoneNumTextField.text;
     if (HPCheckValue(phoneNum, HPCheckTypePhoneNumber)) {
         if (self.paySecurityBlock) {
-            NSString *endTime = [NSString stringWithFormat:@"%@-%@-%@",self.dayLab.text,self.hourLab.text,self.minuteLab.text];
+            NSString *endTime = [NSString stringWithFormat:@"%@-%@-%@-%@",self.monthLab.text,self.dayLab.text,self.hourLab.text,self.minuteLab.text];
             
             self.paySecurityBlock(endTime,self.personNumLab.text,phoneNum);
         }
@@ -223,7 +223,9 @@
 -(void)keyboardWillShow:(NSNotification *)info{
     NSDictionary* userInfo = [info userInfo];
     CGRect keyboardFrameEnd = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];//键盘高度
-    
+    CGFloat fix = 64.0;
+    keyboardFrameEnd.origin.y -= fix;
+    keyboardFrameEnd.size.height += fix;
     if (self.keyboardShowBlock) {
         self.keyboardShowBlock(keyboardFrameEnd);
     }

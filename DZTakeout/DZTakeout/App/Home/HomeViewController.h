@@ -7,8 +7,8 @@
 //
 
 #import "HPViewController.h"
-#import "DZJSInteractiveExport.h"
 
-@interface HomeViewController : HPViewController<DZJSInteractiveExport>
+
+@interface HomeViewController : HPViewController
 
 @end

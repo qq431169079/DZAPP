@@ -51,11 +51,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _maxSlideOriginY = ASPECT_BLUR_HEIGHT + 55;
+    _maxSlideOriginY = ASPECT_BLUR_HEIGHT + 45;
     _minSlideOriginY = ASPECT_NAV_HEIGHT;
     
     CGRect frame = self.view.bounds;
-    frame.origin.y = ASPECT_BLUR_HEIGHT + 55;
+    frame.origin.y = ASPECT_BLUR_HEIGHT + 45;
     frame.size.height -= frame.origin.y;
     [self addChildViewController:self.containerViewController];
     [self.containerViewController didMoveToParentViewController:self];

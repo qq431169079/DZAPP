@@ -39,7 +39,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    [self loadWebViewWithURL:@"http://39.108.6.102:8080/DzClient/treasure/treasure.html"];
+    [self loadWebViewWithURL:DZTreasureURL];
 }
 
 - (void)setupSubviews {

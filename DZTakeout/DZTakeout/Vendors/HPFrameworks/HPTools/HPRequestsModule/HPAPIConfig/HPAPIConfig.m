@@ -87,7 +87,14 @@
     if (apiName) {
         NSDictionary *dict = [[_configDictionary objectForKey:HPApiServiceKey] objectForKey:apiName];
         if (dict ) {
-            return [dict objectForKey:HPAPINameKey];
+            NSString *baseURL = self.baseUrlPrefix;
+            NSString *api = [dict objectForKey:HPAPINameKey];
+            if ([api containsString:@"http://"] || [api containsString:@"https://"]) {
+                return api;
+            }else{
+                return [NSString stringWithFormat:@"%@%@",baseURL,api];
+            }
+//            return [dict objectForKey:HPAPINameKey];
         } else {
             NSLog(@"ERROR>>LEConfigurate : your apiName can not found!\n");
         }

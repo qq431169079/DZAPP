@@ -1,16 +1,16 @@
 //
-//  DZWKWebViewController.h
+//  DZBaseWKViewController.h
 //  DZTakeout
 //
-//  Created by HuangPan on 2018/6/9.
+//  Created by HuangPan on 2018/6/20.
 //  Copyright © 2018年 HuangPan. All rights reserved.
 //
 
-#import "HPViewController.h"
-#import "DZJSInteractiveExport.h"
+#import "HPBaseViewController.h"
 
-@interface DZWKWebViewController : HPViewController<DZJSInteractiveExport>
-@property (nonatomic, strong) UIWebView *webView;
+
+@interface DZBaseWKViewController : HPBaseViewController
+
 /**
  * 不带其他参数的
  * urlString
@@ -27,7 +27,7 @@
 #pragma mark - Initialize Methods
 /**
  webview布局
-
+ 
  @return 边距
  */
 - (UIEdgeInsets)webViewEdges;
@@ -36,14 +36,14 @@
 
 /**
  调起控制器
-
+ 
  @param destn 目标控制器
  */
 - (void)launch:(NSString *)destn;
 
 /**
  调起控制器
-
+ 
  @param destn 目标控制器
  @param param 参数
  */

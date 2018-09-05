@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/goodsList/seller-comment.html" params:@{@"cid":self.companyId}];
+    [self loadWebView:DZGoodsListURL params:@{@"cid":self.companyId}];
 }
 
 - (void)dealloc {

@@ -26,11 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    [self loadWebViewWithURL:DZUserAddr([UserHelper userToken])];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self loadWebViewWithURL:DZUserAddr([UserHelper userToken])];
+    [self.webView reload];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

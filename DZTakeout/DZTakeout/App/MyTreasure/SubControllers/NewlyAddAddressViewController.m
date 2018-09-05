@@ -7,8 +7,8 @@
 //
 
 #import "NewlyAddAddressViewController.h"
-
-@interface NewlyAddAddressViewController ()
+#import "DZMapViewController.h"
+@interface NewlyAddAddressViewController ()<DZMapDelegate>
 
 @end
 
@@ -30,5 +30,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)launch:(NSString *)destn{
+    if ([destn isEqualToString:@"map"]) {
+        DZMapViewController *mapVC = [DZMapViewController controller];
+        mapVC.delegate = self;
+        [self.navigationController pushViewController:mapVC animated:YES];
+    }
+}
+-(void)checkMapAddress:(NSArray *)Address{
+    if (Address.count == 3) {
+        NSString *addr = Address.firstObject;
+        NSString *lng = Address[1];
+        NSString *lat = Address.lastObject;
+        [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"window.set(\"%@\",\"%@\",\"%@\")",addr,lng,lat]];
+    }
 
+}
 @end

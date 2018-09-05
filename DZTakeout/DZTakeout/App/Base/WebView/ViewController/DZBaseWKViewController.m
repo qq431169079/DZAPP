@@ -10,14 +10,14 @@
 #import "TKAlertCenter.h"
 #import "DZSeatSelectionView.h"
 #import "DZLoadingHoldView.h"
-
-@interface DZBaseWKViewController ()<UIWebViewDelegate, UIScrollViewDelegate>
+#import "DZJSActionRouter.h"
+@interface DZBaseWKViewController ()<UIWebViewDelegate, UIScrollViewDelegate,DZJSActionRouterDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 @property (nonatomic, strong) JSContext *context;
 @property (nonatomic, weak) DZLoadingHoldView *loadingHoldView;//加载的动画
 @property (nonatomic,strong) NSString *curURL;
-
+@property (nonatomic,strong) DZJSActionRouter *actionRouter;
 @end
 
 @implementation DZBaseWKViewController
@@ -50,7 +50,7 @@
 #pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-    self.context[@"android"] = self;
+    self.context[@"android"] = self.actionRouter;
     [self.loadingHoldView setImageWithRequestResult:DZRequestSuccess];
 }
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -152,6 +152,8 @@
         _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         _webView.delegate = self;
         _webView.backgroundColor = [UIColor whiteColor];
+        self.context = [_webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+        self.context[@"android"] = self.actionRouter;
         _webView.scrollView.delegate = self;
     }
     return _webView;
@@ -175,5 +177,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(DZJSActionRouter *)actionRouter{
+    if (_actionRouter == nil) {
+        _actionRouter = [[DZJSActionRouter alloc] init];
+        _actionRouter.delegate = self;
+    }
+    return _actionRouter;
+}
 @end

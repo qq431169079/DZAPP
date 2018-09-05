@@ -26,11 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/goodsList/order-food.html" params:@{@"cid":self.companyId, @"token":[UserHelper userToken],@"orderNo":self.orderNo}];
+    [self loadWebView:DZOrderFoodURL params:@{@"cid":self.companyId, @"token":[UserHelper userToken],@"orderNo":self.orderNo}];
     [UserHelper temporaryCacheObject:self.orderNo forKey:kOrderNoCacheKey];
     [UserHelper temporaryCacheObject:self.orderId forKey:kOrderIdCacheKey];
 }
+- (void)launch:(NSString *)destn {
+    
+    if ([destn isEqualToString:@"mspay"]) {
+        NSArray *params = [NSArray arrayWithObjects:self.orderId, self.companyId,nil];
+        [super launch:@"mspayFoodsOrder" withParams:params];
 
+    }
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

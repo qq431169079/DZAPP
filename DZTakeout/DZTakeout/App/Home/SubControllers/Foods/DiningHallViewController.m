@@ -17,7 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDictionary *param = @{@"cid":self.companyId,@"token":[UserHelper userToken]};
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/selectSeat/select-seat.html" params:param];
+    [self loadWebView:DZSelectSeatURL params:param];
 }
 
 - (void)didReceiveMemoryWarning {

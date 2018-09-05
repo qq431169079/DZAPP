@@ -8,7 +8,7 @@
 
 #import "FoodsBusinessDetailsViewController.h"
 #import "UIButton+HPUtil.h"
-
+#import "DZBMKLocationTool.h"
 @interface FoodsBusinessDetailsViewController ()
 
 @property (nonatomic, strong) UIButton *backButton;
@@ -47,7 +47,7 @@
     self.view.backgroundColor = RGB(250, 126, 0);
     // Do any additional setup after loading the view.
     [self _setupSubviews];
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/foodDetail/shop.html" params:@{@"cid":self.companyId, @"location":@"22.6733000000,114.0651500000"}];
+    [self loadWebView:DZFoodDetailURL params:@{@"cid":self.companyId, @"location":[DZBMKLocationTool sharedInstance].coordinateStr}];
     
     __weak typeof(self) wself = self;
     [UserHelper temporaryCacheObject:wself forKey:kOrderDetailsCacheKey];

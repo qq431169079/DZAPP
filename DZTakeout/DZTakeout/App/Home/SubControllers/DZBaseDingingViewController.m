@@ -105,7 +105,7 @@
 - (void)requestFoodsOrderInfoEndTime:(NSString *)endTime mealNum:(NSString *)mealNum phoneNum:(NSString *)phoneNum{
     DZWeakSelf(self)
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            self.tableNO,@"tableNo",
+                            self.tableID,@"tableNo",
                             self.companyId,@"cid",
                             [UserHelper userToken],@"token",
                             self.tableName,@"Remarks",
@@ -128,7 +128,7 @@
 - (void)requestPaySecurityInfoEndTime:(NSString *)endTime mealNum:(NSString *)mealNum phoneNum:(NSString *)phoneNum{
     DZWeakSelf(self)
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            self.tableNO,@"tableNo",
+                            self.tableID,@"tableNo",
                             self.companyId,@"cid",
                             [UserHelper userToken],@"token",
                             self.tableName,@"Remarks",

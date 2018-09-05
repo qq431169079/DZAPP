@@ -30,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDictionary *params = @{@"orderId":self.orderId, @"token":[UserHelper userToken]};
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/taskpay/pay.html" params:params];
+    [self loadWebView:DZTaskPayURL params:params];
     _orderNo = [UserHelper temporaryObjectForKey:kOrderNoCacheKey];
     [self setupNotifications];
 }

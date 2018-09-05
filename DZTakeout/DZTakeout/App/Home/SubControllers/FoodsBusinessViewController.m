@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view.
     [self __setupNavBar];
     
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/fooderSearch/fooderSearch.html" params:@{@"lng":[DZBMKLocationTool sharedInstance].coordinateStr}];
+    [self loadWebView:DZFooderSearchURL params:@{@"lng":[DZBMKLocationTool sharedInstance].coordinateStr}];
 }
 
 - (void)__setupNavBar {

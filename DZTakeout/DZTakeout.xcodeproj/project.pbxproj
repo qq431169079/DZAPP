@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1503585F20DA60100080AFCA /* SellerCommentsAndOrdersContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503585E20DA60100080AFCA /* SellerCommentsAndOrdersContainerController.m */; };
-		1503586320DA85A00080AFCA /* DZBaseWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503586220DA85A00080AFCA /* DZBaseWKViewController.m */; };
 		1503587520DA8A1E0080AFCA /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503586820DA8A1E0080AFCA /* UIButton+SGPagingView.m */; };
 		1503587620DA8A1E0080AFCA /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503586920DA8A1E0080AFCA /* UIView+SGPagingView.m */; };
 		1503587720DA8A1E0080AFCA /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1503586B20DA8A1E0080AFCA /* SGPageContentScrollView.m */; };
@@ -73,7 +72,6 @@
 		150D11AD20DA500F00657506 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11AC20DA500F00657506 /* MyOrdersViewController.m */; };
 		150D11B320DA517600657506 /* MyCollectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11B220DA517600657506 /* MyCollectsViewController.m */; };
 		150D11B620DA51E300657506 /* MyCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11B520DA51E300657506 /* MyCommentsViewController.m */; };
-		150D231120D168E600A5B46D /* DZJSInteractiveRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231020D168E600A5B46D /* DZJSInteractiveRouter.m */; };
 		150D231420D16DE200A5B46D /* DZFakeSearchNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231320D16DE200A5B46D /* DZFakeSearchNavBar.m */; };
 		150D231720D40A4A00A5B46D /* FoodsBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231620D40A4A00A5B46D /* FoodsBusinessViewController.m */; };
 		150D231D20D40F1100A5B46D /* FoodsBusinessDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231C20D40F1100A5B46D /* FoodsBusinessDetailsViewController.m */; };
@@ -115,7 +113,6 @@
 		15BB6DD2206E881E00B5A63D /* DZFakeNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BB6DD1206E881E00B5A63D /* DZFakeNavigationBar.m */; };
 		15C71CEB20CC1575001D32EB /* TakeawayBusinessListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C71CEA20CC1575001D32EB /* TakeawayBusinessListViewController.m */; };
 		15C71CF020CC1B04001D32EB /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C71CEF20CC1B04001D32EB /* JavaScriptCore.framework */; };
-		15C71CF320CC2B1E001D32EB /* DZWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C71CF220CC2B1E001D32EB /* DZWKWebViewController.m */; };
 		15C71CF820CEC70A001D32EB /* HPJSInteractiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C71CF720CEC70A001D32EB /* HPJSInteractiveView.m */; };
 		15C71CFA20CEDD96001D32EB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15C71CF920CEDD95001D32EB /* index.html */; };
 		69EF62F278F3F791E9ABD73B /* libPods-DZTakeout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B90E700D46115A94E415C5 /* libPods-DZTakeout.a */; };
@@ -131,6 +128,13 @@
 		B224C07A2136890000319FFB /* SellerBusinessRelatedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0752136890000319FFB /* SellerBusinessRelatedTableViewCell.m */; };
 		B224C07B2136890000319FFB /* DZActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0762136890000319FFB /* DZActivityTableViewCell.m */; };
 		B224C07C2136890000319FFB /* DZActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B224C0782136890000319FFB /* DZActivityTableViewCell.xib */; };
+		B224C0892139131E00319FFB /* DZMenushowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C0882139131E00319FFB /* DZMenushowViewController.m */; };
+		B224C08C21392F3400319FFB /* DZFoodReservationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C08B21392F3400319FFB /* DZFoodReservationViewController.m */; };
+		B224C08F213BC3FD00319FFB /* DZMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C08E213BC3FD00319FFB /* DZMapViewController.m */; };
+		B224C09B213CCD0600319FFB /* DZJSInteractiveRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C092213CCD0600319FFB /* DZJSInteractiveRouter.m */; };
+		B224C09C213CCD0600319FFB /* DZBaseWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C097213CCD0600319FFB /* DZBaseWKViewController.m */; };
+		B224C09D213CCD0600319FFB /* DZWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C098213CCD0600319FFB /* DZWKWebViewController.m */; };
+		B224C0A0213CD0B600319FFB /* DZJSActionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C09F213CD0B600319FFB /* DZJSActionRouter.m */; };
 		B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C238F20EF63200021F5ED /* DiscoverViewController.m */; };
 		B25C239720EF63200021F5ED /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C239120EF63200021F5ED /* MessageViewController.m */; };
 		B25C23A620EF64860021F5ED /* DZAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23A420EF64860021F5ED /* DZAddressBookViewController.m */; };
@@ -198,8 +202,6 @@
 /* Begin PBXFileReference section */
 		1503585D20DA60100080AFCA /* SellerCommentsAndOrdersContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellerCommentsAndOrdersContainerController.h; sourceTree = "<group>"; };
 		1503585E20DA60100080AFCA /* SellerCommentsAndOrdersContainerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellerCommentsAndOrdersContainerController.m; sourceTree = "<group>"; };
-		1503586120DA85A00080AFCA /* DZBaseWKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZBaseWKViewController.h; sourceTree = "<group>"; };
-		1503586220DA85A00080AFCA /* DZBaseWKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZBaseWKViewController.m; sourceTree = "<group>"; };
 		1503586620DA8A1E0080AFCA /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
 		1503586720DA8A1E0080AFCA /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
 		1503586820DA8A1E0080AFCA /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
@@ -324,9 +326,6 @@
 		150D11B220DA517600657506 /* MyCollectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectsViewController.m; sourceTree = "<group>"; };
 		150D11B420DA51E300657506 /* MyCommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCommentsViewController.h; sourceTree = "<group>"; };
 		150D11B520DA51E300657506 /* MyCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCommentsViewController.m; sourceTree = "<group>"; };
-		150D230E20D165A700A5B46D /* DZJSInteractiveExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZJSInteractiveExport.h; sourceTree = "<group>"; };
-		150D230F20D168E600A5B46D /* DZJSInteractiveRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZJSInteractiveRouter.h; sourceTree = "<group>"; };
-		150D231020D168E600A5B46D /* DZJSInteractiveRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZJSInteractiveRouter.m; sourceTree = "<group>"; };
 		150D231220D16DE200A5B46D /* DZFakeSearchNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFakeSearchNavBar.h; sourceTree = "<group>"; };
 		150D231320D16DE200A5B46D /* DZFakeSearchNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFakeSearchNavBar.m; sourceTree = "<group>"; };
 		150D231520D40A4A00A5B46D /* FoodsBusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodsBusinessViewController.h; sourceTree = "<group>"; };
@@ -408,8 +407,6 @@
 		15C71CE920CC1575001D32EB /* TakeawayBusinessListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakeawayBusinessListViewController.h; sourceTree = "<group>"; };
 		15C71CEA20CC1575001D32EB /* TakeawayBusinessListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakeawayBusinessListViewController.m; sourceTree = "<group>"; };
 		15C71CEF20CC1B04001D32EB /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		15C71CF120CC2B1E001D32EB /* DZWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZWKWebViewController.h; sourceTree = "<group>"; };
-		15C71CF220CC2B1E001D32EB /* DZWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZWKWebViewController.m; sourceTree = "<group>"; };
 		15C71CF620CEC70A001D32EB /* HPJSInteractiveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPJSInteractiveView.h; sourceTree = "<group>"; };
 		15C71CF720CEC70A001D32EB /* HPJSInteractiveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPJSInteractiveView.m; sourceTree = "<group>"; };
 		15C71CF920CEDD95001D32EB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -436,6 +433,21 @@
 		B224C0762136890000319FFB /* DZActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZActivityTableViewCell.m; sourceTree = "<group>"; };
 		B224C0772136890000319FFB /* SellerBusinessRelatedViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellerBusinessRelatedViews.h; sourceTree = "<group>"; };
 		B224C0782136890000319FFB /* DZActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZActivityTableViewCell.xib; sourceTree = "<group>"; };
+		B224C0872139131E00319FFB /* DZMenushowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZMenushowViewController.h; sourceTree = "<group>"; };
+		B224C0882139131E00319FFB /* DZMenushowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZMenushowViewController.m; sourceTree = "<group>"; };
+		B224C08A21392F3400319FFB /* DZFoodReservationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFoodReservationViewController.h; sourceTree = "<group>"; };
+		B224C08B21392F3400319FFB /* DZFoodReservationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFoodReservationViewController.m; sourceTree = "<group>"; };
+		B224C08D213BC3FD00319FFB /* DZMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZMapViewController.h; sourceTree = "<group>"; };
+		B224C08E213BC3FD00319FFB /* DZMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZMapViewController.m; sourceTree = "<group>"; };
+		B224C092213CCD0600319FFB /* DZJSInteractiveRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZJSInteractiveRouter.m; sourceTree = "<group>"; };
+		B224C093213CCD0600319FFB /* DZJSInteractiveExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZJSInteractiveExport.h; sourceTree = "<group>"; };
+		B224C094213CCD0600319FFB /* DZJSInteractiveRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZJSInteractiveRouter.h; sourceTree = "<group>"; };
+		B224C097213CCD0600319FFB /* DZBaseWKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZBaseWKViewController.m; sourceTree = "<group>"; };
+		B224C098213CCD0600319FFB /* DZWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZWKWebViewController.m; sourceTree = "<group>"; };
+		B224C099213CCD0600319FFB /* DZBaseWKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZBaseWKViewController.h; sourceTree = "<group>"; };
+		B224C09A213CCD0600319FFB /* DZWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWKWebViewController.h; sourceTree = "<group>"; };
+		B224C09E213CD0B600319FFB /* DZJSActionRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZJSActionRouter.h; sourceTree = "<group>"; };
+		B224C09F213CD0B600319FFB /* DZJSActionRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZJSActionRouter.m; sourceTree = "<group>"; };
 		B25C238E20EF63200021F5ED /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		B25C238F20EF63200021F5ED /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B25C239120EF63200021F5ED /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -833,6 +845,10 @@
 				150B5F2720E336C100484A5F /* FoodsPaymentViewController.m */,
 				1580302320E3EB9A00A16384 /* FoodsPayFailureViewController.h */,
 				1580302420E3EB9A00A16384 /* FoodsPayFailureViewController.m */,
+				B224C0872139131E00319FFB /* DZMenushowViewController.h */,
+				B224C0882139131E00319FFB /* DZMenushowViewController.m */,
+				B224C08A21392F3400319FFB /* DZFoodReservationViewController.h */,
+				B224C08B21392F3400319FFB /* DZFoodReservationViewController.m */,
 			);
 			path = Foods;
 			sourceTree = "<group>";
@@ -842,6 +858,8 @@
 			children = (
 				1580302620E5258E00A16384 /* Takeout_OrderDetailsViewController.h */,
 				1580302720E5258E00A16384 /* Takeout_OrderDetailsViewController.m */,
+				B224C08D213BC3FD00319FFB /* DZMapViewController.h */,
+				B224C08E213BC3FD00319FFB /* DZMapViewController.m */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -1018,15 +1036,9 @@
 		15AB3F9B2068EAFF00A8447E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B224C090213CCD0600319FFB /* WebView */,
 				B27E5C2020F0BC6A007C4FCC /* PickView */,
 				15AB3FDB20691EB600A8447E /* Macro */,
-				15C71CF120CC2B1E001D32EB /* DZWKWebViewController.h */,
-				15C71CF220CC2B1E001D32EB /* DZWKWebViewController.m */,
-				1503586120DA85A00080AFCA /* DZBaseWKViewController.h */,
-				1503586220DA85A00080AFCA /* DZBaseWKViewController.m */,
-				150D230E20D165A700A5B46D /* DZJSInteractiveExport.h */,
-				150D230F20D168E600A5B46D /* DZJSInteractiveRouter.h */,
-				150D231020D168E600A5B46D /* DZJSInteractiveRouter.m */,
 				1503588B20DB56580080AFCA /* DZRequests.h */,
 				1503588C20DB56580080AFCA /* DZRequests.m */,
 				B29ED15A20EDFA0100A1D044 /* DZLoadingView.h */,
@@ -1358,6 +1370,46 @@
 				B224C0782136890000319FFB /* DZActivityTableViewCell.xib */,
 			);
 			path = SellerBusiness;
+			sourceTree = "<group>";
+		};
+		B224C090213CCD0600319FFB /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B224C091213CCD0600319FFB /* Model */,
+				B224C095213CCD0600319FFB /* View */,
+				B224C096213CCD0600319FFB /* ViewController */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		B224C091213CCD0600319FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B224C094213CCD0600319FFB /* DZJSInteractiveRouter.h */,
+				B224C092213CCD0600319FFB /* DZJSInteractiveRouter.m */,
+				B224C093213CCD0600319FFB /* DZJSInteractiveExport.h */,
+				B224C09E213CD0B600319FFB /* DZJSActionRouter.h */,
+				B224C09F213CD0B600319FFB /* DZJSActionRouter.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B224C095213CCD0600319FFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B224C096213CCD0600319FFB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B224C099213CCD0600319FFB /* DZBaseWKViewController.h */,
+				B224C097213CCD0600319FFB /* DZBaseWKViewController.m */,
+				B224C09A213CCD0600319FFB /* DZWKWebViewController.h */,
+				B224C098213CCD0600319FFB /* DZWKWebViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		B25C238720EF63200021F5ED /* AddressBook */ = {
@@ -1726,7 +1778,6 @@
 				15AB3FDA20691B2300A8447E /* HPFileManager.m in Sources */,
 				150B5F1820E29C1C00484A5F /* SelectSeatViewController.m in Sources */,
 				B25C23AB20EF650E0021F5ED /* DZAddressBookTableViewCell.m in Sources */,
-				1503586320DA85A00080AFCA /* DZBaseWKViewController.m in Sources */,
 				150D232620D416A800A5B46D /* DZSegmentNavBarController.m in Sources */,
 				15AB3FC2206902BB00A8447E /* MyTreasureViewController.m in Sources */,
 				15BB6DCC206CCFAA00B5A63D /* UIView+HPUtil.m in Sources */,
@@ -1735,6 +1786,7 @@
 				B22228832133C51400559262 /* DZActivityViewController.m in Sources */,
 				150B5F2220E29DAD00484A5F /* DiningBoxViewController.m in Sources */,
 				150D11A920DA4E7500657506 /* EditUserAddressViewController.m in Sources */,
+				B224C09D213CCD0600319FFB /* DZWKWebViewController.m in Sources */,
 				1503587A20DA8A1E0080AFCA /* SGPageTitleViewConfigure.m in Sources */,
 				150B5F2C20E39FD200484A5F /* NSArray+HPUtil.m in Sources */,
 				150D11AD20DA500F00657506 /* MyOrdersViewController.m in Sources */,
@@ -1748,6 +1800,7 @@
 				1503599820DCD2390080AFCA /* HPCoverView.m in Sources */,
 				B27E5E4E20F3599C007C4FCC /* DZJrmfWalletSDK.m in Sources */,
 				1515236C20E8693800B4FBBB /* RegisterViewController.m in Sources */,
+				B224C09C213CCD0600319FFB /* DZBaseWKViewController.m in Sources */,
 				1515238C20E8722F00B4FBBB /* NSData+Base64.m in Sources */,
 				150D119120D94DE900657506 /* BookFoodsFailureViewController.m in Sources */,
 				B27E5C2620F0BC79007C4FCC /* CustomDayDatePicker.m in Sources */,
@@ -1755,9 +1808,9 @@
 				150D118520D9008900657506 /* ShoppingCartDetailsViewController.m in Sources */,
 				15AB3FA82068ECF300A8447E /* UIButton+HPUtil.m in Sources */,
 				150D11B620DA51E300657506 /* MyCommentsViewController.m in Sources */,
+				B224C09B213CCD0600319FFB /* DZJSInteractiveRouter.m in Sources */,
 				15AB3FD520691AAB00A8447E /* NSObject+NSCoding.m in Sources */,
 				15C71CEB20CC1575001D32EB /* TakeawayBusinessListViewController.m in Sources */,
-				150D231120D168E600A5B46D /* DZJSInteractiveRouter.m in Sources */,
 				B224C06D213677BD00319FFB /* DZSeatSelectionView.m in Sources */,
 				1503588420DB4FA90080AFCA /* HPRequests.m in Sources */,
 				1515238B20E8722F00B4FBBB /* NSData+Encryption.m in Sources */,
@@ -1776,10 +1829,12 @@
 				B25C23AF20EF671A0021F5ED /* DZFriendModel.m in Sources */,
 				15AB3FB62068FC9800A8447E /* HPTabBarController.m in Sources */,
 				B29ED15620EDF9CD00A1D044 /* NSString+HPUtil.m in Sources */,
+				B224C0A0213CD0B600319FFB /* DZJSActionRouter.m in Sources */,
 				B29ED15320EDF9CD00A1D044 /* NSString+BlockHelper.m in Sources */,
 				15AB3FD620691AAB00A8447E /* ClassProperty.m in Sources */,
 				15BB6DC3206CCEEC00B5A63D /* DZSearchNavigationBar.m in Sources */,
 				150D117F20D8116600657506 /* CommitOrderViewController.m in Sources */,
+				B224C08F213BC3FD00319FFB /* DZMapViewController.m in Sources */,
 				15035A2320E0EF840080AFCA /* HPPayment.m in Sources */,
 				150359F920DCE9C80080AFCA /* DZMenuScrollView.m in Sources */,
 				15035A0720DE5AA30080AFCA /* HPSegment.m in Sources */,
@@ -1812,13 +1867,13 @@
 				150358B320DCD12D0080AFCA /* HPAlertView+HP.m in Sources */,
 				B29ED10E20ECC17500A1D044 /* DZSearchResultCollectionView.m in Sources */,
 				150D118820D900E400657506 /* PaymentViewController.m in Sources */,
-				15C71CF320CC2B1E001D32EB /* DZWKWebViewController.m in Sources */,
 				B224C07B2136890000319FFB /* DZActivityTableViewCell.m in Sources */,
 				150359ED20DCD8FD0080AFCA /* CompanyAllGoodsModel.m in Sources */,
 				B29ED15820EDF9CD00A1D044 /* UIImage+HPUtil.m in Sources */,
 				1515236720E863EE00B4FBBB /* LoginViewController.m in Sources */,
 				15035A0A20DE5DE90080AFCA /* DZSegment.m in Sources */,
 				15035A0E20E0D0810080AFCA /* HPIMManager.m in Sources */,
+				B224C0892139131E00319FFB /* DZMenushowViewController.m in Sources */,
 				15AB3FB12068F15A00A8447E /* HPNavigationController.m in Sources */,
 				B29ED15420EDF9CD00A1D044 /* NSString+Base64.m in Sources */,
 				1515237120E86E1A00B4FBBB /* HPTool.m in Sources */,
@@ -1849,6 +1904,7 @@
 				150D11A020DA4A1D00657506 /* SellerBusinessViewController.m in Sources */,
 				1503587620DA8A1E0080AFCA /* UIView+SGPagingView.m in Sources */,
 				B224C07A2136890000319FFB /* SellerBusinessRelatedTableViewCell.m in Sources */,
+				B224C08C21392F3400319FFB /* DZFoodReservationViewController.m in Sources */,
 				1580302820E5258E00A16384 /* Takeout_OrderDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1979,7 +2035,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FXFAY595D;
+				DEVELOPMENT_TEAM = 8C3X8SM23N;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = DZTakeout/Info.plist;
@@ -2001,7 +2057,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FXFAY595D;
+				DEVELOPMENT_TEAM = 8C3X8SM23N;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = DZTakeout/Info.plist;

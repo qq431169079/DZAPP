@@ -384,8 +384,8 @@ static CGFloat DetailHeaderHeight = 30;
 }
 -(void)removeCurOrd:(NSString *)cid{
     NSDictionary *params = @{@"cid":cid, @"token":[UserHelper userToken]};
-    [DZRequests post:@"CreateOrder" parameters:params success:^(id record) {
-        NSLog(@"清空购物车");
+    [DZRequests post:@"clearShop" parameters:params success:^(id record) {
+        NSLog(@"清空购物车成功");
     } failure:^(HPRequestsError type, NSError *error) {
         NSLog(@"清空购物车失败");
     }];

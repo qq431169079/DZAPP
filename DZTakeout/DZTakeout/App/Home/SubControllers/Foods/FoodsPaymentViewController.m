@@ -27,11 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    NSDictionary *params = @{@"orderId":self.orderId, @"token":[UserHelper userToken], @"cateId":self.cateId};
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:self.orderId forKey:@"orderId"];
     [params setObject:[UserHelper userToken] forKey:@"token"];
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/pay/pay.html" params:params];
+    [self loadWebView:DZClientPayURL params:params];
     [self setupNotifications];
 }
 

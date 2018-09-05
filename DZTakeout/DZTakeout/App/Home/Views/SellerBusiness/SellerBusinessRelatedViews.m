@@ -322,37 +322,42 @@ static NSString * const reuseIdentifier = @"DZActivityTableViewCell";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+    return 30;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DZActivityTableViewCell *activityCell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     DiscountModel *model = self.items[indexPath.row];
+    activityCell.totalNum = self.items.count;
     [activityCell setCellWithModel:model needSelectedIcon:indexPath.row==0 selected:self.isOpen];
     return activityCell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    self.isOpen = !self.isOpen;
-    CGFloat change = 40.0-(self.items.count-1)*40.0;
-    if (self.isOpen) {
-        change = -change;
+    if (self.items.count >1) {
+
+        self.isOpen = !self.isOpen;
+        CGFloat change = 30.0-(self.items.count-1)*30.0;
+        if (self.isOpen) {
+            change = -change;
+        }
+        if (self.changePartInfoDetailsViewHeightBlock) {
+            self.changePartInfoDetailsViewHeightBlock(change);
+        }
+        [tableView reloadData];
     }
-    if (self.changePartInfoDetailsViewHeightBlock) {
-        self.changePartInfoDetailsViewHeightBlock(change);
-    }
-    [tableView reloadData];
+
 }
 
 -(CGFloat)setupPartInfo_Details:(NSArray<DiscountModel *> *)items{
-    NSMutableArray *add = [NSMutableArray arrayWithArray:items];
-    [add addObjectsFromArray:items];
-    [add addObjectsFromArray:items];
-    [add addObjectsFromArray:items];
-    [add addObjectsFromArray:items];
-    _items = add.copy;
-    self.viewHeight = 15 +40 *items.count;
+//    NSMutableArray *add = [NSMutableArray arrayWithArray:items];
+//    [add addObjectsFromArray:items];
+//    [add addObjectsFromArray:items];
+//    [add addObjectsFromArray:items];
+//    [add addObjectsFromArray:items];
+    _items = items.copy;
+    self.viewHeight = 15 +30 *items.count;
     [self.activityTabView reloadData];
     return self.viewHeight;
 }

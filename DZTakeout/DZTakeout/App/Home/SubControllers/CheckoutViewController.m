@@ -30,7 +30,7 @@
         self.orderNo.length == 0) {
         return;
     }
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/checkout/checkout.html" params:@{@"orderId":self.orderId, @"orderNo":self.orderNo, @"token":[UserHelper userToken]}];
+    [self loadWebView:DZCheckoutURL params:@{@"orderId":self.orderId, @"orderNo":self.orderNo, @"token":[UserHelper userToken]}];
 }
 
 - (void)didReceiveMemoryWarning {

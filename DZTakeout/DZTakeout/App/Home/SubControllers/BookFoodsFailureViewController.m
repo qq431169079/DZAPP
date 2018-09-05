@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebViewWithURL:@"http://39.108.6.102:8080/DzClient/predefinedFailure/predefined-failure.html"];
+    [self loadWebViewWithURL:DZPredeFinedFailureURL];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -23,12 +23,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    [self loadWebViewWithURL:@"http://118.190.149.109:8081/DzClient/userAddr/update-addr.html"];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setValue:self.addressID forKey:@"id"];
-    [params setValue:[UserHelper userToken] forKey:@"token"];
-    NSString *newURL = [NSString stringWithFormat:@"http://39.108.6.102:8080/DzClient/userAddr/update-addr.html?token=%@&id=%@",[UserHelper userToken],self.addressID];
+//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+//    [params setValue:self.addressID forKey:@"id"];
+//    [params setValue:[UserHelper userToken] forKey:@"token"];
+    NSString *newURL = DZUserAddrUpdateURL([UserHelper userToken],self.addressID);
     [self loadWebViewWithURL:newURL];
-    [self loadWebView:@"http://39.108.6.102:8080/DzClient/userAddr/update-addr.html" params:params];
+//    [self loadWebView:@"http://39.108.6.102:8080/DzClient/userAddr/update-addr.html" params:params];
 }
 
 - (void)didReceiveMemoryWarning {
