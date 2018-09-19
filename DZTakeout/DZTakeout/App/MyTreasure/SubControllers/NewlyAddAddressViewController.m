@@ -35,7 +35,10 @@
         DZMapViewController *mapVC = [DZMapViewController controller];
         mapVC.delegate = self;
         [self.navigationController pushViewController:mapVC animated:YES];
+    }else{
+        [super launch:destn];
     }
+
 }
 -(void)checkMapAddress:(NSArray *)Address{
     if (Address.count == 3) {

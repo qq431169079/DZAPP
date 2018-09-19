@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DZSearchTipHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHP-lw-abH">
+                    <rect key="frame" x="12" y="33" width="36" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.40000283718109131" green="0.39999482035636902" blue="0.40000027418136597" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-kx-AMB">
+                    <rect key="frame" x="349" y="30.5" width="14" height="22"/>
+                    <state key="normal" image="delete_icon"/>
+                    <connections>
+                        <action selector="clearBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="KMv-kp-WCV"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6H-Kb-zOT">
+                    <rect key="frame" x="10" y="53" width="355" height="1"/>
+                    <color key="backgroundColor" red="0.87843728065490723" green="0.87842077016830444" blue="0.87843197584152222" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2uN-xu-rI0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="z6H-Kb-zOT" secondAttribute="bottom" id="2Fu-Ra-9wl"/>
+                <constraint firstItem="gHP-lw-abH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="AA3-a8-SeQ"/>
+                <constraint firstItem="z6H-Kb-zOT" firstAttribute="top" secondItem="gHP-lw-abH" secondAttribute="bottom" constant="3" id="E1g-zO-eqr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="z6H-Kb-zOT" secondAttribute="trailing" constant="10" id="b5m-mT-JEw"/>
+                <constraint firstItem="z6H-Kb-zOT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="dES-Zy-Ndm"/>
+                <constraint firstItem="4cu-kx-AMB" firstAttribute="centerY" secondItem="gHP-lw-abH" secondAttribute="centerY" id="sWo-vU-THI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4cu-kx-AMB" secondAttribute="trailing" constant="12" id="xxy-5K-XxJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="clearBtn" destination="4cu-kx-AMB" id="phm-dO-wGa"/>
+                <outlet property="titleLab" destination="gHP-lw-abH" id="WTX-SY-sCd"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="-255"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete_icon" width="14" height="14"/>
+    </resources>
+</document>

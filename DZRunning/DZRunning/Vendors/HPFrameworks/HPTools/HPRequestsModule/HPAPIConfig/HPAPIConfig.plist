@@ -7,38 +7,38 @@
 	<key>HPDistributionKey</key>
 	<dict>
 		<key>HPBaseUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPSSLUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPImageUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 	</dict>
 	<key>HPGrayEnvironmentKey</key>
 	<dict>
 		<key>HPBaseUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPSSLUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPImageUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 	</dict>
 	<key>HPDevelopmentKey</key>
 	<dict>
 		<key>HPBaseUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPSSLUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPImageUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 	</dict>
 	<key>HPPersonalKey</key>
 	<dict>
 		<key>HPBaseUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPSSLUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 		<key>HPImageUrlKey</key>
-		<string>http://118.190.149.109:8081/</string>
+		<string>http://39.108.6.102:8080/</string>
 	</dict>
 	<key>HPAPI_Service</key>
 	<dict>
@@ -47,42 +47,42 @@
 			<key>dessc</key>
 			<string>修改密码验证码</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/user?getCode</string>
+			<string>http://39.108.6.102:8080/Dz/user?getCode</string>
 		</dict>
 		<key>resetPWD</key>
 		<dict>
 			<key>dessc</key>
 			<string>修改密码</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/user?updatePassword</string>
+			<string>http://39.108.6.102:8080/Dz/user?updatePassword</string>
 		</dict>
 		<key>SearchFoodKeyWord</key>
 		<dict>
 			<key>dessc</key>
 			<string>关键词搜索</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/search?doSearch</string>
+			<string>http://39.108.6.102:8080/Dz/search?doSearch</string>
 		</dict>
 		<key>foodsOrderInfo</key>
 		<dict>
 			<key>dessc</key>
 			<string>直接点餐</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/order?reserve</string>
+			<string>http://39.108.6.102:8080/Dz/order?reserve</string>
 		</dict>
 		<key>seatInfo</key>
 		<dict>
 			<key>dessc</key>
 			<string>获取座位信息</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/reserve?find</string>
+			<string>http://39.108.6.102:8080/Dz/reserve?find</string>
 		</dict>
 		<key>saveORupdate</key>
 		<dict>
 			<key>dessc</key>
 			<string>收藏商家</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/include?saveORupdate</string>
+			<string>http://39.108.6.102:8080/Dz/include?saveORupdate</string>
 		</dict>
 		<key>RHToken</key>
 		<dict>
@@ -96,14 +96,14 @@
 			<key>desc</key>
 			<string>热门搜索</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/search?view</string>
+			<string>http://39.108.6.102:8080/Dz/search?view</string>
 		</dict>
 		<key>SearchHistoryTip</key>
 		<dict>
 			<key>desc</key>
 			<string>历史搜索</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/search?userSearch</string>
+			<string>http://39.108.6.102:8080/Dz/search?userSearch</string>
 		</dict>
 		<key>FindCompany</key>
 		<dict>
@@ -157,7 +157,7 @@
 		<key>Login</key>
 		<dict>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/user/login</string>
+			<string>http://39.108.6.102:8080/Dz/user/login</string>
 			<key>desc</key>
 			<string>登录</string>
 		</dict>
@@ -166,12 +166,12 @@
 			<key>desc</key>
 			<string>token登录获取用户信息</string>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/user?info</string>
+			<string>http://39.108.6.102:8080/Dz/user?info</string>
 		</dict>
 		<key>Register</key>
 		<dict>
 			<key>api</key>
-			<string>http://118.190.149.109:8081/Dz/user?saveORupdate</string>
+			<string>http://39.108.6.102:8080/Dz/user?saveORupdate</string>
 			<key>desc</key>
 			<string>注册</string>
 		</dict>

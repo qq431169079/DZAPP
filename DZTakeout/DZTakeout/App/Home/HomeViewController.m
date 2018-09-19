@@ -84,7 +84,7 @@ DZJSActionRouterDelegate
 }
 -(void)loadWebViewWithLocation:(BMKLocation *)location{
     
-    NSString *homeURL = [NSString stringWithFormat:@"%@?lng=%@",DZHomeURL,[DZBMKLocationTool sharedInstance].coordinateStr];
+    NSString *homeURL = [NSString stringWithFormat:@"%@?lng=%@&cid=22",DZHomeURL,[DZBMKLocationTool sharedInstance].coordinateStr];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:homeURL]];
     [self.webView loadRequest:request];

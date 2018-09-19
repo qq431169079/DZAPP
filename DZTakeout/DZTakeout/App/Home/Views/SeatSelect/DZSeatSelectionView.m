@@ -140,7 +140,7 @@
     }
     if ([infoDictAllKeys containsObject:@"meals"]) {
         NSString *meals = infoDict[@"meals"];
-        NSArray *mealsInfo = [meals componentsSeparatedByString:@"~"];
+        NSArray *mealsInfo = [meals componentsSeparatedByString:@"一"];
         self.minMeals = [[mealsInfo firstObject] integerValue];
         self.maxMeals = [[mealsInfo lastObject] integerValue];
         self.personNum = self.minMeals;

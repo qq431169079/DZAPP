@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebView:@"http://118.190.149.109:8081/DzClient/orderDetail/orderindex.html" params:@{@"orderId":self.orderId, @"orderNo":self.orderNo}];
+//    [self loadWebView:DZOrderDetail params:@{@"orderId":self.orderId, @"orderNo":self.orderNo}];
 }
 
 - (void)onReturnBackComplete:(void (^)(void))complete {

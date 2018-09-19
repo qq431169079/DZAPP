@@ -26,9 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadWebView:@"http://118.190.149.109:8081/DzClient/goodsList/order-food.html" params:@{@"cid":self.companyId, @"token":[UserHelper userToken],@"orderNo":self.orderNo}];
-    [UserHelper temporaryCacheObject:self.orderNo forKey:kOrderNoCacheKey];
-    [UserHelper temporaryCacheObject:self.orderId forKey:kOrderIdCacheKey];
+//    [self loadWebView:@"http://39.108.6.102:8080/DzClient/goodsList/order-food.html" params:@{@"cid":self.companyId, @"token":[UserHelper userToken],@"orderNo":self.orderNo}];
+//    [UserHelper temporaryCacheObject:self.orderNo forKey:kOrderNoCacheKey];
+//    [UserHelper temporaryCacheObject:self.orderId forKey:kOrderIdCacheKey];
 }
 
 - (void)didReceiveMemoryWarning {

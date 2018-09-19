@@ -8,15 +8,15 @@
 
 #import "HomeViewController.h"
 
-#import "DZFakeNavigationBar.h"
-#import "TakeawayBusinessListViewController.h"
-#import "DZSearchViewController.h"
+//#import "DZFakeNavigationBar.h"
+//#import "TakeawayBusinessListViewController.h"
+//#import "DZSearchViewController.h"
 
 #import "DZBMKLocationTool.h"
 #import "DZLoadingView.h"
 #import "DZLoadingHoldView.h"
 @interface HomeViewController ()<
-DZFakeNavigationBarDelegate,
+//DZFakeNavigationBarDelegate,
 UIScrollViewDelegate,
 UIWebViewDelegate,
 BMKLocationAuthDelegate,
@@ -28,7 +28,8 @@ BMKLocationManagerDelegate
 @property (nonatomic, strong) JSContext *context;
 @property (nonatomic, strong) BMKLocationManager *locationManager;
 @property (nonatomic, weak) DZLoadingView *loadingView;         //下拉刷新的动画
-@property (nonatomic, weak) DZLoadingHoldView *loadingHoldView;//加载的动画
+@property (nonatomic, weak) DZLoadingHoldView *loadingHoldView; //加载的动画
+@property (nonatomic, assign) BOOL needReload;                  //第一次重载
 @end
 
 @implementation HomeViewController
@@ -36,8 +37,7 @@ BMKLocationManagerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    [self.view addSubview:self.navBar];
+    self.needReload = YES;
     [self.view addSubview:self.webView];
     
     CGFloat navBarH = ASPECT_NAV_HEIGHT;
@@ -55,7 +55,7 @@ BMKLocationManagerDelegate
 }
 
 - (void)setupNavigation {
-    self.title = @"首页";
+    self.title = @"抢单";
     self.navigationController.title = @"抢单";
 }
 
@@ -77,10 +77,17 @@ BMKLocationManagerDelegate
         }
     }];
 }
+
 -(void)loadWebViewWithLocation:(BMKLocation *)location{
     
-    NSString *homeURL = [NSString stringWithFormat:@"http://118.190.149.109:8081/DzClient/competeOrder/compete-order.html?lng=%@",[DZBMKLocationTool sharedInstance].coordinateStr];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:homeURL]];
+    NSString *homeURL = DZCompeteOrder([DZBMKLocationTool sharedInstance].coordinateStr);
+    NSURL *url = [NSURL URLWithString:homeURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [self setCookieForURL:request.URL];
+    NSDictionary * cookies = [NSHTTPCookie requestHeaderFieldsWithCookies:[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:request.URL]];
+    [request setHTTPShouldHandleCookies:YES];
+    [request setAllHTTPHeaderFields:cookies];
+
     [self.webView loadRequest:request];
     
 }
@@ -112,7 +119,9 @@ BMKLocationManagerDelegate
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     self.context[@"android"] = self;
     [self.loadingHoldView removeFromSuperview];
+
 }
+
 
 #pragma mark - DZJSInteractiveExport
 - (void)base:(JSValue *)destn {
@@ -150,47 +159,55 @@ BMKLocationManagerDelegate
 }
 
 - (void)launch:(NSString *)destn withParams:(NSArray<NSString *> *)params {
-    UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:destn params:params];
-    [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
+    if (([destn isEqualToString:@"songcan"]||[destn isEqualToString:@"quhuo"] )&& params.count>=2) {
+        NSString *latitude = [params firstObject];
+        NSString *longitude = params[1];
+        
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"选择导航地图" preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        //百度地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"百度地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+                NSString *baiduURL = [[NSString stringWithFormat:@"baidumap://map/direction?&origin=name:我的位置|latlng:%@&destination=%@&mode=driving",[DZBMKLocationTool sharedInstance].coordinateStr,[NSString stringWithFormat:@"%@,%@",latitude,longitude]] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:baiduURL]];
+            }];
+            [alertController addAction:baiduAction];
+        }
+        //高德地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"高德地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+                NSString *url = [[NSString stringWithFormat:@"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&slat=%lf&slon=%lf&sname=我的位置&did=BGVIS2&dlat=%@&dlon=%@&dev=0&m=0&t=0",[DZBMKLocationTool sharedInstance].curLocation.location.coordinate.latitude,[DZBMKLocationTool sharedInstance].curLocation.location.coordinate.longitude, latitude,longitude] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+            }];
+            [alertController addAction:baiduAction];
+        }
+        
+        //苹果地图
+        if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"http://maps.apple.com"]]) {
+            UIAlertAction *baiduAction = [UIAlertAction actionWithTitle:@"苹果地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                NSString *urlString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@",[NSString stringWithFormat:@"%@,%@",latitude,longitude]] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+                
+            }];
+            [alertController addAction:baiduAction];
+        }
+        
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+
 }
 
 #pragma mark - UIScrollViewDelegate
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//
-//    [self.navBar gradation_scrollViewDidScroll:scrollView];
-//    CGFloat offset = scrollView.contentOffset.y;
-//    NSLog(@"offset___%f",offset);
-//    if (offset<0) {
-//        [self reloadWebViewWithOffset:offset];
-//    }
-//}
 
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    [self.navBar gradation_scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
-//    CGFloat offset = scrollView.contentOffset.y;
-//    if (offset<-50) {
-//        [self resetWebView];
-//    }
-//}
-//
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    [self.navBar gradation_scrollViewDidEndDecelerating:scrollView];
-//}
 #pragma mark - 其他
--(void)reloadWebViewWithOffset:(CGFloat)offset{
-    if (self.loadingView.isloading) {
-        return;
-    }
-    CGFloat scale = ABS(offset)/50.0;
-    if (scale>1) {
-        scale =1;
 
-        
-    }
-    CGAffineTransform transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
-    transform = CGAffineTransformRotate(transform, M_PI * ABS(offset)/50.0 *4);
-    self.loadingView.transform = transform;
-}
+
 -(void)resetWebView{
     [self.loadingView startLoadingAnimation];
     //重新定位
@@ -199,10 +216,62 @@ BMKLocationManagerDelegate
         [self.loadingView endLoadingAnimaton];
         if (error == nil) {
             [weakSelf loadWebViewWithLocation:location];
-            [weakSelf getLocationName:location];
+//            [weakSelf getLocationName:location];
         }
     }];
 }
+
+
+-(void)setCookieForURL:(NSURL *)url{
+    if ([UserHelper userToken].length >1 && [DZBMKLocationTool sharedInstance].coordinateStr.length >1) {
+        NSMutableArray *cookies = [NSMutableArray array];
+        for (int i=0; i<2; i++) {
+            
+            NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+            
+            if (i==0) {
+                
+                [cookieProperties setObject:@"token" forKey:NSHTTPCookieName];
+                
+                [cookieProperties setObject:[UserHelper userToken] forKey:NSHTTPCookieValue];
+                
+            }
+            
+            if (i==1) {
+                
+                [cookieProperties setObject:@"lng" forKey:NSHTTPCookieName];
+                
+                [cookieProperties setObject:[DZBMKLocationTool sharedInstance].coordinateStr forKey:NSHTTPCookieValue];
+                
+            }
+
+            
+            [cookieProperties setObject:@"dzRunning" forKey:NSHTTPCookieDomain];
+            
+            [cookieProperties setObject:@"/" forKey:NSHTTPCookiePath];
+            
+            [cookieProperties setObject:@"0" forKey:NSHTTPCookieVersion];
+            [cookieProperties setObject:[[NSDate date] dateByAddingTimeInterval:2629743] forKey:NSHTTPCookieExpires];
+            NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
+            
+            [cookies addObject:cookie];
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+        }
+        
+        for (NSHTTPCookie *cookie in cookies){
+            // cookiesWithResponseHeaderFields方法，需要为URL设置一个cookie为NSDictionary类型的header，注意NSDictionary里面的forKey需要是@"Set-Cookie"
+            NSString *str = [[NSString alloc] initWithFormat:@"%@=%@",[cookie name],[cookie value]];
+            NSDictionary *dic = [NSDictionary dictionaryWithObject:str forKey:@"Set-Cookie"];
+            NSArray *headeringCookie = [NSHTTPCookie cookiesWithResponseHeaderFields:dic forURL:url];
+            // 设置Cookie，只要访问URL为HOST的网页时，会自动附带上设置的header
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:headeringCookie
+                                                               forURL:url
+                                                      mainDocumentURL:nil];
+        }
+        
+    }
+}
+
 #pragma mark - Getter & Setter
 - (UIWebView *)webView {
     if (!_webView) {
@@ -230,6 +299,9 @@ BMKLocationManagerDelegate
 //    }
 //    return _navBar;
 //}
+
+
+
 
 -(DZLoadingView *)loadingView{
     if (_loadingView == nil) {

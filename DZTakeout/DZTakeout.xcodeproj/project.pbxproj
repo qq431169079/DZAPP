@@ -2035,7 +2035,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C3X8SM23N;
+				DEVELOPMENT_TEAM = 8FXFAY595D;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = DZTakeout/Info.plist;
@@ -2057,7 +2057,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8C3X8SM23N;
+				DEVELOPMENT_TEAM = 8FXFAY595D;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
 				INFOPLIST_FILE = DZTakeout/Info.plist;
