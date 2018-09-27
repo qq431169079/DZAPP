@@ -33,5 +33,8 @@
  更新状态栏颜色
  */
 - (void)setUpdateStatusBarAppearance:(UIStatusBarStyle)statusBarStyle;
-
+/**
+ 注入cookie
+ */
+-(void)setCookieForURL:(NSURL *)url;
 @end

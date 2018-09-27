@@ -8,10 +8,8 @@
 
 #import "HomeViewController.h"
 
-//#import "DZFakeNavigationBar.h"
-//#import "TakeawayBusinessListViewController.h"
-//#import "DZSearchViewController.h"
-
+#import "HPNavigationController.h"
+#import "LoginViewController.h"
 #import "DZBMKLocationTool.h"
 #import "DZLoadingView.h"
 #import "DZLoadingHoldView.h"
@@ -121,19 +119,22 @@ BMKLocationManagerDelegate
 
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    [self setCookieForURL:request.URL];
+    return YES;
+}
 
 #pragma mark - DZJSInteractiveExport
 - (void)base:(JSValue *)destn {
     _hy_dispatch_main_async_safe(^{
-        UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:[destn toString]];
-        [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
+        [self launch:[destn toString]];
     });
 }
 
 - (void)valLink:(JSValue *)destn final:(JSValue *)param {
     _hy_dispatch_main_async_safe(^{
-        UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:[destn toString] param:[param toString]];
-        [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
+        [self launch:[destn toString] withParam:[param toString]];
     });
 }
 
@@ -156,12 +157,37 @@ BMKLocationManagerDelegate
         [self launch:[destn toString] withParams:args.copy];
     });
 }
+- (void)launch:(NSString *)destn {
 
+    
+}
 - (void)launch:(NSString *)destn withParams:(NSArray<NSString *> *)params {
-    NSLog(@"___");
+
 
 }
-
+- (void)launch:(NSString *)destn withParam:(NSString *)param{
+    if ([destn isEqualToString:@"logout"]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确认退出当前用户?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *addAction = [UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [UserHelper cleanAllTemporaryObjects];
+            [UserHelper logout];
+            
+            HPNavigationController *rootController = [[HPNavigationController alloc] initWithRootViewController:[LoginViewController controller]];
+            [[UIApplication sharedApplication].keyWindow setRootViewController:rootController];
+            [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+        }];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertController addAction:addAction];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }else if ([destn isEqualToString:@"alert"]){
+        occasionalHint(param);
+    }
+    
+}
 #pragma mark - UIScrollViewDelegate
 
 #pragma mark - 其他

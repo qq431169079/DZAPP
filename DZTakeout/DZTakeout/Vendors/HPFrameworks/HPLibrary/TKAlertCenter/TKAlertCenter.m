@@ -263,7 +263,7 @@ CGRect subtractRect(CGRect wf,CGRect kf){
 	
 	NSDictionary *userInfo = [notification userInfo];
 	NSNumber *v = [userInfo objectForKey:UIApplicationStatusBarOrientationUserInfoKey];
-	UIInterfaceOrientation o = [v intValue];
+	UIInterfaceOrientation o = (UIInterfaceOrientation)[v intValue];
 	
 	CGFloat degrees = 0;
 	if(o == UIInterfaceOrientationLandscapeLeft ) degrees = -90;

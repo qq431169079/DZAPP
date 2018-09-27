@@ -96,6 +96,8 @@ DZJSActionRouterDelegate
     if (poiList.count>0) {
         BMKLocationPoi *locationPoi = [poiList firstObject];
         self.navBar.title = locationPoi.name;
+    }else{
+        self.navBar.title = locationReGeocode.street;
     }
 }
 

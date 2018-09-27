@@ -35,8 +35,8 @@
 //    [HPIMManager initWithAppKey:@"z3v5yqkbz1jk0"];
 //    //设置红包扩展的Url Scheme。
 //    [[RCIM sharedRCIM] setScheme:@"DZRunningRedPacket" forExtensionModule:@"JrmfPacketManager"];
-//    //极光推送
-//    [self setupJPUSH:launchOptions];
+    //极光推送
+    [self setupJPUSH:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -141,7 +141,7 @@
     // init Push
     // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
     // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
-    [JPUSHService setupWithOption:launchOptions appKey:@"a72e09b25bac9fe6a8e048e3"
+    [JPUSHService setupWithOption:launchOptions appKey:@"d654c4cc644721db764b7f55"
                           channel:@"AppStore"
                  apsForProduction:NO
             advertisingIdentifier:nil];

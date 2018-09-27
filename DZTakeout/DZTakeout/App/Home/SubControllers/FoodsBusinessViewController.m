@@ -58,7 +58,7 @@
 
 #pragma mark - Event Response
 - (void)_startLocationIfNeeded {
-    
+    NSLog(@"_____");
 }
 
 - (void)_handleReturnBackEvent {

@@ -23,7 +23,7 @@
 #import "DZFoodReservationViewController.h"
 #import "DZMapViewController.h"
 #import "HPPayment.h"
-
+#import "DZCameraViewController.h"
 /// 美食模块
 #import "SelectSeatViewController.h"
 #import "FoodsPaymentViewController.h"
@@ -189,6 +189,10 @@
         DZMenushowViewController *menushowViewController = [DZMenushowViewController controller];
         menushowViewController.cid = [params firstObject];
         return menushowViewController;
+    }else if ([destn isEqualToString:@"openCamber"]){
+        //后厨
+        DZCameraViewController *cameraViewController = [DZCameraViewController controller];
+        return cameraViewController;
     }
 
     return nil;

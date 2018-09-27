@@ -135,6 +135,10 @@
 		B224C09C213CCD0600319FFB /* DZBaseWKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C097213CCD0600319FFB /* DZBaseWKViewController.m */; };
 		B224C09D213CCD0600319FFB /* DZWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C098213CCD0600319FFB /* DZWKWebViewController.m */; };
 		B224C0A0213CD0B600319FFB /* DZJSActionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C09F213CD0B600319FFB /* DZJSActionRouter.m */; };
+		B2477366215245220068B348 /* DZKitchenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2477365215245220068B348 /* DZKitchenViewController.m */; };
+		B247737021536D5F0068B348 /* DZCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B247736F21536D5F0068B348 /* DZCameraViewController.m */; };
+		B247744C215380C60068B348 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B247744B215380C50068B348 /* libiconv.tbd */; };
+		B247744E2153810A0068B348 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B247744D2153810A0068B348 /* libbz2.tbd */; };
 		B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C238F20EF63200021F5ED /* DiscoverViewController.m */; };
 		B25C239720EF63200021F5ED /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C239120EF63200021F5ED /* MessageViewController.m */; };
 		B25C23A620EF64860021F5ED /* DZAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C23A420EF64860021F5ED /* DZAddressBookViewController.m */; };
@@ -448,6 +452,12 @@
 		B224C09A213CCD0600319FFB /* DZWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWKWebViewController.h; sourceTree = "<group>"; };
 		B224C09E213CD0B600319FFB /* DZJSActionRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZJSActionRouter.h; sourceTree = "<group>"; };
 		B224C09F213CD0B600319FFB /* DZJSActionRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZJSActionRouter.m; sourceTree = "<group>"; };
+		B2477364215245220068B348 /* DZKitchenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZKitchenViewController.h; sourceTree = "<group>"; };
+		B2477365215245220068B348 /* DZKitchenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZKitchenViewController.m; sourceTree = "<group>"; };
+		B247736E21536D5F0068B348 /* DZCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZCameraViewController.h; sourceTree = "<group>"; };
+		B247736F21536D5F0068B348 /* DZCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZCameraViewController.m; sourceTree = "<group>"; };
+		B247744B215380C50068B348 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		B247744D2153810A0068B348 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		B25C238E20EF63200021F5ED /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		B25C238F20EF63200021F5ED /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		B25C239120EF63200021F5ED /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
@@ -545,6 +555,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B247744E2153810A0068B348 /* libbz2.tbd in Frameworks */,
+				B247744C215380C60068B348 /* libiconv.tbd in Frameworks */,
 				B27E5C2D20F224AF007C4FCC /* CoreText.framework in Frameworks */,
 				B27E5C2B20F2249F007C4FCC /* CoreMotion.framework in Frameworks */,
 				B29ED14020EDE47D00A1D044 /* SafariServices.framework in Frameworks */,
@@ -979,6 +991,7 @@
 		15AB3F952068EAFF00A8447E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B247736A21536C560068B348 /* Camber */,
 				B222286D2132859100559262 /* Activity */,
 				B29ED09920EA69D300A1D044 /* SearchView */,
 				150358A020DCCBC10080AFCA /* Login&Register */,
@@ -1205,6 +1218,7 @@
 		15C71CE820CC151D001D32EB /* SubControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B2477363215245030068B348 /* Kitchen */,
 				150B5F3920E3D47500484A5F /* Orders */,
 				150B5F1520E29C0100484A5F /* Foods */,
 				15C71CE920CC1575001D32EB /* TakeawayBusinessListViewController.h */,
@@ -1259,6 +1273,8 @@
 		644C9A08BC7DC67EF59248F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B247744D2153810A0068B348 /* libbz2.tbd */,
+				B247744B215380C50068B348 /* libiconv.tbd */,
 				B27E5C2C20F224AF007C4FCC /* CoreText.framework */,
 				B27E5C2A20F22493007C4FCC /* CoreMotion.framework */,
 				B29ED13F20EDE47D00A1D044 /* SafariServices.framework */,
@@ -1410,6 +1426,48 @@
 				B224C098213CCD0600319FFB /* DZWKWebViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2477363215245030068B348 /* Kitchen */ = {
+			isa = PBXGroup;
+			children = (
+				B2477364215245220068B348 /* DZKitchenViewController.h */,
+				B2477365215245220068B348 /* DZKitchenViewController.m */,
+			);
+			path = Kitchen;
+			sourceTree = "<group>";
+		};
+		B247736A21536C560068B348 /* Camber */ = {
+			isa = PBXGroup;
+			children = (
+				B247736B21536CB80068B348 /* Model */,
+				B247736D21536CB80068B348 /* View */,
+				B247736C21536CB80068B348 /* ViewController */,
+			);
+			path = Camber;
+			sourceTree = "<group>";
+		};
+		B247736B21536CB80068B348 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B247736C21536CB80068B348 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B247736E21536D5F0068B348 /* DZCameraViewController.h */,
+				B247736F21536D5F0068B348 /* DZCameraViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B247736D21536CB80068B348 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B25C238720EF63200021F5ED /* AddressBook */ = {
@@ -1853,6 +1911,7 @@
 				B27E5C2520F0BC79007C4FCC /* JXAlertview.m in Sources */,
 				B29ED0F920EC747100A1D044 /* DZSearchTipCollectionView.m in Sources */,
 				15BB6DD2206E881E00B5A63D /* DZFakeNavigationBar.m in Sources */,
+				B247737021536D5F0068B348 /* DZCameraViewController.m in Sources */,
 				15AB3FAE2068EED300A8447E /* HPViewController.m in Sources */,
 				B27E5C2920F1C74D007C4FCC /* DZBaseDingingViewController.m in Sources */,
 				150359FF20DE03BE0080AFCA /* __FormatGoodsNode.m in Sources */,
@@ -1902,6 +1961,7 @@
 				150B5F1B20E29D1500484A5F /* DiningHallViewController.m in Sources */,
 				1503588D20DB56580080AFCA /* DZRequests.m in Sources */,
 				150D11A020DA4A1D00657506 /* SellerBusinessViewController.m in Sources */,
+				B2477366215245220068B348 /* DZKitchenViewController.m in Sources */,
 				1503587620DA8A1E0080AFCA /* UIView+SGPagingView.m in Sources */,
 				B224C07A2136890000319FFB /* SellerBusinessRelatedTableViewCell.m in Sources */,
 				B224C08C21392F3400319FFB /* DZFoodReservationViewController.m in Sources */,
@@ -2037,10 +2097,49 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FXFAY595D;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/BMKLocationKit/framework\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM/JrmfIMLib\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM/AlipaySDK\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/libavcodec.a\"",
+				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/BMKLocationKit\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/JCore\"",
+					"\"${PODS_ROOT}/Headers/Public/JPush\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/PGDatePicker\"",
+					"\"${PODS_ROOT}/Headers/Public/PGPickerView\"",
+					"\"${PODS_ROOT}/Headers/Public/RongCloudIM\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/TTGTagCollectionView\"",
+					"\"${PODS_ROOT}/Headers/Public/TYAlertController\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/include\"",
+				);
 				INFOPLIST_FILE = DZTakeout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DZTakeout/App/Camber/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uioa.dz.takeout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -2059,10 +2158,49 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8FXFAY595D;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/BMKLocationKit/framework\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM/JrmfIMLib\"",
+					"\"${PODS_ROOT}/RongCloudIM/RongCloudIM/AlipaySDK\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/libavcodec.a\"",
+				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT)/Resources/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/BMKLocationKit\"",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"\"${PODS_ROOT}/Headers/Public/JCore\"",
+					"\"${PODS_ROOT}/Headers/Public/JPush\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"\"${PODS_ROOT}/Headers/Public/PGDatePicker\"",
+					"\"${PODS_ROOT}/Headers/Public/PGPickerView\"",
+					"\"${PODS_ROOT}/Headers/Public/RongCloudIM\"",
+					"\"${PODS_ROOT}/Headers/Public/SDCycleScrollView\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/TTGTagCollectionView\"",
+					"\"${PODS_ROOT}/Headers/Public/TYAlertController\"",
+					"\"${PODS_ROOT}/Headers/Public/WebViewJavascriptBridge\"",
+					"\"${PODS_ROOT}/Headers/Public/WechatOpenSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
+					"\"${PODS_ROOT}/Headers/Public/pop\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib\"",
+					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/include\"",
+				);
 				INFOPLIST_FILE = DZTakeout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DZTakeout/App/Camber/Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uioa.dz.takeout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -51,7 +51,10 @@
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     self.context[@"android"] = self;
 }
-
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    [self setCookieForURL:request.URL];
+    return YES;
+}
 #pragma mark - DZJSInteractiveExport
 - (void)base:(JSValue *)destn {
     _hy_dispatch_main_async_safe(^{
@@ -107,7 +110,13 @@
 #pragma mark - public
 - (void)loadWebViewWithURL:(NSString *)urlString {
     if (!urlString || urlString.length == 0) {return;};
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self setCookieForURL:request.URL];
+    NSDictionary * cookies = [NSHTTPCookie requestHeaderFieldsWithCookies:[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:request.URL]];
+    [request setHTTPShouldHandleCookies:YES];
+    [request setAllHTTPHeaderFields:cookies];
     [self.webView loadRequest:request];
 }
 

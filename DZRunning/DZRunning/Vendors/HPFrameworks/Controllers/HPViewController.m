@@ -8,7 +8,7 @@
 
 #import "HPViewController.h"
 #import <IQKeyboardManager.h>
-
+#import "DZBMKLocationTool.h"
 @interface HPViewController () {
 
     UIStatusBarStyle _super_statusBarStyle;
@@ -109,6 +109,57 @@
 - (BOOL)prefersToolBarHidden {
     
     return YES;
+}
+
+
+-(void)setCookieForURL:(NSURL *)url{
+    if ([UserHelper userToken].length >1 && [DZBMKLocationTool sharedInstance].coordinateStr.length >1) {
+        NSMutableArray *cookies = [NSMutableArray array];
+        for (int i=0; i<2; i++) {
+            
+            NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+            
+            if (i==0) {
+                
+                [cookieProperties setObject:@"token" forKey:NSHTTPCookieName];
+                
+                [cookieProperties setObject:[UserHelper userToken] forKey:NSHTTPCookieValue];
+                
+            }
+            
+            if (i==1) {
+                
+                [cookieProperties setObject:@"lng" forKey:NSHTTPCookieName];
+                
+                [cookieProperties setObject:[DZBMKLocationTool sharedInstance].coordinateStr forKey:NSHTTPCookieValue];
+                
+            }
+            
+            
+            [cookieProperties setObject:@"dzRunning" forKey:NSHTTPCookieDomain];
+            
+            [cookieProperties setObject:@"/" forKey:NSHTTPCookiePath];
+            
+            [cookieProperties setObject:@"0" forKey:NSHTTPCookieVersion];
+            [cookieProperties setObject:[[NSDate date] dateByAddingTimeInterval:2629743] forKey:NSHTTPCookieExpires];
+            NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
+            
+            [cookies addObject:cookie];
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+        }
+        
+        for (NSHTTPCookie *cookie in cookies){
+            // cookiesWithResponseHeaderFields方法，需要为URL设置一个cookie为NSDictionary类型的header，注意NSDictionary里面的forKey需要是@"Set-Cookie"
+            NSString *str = [[NSString alloc] initWithFormat:@"%@=%@",[cookie name],[cookie value]];
+            NSDictionary *dic = [NSDictionary dictionaryWithObject:str forKey:@"Set-Cookie"];
+            NSArray *headeringCookie = [NSHTTPCookie cookiesWithResponseHeaderFields:dic forURL:url];
+            // 设置Cookie，只要访问URL为HOST的网页时，会自动附带上设置的header
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookies:headeringCookie
+                                                               forURL:url
+                                                      mainDocumentURL:nil];
+        }
+        
+    }
 }
 
 #pragma mark - Rotation
