@@ -184,9 +184,13 @@ BMKLocationManagerDelegate
         [alertController addAction:cancelAction];
         [self presentViewController:alertController animated:YES completion:nil];
     }else if ([destn isEqualToString:@"alert"]){
-        occasionalHint(param);
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:param message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
-    
 }
 #pragma mark - UIScrollViewDelegate
 

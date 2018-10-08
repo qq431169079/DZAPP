@@ -61,6 +61,9 @@
 }
 
 - (IBAction)continueBtnClick:(id)sender {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(continueReserve:)]) {
+        [self.delegate continueReserve:self];
+    }
 }
 
 @end

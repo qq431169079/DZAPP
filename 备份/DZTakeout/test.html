@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>添加地址</title>
+		<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+		<link rel="stylesheet" href="./new-addr.css">
+		<script type="text/javascript" src="../common/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../common/js/baseUrl.js"></script>
+		<script type="text/javascript" src="../common/js/common.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+	function aa() {
+        alert("测试");
+		var address = $('#address').val();
+		var door = $('#door').val();
+		var contacts = $('#contacts').val();
+		var phone = $('#phone').val();
+		var label = "家";
+		if (address.length == <4) {
+			valLink("alert","请输入地址");
+			return false;
+		}
+		if (contacts.length == <2) {
+			valLink("alert","请正确联系人姓名");
+			return false;
+		}
+
+		if (phone.length == 11) {
+			valLink("alert","请输入联系人电话");
+			return false;
+		}
+	
+		$.ajax( {
+			type : 'POST',
+			url : BASE_URL + LOGIN_ACTION.SAVEORUPDATE,
+			data : {
+				token : GetQueryString("token"),
+				address : address,
+				name : contacts,
+				phone : phone,
+				isDefault : true,
+				room : door,
+				label : label
+			},
+			success : function(data) {
+				link('finish');
+				valLink("alert", "添加成功.");
+			}
+		});
+
+	}
+        function kkk() {
+            valLink("realPay", "1111");
+        }
+	$(function() {
+		$("#home").click(function() {
+			$("#home").attr("class", "label-icon active");
+			$("#school").attr("class", "label-icon");
+			$("#company").attr("class", "label-icon");
+		})
+
+		$("#company").click(function() {
+			$("#company").attr("class", "label-icon active");
+			$("#school").attr("class", "label-icon");
+			$("#home").attr("class", "label-icon");
+		})
+
+		$("#school").click(function() {
+			$("#school").attr("class", "label-icon active");
+			$("#home").attr("class", "label-icon");
+			$("#company").attr("class", "label-icon");
+		})
+	})
+</script>
+
+		<div class="list-box">
+			<div class="item">
+				<span class="label">收货地址</span>
+				<input type="text" placeholder="小区／写字楼／学校等" id="address">
+			</div>
+			<div class="item last-item">
+				<span class="label">门牌号</span>
+				<input type="text" placeholder="例：8号楼808室" id="door">
+			</div>
+			<div class="item">
+				<span class="label">联系人</span>
+				<input type="text" placeholder="联系人姓名" id="contacts">
+			</div>
+			<div class="item last-item">
+				<span class="label">手机号</span>
+				<input type="number" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="联系人电话" id="phone">
+			</div>
+			<div class="item label">
+				<span class="label">标签</span>
+				<div class="label-icon-box">
+					<span id="home" class="label-icon active">家</span>
+					<span id="company" class="label-icon">公司</span>
+					<span id="school" class="label-icon">学校</span>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="item last-item">
+				<input type="button" value="提交" style="margin-top: 100px;margin-left: 20px;height: 46px;width: 90%;background-color: #FF7E00;color: #fff;border-radius: 5px;" onclick="aa()">
+                                    <input type="button" value="测试" style="margin-top: 200px;margin-left: 20px;height: 46px;width: 90%;background-color: #FF7E00;color: #fff;border-radius: 5px;" onclick="kkk()">
+			</div>
+	</body>
+</html>

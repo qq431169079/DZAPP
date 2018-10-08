@@ -1,0 +1,29 @@
+
+//
+//  PrefixHeader.pch
+//  DZTakeout
+//
+//  Created by HuangPan on 2018/3/26.
+//  Copyright © 2018年 HuangPan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "DZTheme.h"
+#import "HPMacro.h"
+#import "HPNETMacro.h"
+#import "DZRequests.h"
+#import "HPAlertView+HP.h"
+#import "UIView+HPUtil.h"
+#import "UserHelper.h"
+#import "DZStaticVariables.h"
+
+#import "DZJSInteractiveRouter.h"
+#import <Masonry/Masonry.h>
+#import "UIImageView+webImage.h"
+#import "HPTool.h"
+#endif
+#endif /* PrefixHeader_pch */

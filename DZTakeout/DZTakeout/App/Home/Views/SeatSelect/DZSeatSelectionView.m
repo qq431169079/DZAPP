@@ -135,7 +135,14 @@
         [self.companyIconImageView DZ_setImageWithURL:infoDict[@"logo"] placeholderImage:nil];
     }
     if ([infoDictAllKeys containsObject:@"seat"]&&[infoDictAllKeys containsObject:@"name"]) {
-        NSString *seatInfo = [NSString stringWithFormat:@"已选:%@%@.",infoDict[@"seat"],infoDict[@"name"]];
+        NSString *seat = infoDict[@"seat"];
+        if ([seat isEqualToString:@"dt"]) {
+            seat = @"大厅";
+        }
+        if ([seat isEqualToString:@"bx"]) {
+            seat = @"包厢";
+        }
+        NSString *seatInfo = [NSString stringWithFormat:@"已选:%@%@.",seat,infoDict[@"name"]];
         self.seatInfoLab.text = seatInfo;
     }
     if ([infoDictAllKeys containsObject:@"meals"]) {

@@ -67,6 +67,9 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    DZShoppingCartView *shoppingCart = [DZShoppingCartView shoppingCart];
+    [shoppingCart removeCurOrd:self.companyId];
+    [shoppingCart clear];
     self.formatDataDict = [NSMutableDictionary dictionary];
     [self fetchClassifyAndFoodsFromServer];
 }
@@ -80,11 +83,12 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
-    [self removeShoppingCart];
+    [self hidShoppingCart];
 }
 
 - (void)showShoppingCart {
     DZShoppingCartView *shoppingCart = [DZShoppingCartView shoppingCart];
+    shoppingCart.hidden = NO;
     shoppingCart.companyId = self.companyId;
     @weakify(self);
     shoppingCart.onPrepareCommitHandler = ^{
@@ -107,23 +111,23 @@ static NSString *const HeaderReuseIdentityOfFoodsKey = @"HeaderReuseIdentityOfFo
     [shoppingCart show];
 
     //如果有商品要重新添加
-    NSDictionary *curGoodsDict = [shoppingCart getAllGoodsByCompanyId:self.companyId];
-    if ([curGoodsDict allKeys].count >0) {
-
-
-        for (NSString *key in [curGoodsDict allKeys]) {
-            NSInteger goodsNum = [curGoodsDict[key] integerValue];
-            for (NSInteger i = goodsNum; i>0; i--) {
-                NSLog(@"goodsNum__%@",key);
-                [self addGoodWithID:key time:0];
-            }
-        }
-    }
+//    NSDictionary *curGoodsDict = [shoppingCart getAllGoodsByCompanyId:self.companyId];
+//    if ([curGoodsDict allKeys].count >0) {
+//
+//
+//        for (NSString *key in [curGoodsDict allKeys]) {
+//            NSInteger goodsNum = [curGoodsDict[key] integerValue];
+//            for (NSInteger i = goodsNum; i>0; i--) {
+//                NSLog(@"goodsNum__%@",key);
+//                [self addGoodWithID:key time:0];
+//            }
+//        }
+//    }
 }
 
-- (void)removeShoppingCart {
+- (void)hidShoppingCart {
     DZShoppingCartView *shoppingCart = [DZShoppingCartView shoppingCart];
-    [shoppingCart remove];
+    shoppingCart.hidden = YES;
 }
 
 #pragma mark - Network

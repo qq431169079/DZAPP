@@ -66,12 +66,6 @@
 		150D119120D94DE900657506 /* BookFoodsFailureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D119020D94DE900657506 /* BookFoodsFailureViewController.m */; };
 		150D119420D94E6900657506 /* SellerCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D119320D94E6900657506 /* SellerCommentsViewController.m */; };
 		150D11A020DA4A1D00657506 /* SellerBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D119F20DA4A1D00657506 /* SellerBusinessViewController.m */; };
-		150D11A820DA4E7500657506 /* UsersAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11A520DA4E7400657506 /* UsersAddressViewController.m */; };
-		150D11A920DA4E7500657506 /* EditUserAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11A620DA4E7400657506 /* EditUserAddressViewController.m */; };
-		150D11AA20DA4E7500657506 /* NewlyAddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11A720DA4E7400657506 /* NewlyAddAddressViewController.m */; };
-		150D11AD20DA500F00657506 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11AC20DA500F00657506 /* MyOrdersViewController.m */; };
-		150D11B320DA517600657506 /* MyCollectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11B220DA517600657506 /* MyCollectsViewController.m */; };
-		150D11B620DA51E300657506 /* MyCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D11B520DA51E300657506 /* MyCommentsViewController.m */; };
 		150D231420D16DE200A5B46D /* DZFakeSearchNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231320D16DE200A5B46D /* DZFakeSearchNavBar.m */; };
 		150D231720D40A4A00A5B46D /* FoodsBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231620D40A4A00A5B46D /* FoodsBusinessViewController.m */; };
 		150D231D20D40F1100A5B46D /* FoodsBusinessDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 150D231C20D40F1100A5B46D /* FoodsBusinessDetailsViewController.m */; };
@@ -116,6 +110,7 @@
 		15C71CF820CEC70A001D32EB /* HPJSInteractiveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C71CF720CEC70A001D32EB /* HPJSInteractiveView.m */; };
 		15C71CFA20CEDD96001D32EB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15C71CF920CEDD95001D32EB /* index.html */; };
 		69EF62F278F3F791E9ABD73B /* libPods-DZTakeout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B90E700D46115A94E415C5 /* libPods-DZTakeout.a */; };
+		B211B2DA216AE5AB009E4A44 /* DZRedPackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B211B2D9216AE5AB009E4A44 /* DZRedPackViewController.m */; };
 		B2157A0B20FEE1CF00218F51 /* DZResetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2157A0920FEE1CF00218F51 /* DZResetPWDViewController.m */; };
 		B2157A0C20FEE1CF00218F51 /* DZResetPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */; };
 		B2157A0F20FEE38F00218F51 /* DZPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2157A0D20FEE38F00218F51 /* DZPredicate.m */; };
@@ -136,7 +131,7 @@
 		B224C09D213CCD0600319FFB /* DZWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C098213CCD0600319FFB /* DZWKWebViewController.m */; };
 		B224C0A0213CD0B600319FFB /* DZJSActionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B224C09F213CD0B600319FFB /* DZJSActionRouter.m */; };
 		B2477366215245220068B348 /* DZKitchenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2477365215245220068B348 /* DZKitchenViewController.m */; };
-		B247737021536D5F0068B348 /* DZCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B247736F21536D5F0068B348 /* DZCameraViewController.m */; };
+		B247737021536D5F0068B348 /* DZCameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B247736F21536D5F0068B348 /* DZCameraViewController.mm */; };
 		B247744C215380C60068B348 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B247744B215380C50068B348 /* libiconv.tbd */; };
 		B247744E2153810A0068B348 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B247744D2153810A0068B348 /* libbz2.tbd */; };
 		B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C238F20EF63200021F5ED /* DiscoverViewController.m */; };
@@ -201,6 +196,13 @@
 		B29ED15820EDF9CD00A1D044 /* UIImage+HPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B29ED14E20EDF9CD00A1D044 /* UIImage+HPUtil.m */; };
 		B29ED15920EDF9CD00A1D044 /* UIImageView+HMDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29ED15120EDF9CD00A1D044 /* UIImageView+HMDAnimation.m */; };
 		B29ED15C20EDFA0100A1D044 /* DZLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29ED15B20EDFA0100A1D044 /* DZLoadingView.m */; };
+		B2EF8FC0215CC5570049F714 /* UsersAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FBA215CC5560049F714 /* UsersAddressViewController.m */; };
+		B2EF8FC1215CC5570049F714 /* EditUserAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FBB215CC5560049F714 /* EditUserAddressViewController.m */; };
+		B2EF8FC2215CC5570049F714 /* NewlyAddAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FBC215CC5560049F714 /* NewlyAddAddressViewController.m */; };
+		B2EF8FC3215CC5570049F714 /* MyOrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FBF215CC5570049F714 /* MyOrdersViewController.m */; };
+		B2EF8FCA215CC58E0049F714 /* MyCollectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FC6215CC58E0049F714 /* MyCollectsViewController.m */; };
+		B2EF8FCB215CC58E0049F714 /* MyCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FC8215CC58E0049F714 /* MyCommentsViewController.m */; };
+		B2EF8FCE215CC5DA0049F714 /* DZOrderCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EF8FCD215CC5DA0049F714 /* DZOrderCommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -318,18 +320,6 @@
 		150D119320D94E6900657506 /* SellerCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellerCommentsViewController.m; sourceTree = "<group>"; };
 		150D119E20DA4A1D00657506 /* SellerBusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SellerBusinessViewController.h; sourceTree = "<group>"; };
 		150D119F20DA4A1D00657506 /* SellerBusinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SellerBusinessViewController.m; sourceTree = "<group>"; };
-		150D11A220DA4E7400657506 /* EditUserAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditUserAddressViewController.h; sourceTree = "<group>"; };
-		150D11A320DA4E7400657506 /* UsersAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersAddressViewController.h; sourceTree = "<group>"; };
-		150D11A420DA4E7400657506 /* NewlyAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewlyAddAddressViewController.h; sourceTree = "<group>"; };
-		150D11A520DA4E7400657506 /* UsersAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersAddressViewController.m; sourceTree = "<group>"; };
-		150D11A620DA4E7400657506 /* EditUserAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditUserAddressViewController.m; sourceTree = "<group>"; };
-		150D11A720DA4E7400657506 /* NewlyAddAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewlyAddAddressViewController.m; sourceTree = "<group>"; };
-		150D11AB20DA500F00657506 /* MyOrdersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
-		150D11AC20DA500F00657506 /* MyOrdersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyOrdersViewController.m; sourceTree = "<group>"; };
-		150D11B120DA517600657506 /* MyCollectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectsViewController.h; sourceTree = "<group>"; };
-		150D11B220DA517600657506 /* MyCollectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectsViewController.m; sourceTree = "<group>"; };
-		150D11B420DA51E300657506 /* MyCommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCommentsViewController.h; sourceTree = "<group>"; };
-		150D11B520DA51E300657506 /* MyCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCommentsViewController.m; sourceTree = "<group>"; };
 		150D231220D16DE200A5B46D /* DZFakeSearchNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFakeSearchNavBar.h; sourceTree = "<group>"; };
 		150D231320D16DE200A5B46D /* DZFakeSearchNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFakeSearchNavBar.m; sourceTree = "<group>"; };
 		150D231520D40A4A00A5B46D /* FoodsBusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodsBusinessViewController.h; sourceTree = "<group>"; };
@@ -417,6 +407,8 @@
 		18B90E700D46115A94E415C5 /* libPods-DZTakeout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DZTakeout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBEEC4653808E608079C146 /* Pods-DZTakeout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZTakeout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DZTakeout/Pods-DZTakeout.debug.xcconfig"; sourceTree = "<group>"; };
 		49CD1F3615C0589AB3FCED1C /* Pods-DZTakeout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZTakeout.release.xcconfig"; path = "Pods/Target Support Files/Pods-DZTakeout/Pods-DZTakeout.release.xcconfig"; sourceTree = "<group>"; };
+		B211B2D8216AE5AB009E4A44 /* DZRedPackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZRedPackViewController.h; sourceTree = "<group>"; };
+		B211B2D9216AE5AB009E4A44 /* DZRedPackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZRedPackViewController.m; sourceTree = "<group>"; };
 		B2157A0820FEE1CF00218F51 /* DZResetPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZResetPWDViewController.h; sourceTree = "<group>"; };
 		B2157A0920FEE1CF00218F51 /* DZResetPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZResetPWDViewController.m; sourceTree = "<group>"; };
 		B2157A0A20FEE1CF00218F51 /* DZResetPWDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZResetPWDViewController.xib; sourceTree = "<group>"; };
@@ -455,7 +447,7 @@
 		B2477364215245220068B348 /* DZKitchenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZKitchenViewController.h; sourceTree = "<group>"; };
 		B2477365215245220068B348 /* DZKitchenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZKitchenViewController.m; sourceTree = "<group>"; };
 		B247736E21536D5F0068B348 /* DZCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZCameraViewController.h; sourceTree = "<group>"; };
-		B247736F21536D5F0068B348 /* DZCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZCameraViewController.m; sourceTree = "<group>"; };
+		B247736F21536D5F0068B348 /* DZCameraViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DZCameraViewController.mm; sourceTree = "<group>"; };
 		B247744B215380C50068B348 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		B247744D2153810A0068B348 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		B25C238E20EF63200021F5ED /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
@@ -548,6 +540,22 @@
 		B29ED15220EDF9CD00A1D044 /* UIImageView+HMDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMDAnimation.h"; sourceTree = "<group>"; };
 		B29ED15A20EDFA0100A1D044 /* DZLoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZLoadingView.h; sourceTree = "<group>"; };
 		B29ED15B20EDFA0100A1D044 /* DZLoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZLoadingView.m; sourceTree = "<group>"; };
+		B2E4F539215DF81A0066A58F /* libPods-MyApp2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MyApp2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E4F53B215DF8560066A58F /* libPods-MyApp2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-MyApp2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2EF8FB7215CC5560049F714 /* EditUserAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditUserAddressViewController.h; sourceTree = "<group>"; };
+		B2EF8FB8215CC5560049F714 /* UsersAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersAddressViewController.h; sourceTree = "<group>"; };
+		B2EF8FB9215CC5560049F714 /* NewlyAddAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewlyAddAddressViewController.h; sourceTree = "<group>"; };
+		B2EF8FBA215CC5560049F714 /* UsersAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersAddressViewController.m; sourceTree = "<group>"; };
+		B2EF8FBB215CC5560049F714 /* EditUserAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditUserAddressViewController.m; sourceTree = "<group>"; };
+		B2EF8FBC215CC5560049F714 /* NewlyAddAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewlyAddAddressViewController.m; sourceTree = "<group>"; };
+		B2EF8FBE215CC5570049F714 /* MyOrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrdersViewController.h; sourceTree = "<group>"; };
+		B2EF8FBF215CC5570049F714 /* MyOrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrdersViewController.m; sourceTree = "<group>"; };
+		B2EF8FC5215CC58E0049F714 /* MyCollectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectsViewController.h; sourceTree = "<group>"; };
+		B2EF8FC6215CC58E0049F714 /* MyCollectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectsViewController.m; sourceTree = "<group>"; };
+		B2EF8FC8215CC58E0049F714 /* MyCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCommentsViewController.m; sourceTree = "<group>"; };
+		B2EF8FC9215CC58E0049F714 /* MyCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCommentsViewController.h; sourceTree = "<group>"; };
+		B2EF8FCC215CC5DA0049F714 /* DZOrderCommentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZOrderCommentViewController.h; sourceTree = "<group>"; };
+		B2EF8FCD215CC5DA0049F714 /* DZOrderCommentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZOrderCommentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -879,18 +887,10 @@
 		150D11A120DA4E7400657506 /* SubControllers */ = {
 			isa = PBXGroup;
 			children = (
-				150D11A220DA4E7400657506 /* EditUserAddressViewController.h */,
-				150D11A320DA4E7400657506 /* UsersAddressViewController.h */,
-				150D11A420DA4E7400657506 /* NewlyAddAddressViewController.h */,
-				150D11A520DA4E7400657506 /* UsersAddressViewController.m */,
-				150D11A620DA4E7400657506 /* EditUserAddressViewController.m */,
-				150D11A720DA4E7400657506 /* NewlyAddAddressViewController.m */,
-				150D11AB20DA500F00657506 /* MyOrdersViewController.h */,
-				150D11AC20DA500F00657506 /* MyOrdersViewController.m */,
-				150D11B120DA517600657506 /* MyCollectsViewController.h */,
-				150D11B220DA517600657506 /* MyCollectsViewController.m */,
-				150D11B420DA51E300657506 /* MyCommentsViewController.h */,
-				150D11B520DA51E300657506 /* MyCommentsViewController.m */,
+				B2EF8FC4215CC58E0049F714 /* Collects */,
+				B2EF8FC7215CC58E0049F714 /* Comments */,
+				B2EF8FB6215CC5560049F714 /* Address */,
+				B2EF8FBD215CC5570049F714 /* Order */,
 			);
 			path = SubControllers;
 			sourceTree = "<group>";
@@ -1191,6 +1191,7 @@
 		15BB6DC0206CCE7E00B5A63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B211B2D7216AE568009E4A44 /* redPack */,
 				B224C0712136890000319FFB /* SellerBusiness */,
 				B224C066213677BD00319FFB /* SeatSelect */,
 				15BB6DC1206CCEEC00B5A63D /* DZSearchNavigationBar.h */,
@@ -1273,6 +1274,8 @@
 		644C9A08BC7DC67EF59248F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2E4F53B215DF8560066A58F /* libPods-MyApp2.a */,
+				B2E4F539215DF81A0066A58F /* libPods-MyApp2.a */,
 				B247744D2153810A0068B348 /* libbz2.tbd */,
 				B247744B215380C50068B348 /* libiconv.tbd */,
 				B27E5C2C20F224AF007C4FCC /* CoreText.framework */,
@@ -1316,6 +1319,15 @@
 				49CD1F3615C0589AB3FCED1C /* Pods-DZTakeout.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B211B2D7216AE568009E4A44 /* redPack */ = {
+			isa = PBXGroup;
+			children = (
+				B211B2D8216AE5AB009E4A44 /* DZRedPackViewController.h */,
+				B211B2D9216AE5AB009E4A44 /* DZRedPackViewController.m */,
+			);
+			path = redPack;
 			sourceTree = "<group>";
 		};
 		B2157A0720FEE19600218F51 /* ResetPassword */ = {
@@ -1458,7 +1470,7 @@
 			isa = PBXGroup;
 			children = (
 				B247736E21536D5F0068B348 /* DZCameraViewController.h */,
-				B247736F21536D5F0068B348 /* DZCameraViewController.m */,
+				B247736F21536D5F0068B348 /* DZCameraViewController.mm */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1655,6 +1667,48 @@
 			path = UIImageView;
 			sourceTree = "<group>";
 		};
+		B2EF8FB6215CC5560049F714 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				B2EF8FB7215CC5560049F714 /* EditUserAddressViewController.h */,
+				B2EF8FB8215CC5560049F714 /* UsersAddressViewController.h */,
+				B2EF8FB9215CC5560049F714 /* NewlyAddAddressViewController.h */,
+				B2EF8FBA215CC5560049F714 /* UsersAddressViewController.m */,
+				B2EF8FBB215CC5560049F714 /* EditUserAddressViewController.m */,
+				B2EF8FBC215CC5560049F714 /* NewlyAddAddressViewController.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		B2EF8FBD215CC5570049F714 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				B2EF8FBE215CC5570049F714 /* MyOrdersViewController.h */,
+				B2EF8FBF215CC5570049F714 /* MyOrdersViewController.m */,
+				B2EF8FCC215CC5DA0049F714 /* DZOrderCommentViewController.h */,
+				B2EF8FCD215CC5DA0049F714 /* DZOrderCommentViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		B2EF8FC4215CC58E0049F714 /* Collects */ = {
+			isa = PBXGroup;
+			children = (
+				B2EF8FC5215CC58E0049F714 /* MyCollectsViewController.h */,
+				B2EF8FC6215CC58E0049F714 /* MyCollectsViewController.m */,
+			);
+			path = Collects;
+			sourceTree = "<group>";
+		};
+		B2EF8FC7215CC58E0049F714 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				B2EF8FC8215CC58E0049F714 /* MyCommentsViewController.m */,
+				B2EF8FC9215CC58E0049F714 /* MyCommentsViewController.h */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1832,6 +1886,7 @@
 				B29ED10A20ECB24900A1D044 /* JYEqualCellSpaceFlowLayout.m in Sources */,
 				15AB3FA12068EBB400A8447E /* HPBaseViewController.m in Sources */,
 				B29ED11220ECC1AE00A1D044 /* DZSearchResultCollectionViewCell.m in Sources */,
+				B2EF8FC2215CC5570049F714 /* NewlyAddAddressViewController.m in Sources */,
 				B2157A0B20FEE1CF00218F51 /* DZResetPWDViewController.m in Sources */,
 				15AB3FDA20691B2300A8447E /* HPFileManager.m in Sources */,
 				150B5F1820E29C1C00484A5F /* SelectSeatViewController.m in Sources */,
@@ -1843,14 +1898,13 @@
 				15AB3FCB2069148500A8447E /* UIViewController+HPUtil.m in Sources */,
 				B22228832133C51400559262 /* DZActivityViewController.m in Sources */,
 				150B5F2220E29DAD00484A5F /* DiningBoxViewController.m in Sources */,
-				150D11A920DA4E7500657506 /* EditUserAddressViewController.m in Sources */,
 				B224C09D213CCD0600319FFB /* DZWKWebViewController.m in Sources */,
 				1503587A20DA8A1E0080AFCA /* SGPageTitleViewConfigure.m in Sources */,
 				150B5F2C20E39FD200484A5F /* NSArray+HPUtil.m in Sources */,
-				150D11AD20DA500F00657506 /* MyOrdersViewController.m in Sources */,
 				15C71CF820CEC70A001D32EB /* HPJSInteractiveView.m in Sources */,
 				B25C23A620EF64860021F5ED /* DZAddressBookViewController.m in Sources */,
 				150358A620DCCBD10080AFCA /* UserHelper.m in Sources */,
+				B2EF8FCA215CC58E0049F714 /* MyCollectsViewController.m in Sources */,
 				15035A1B20E0E3200080AFCA /* SelfCheckoutViewController.m in Sources */,
 				150D119420D94E6900657506 /* SellerCommentsViewController.m in Sources */,
 				B224C0792136890000319FFB /* SellerBusinessRelatedViews.m in Sources */,
@@ -1865,18 +1919,19 @@
 				1503599D20DCD2980080AFCA /* HPKeyboardRecord.m in Sources */,
 				150D118520D9008900657506 /* ShoppingCartDetailsViewController.m in Sources */,
 				15AB3FA82068ECF300A8447E /* UIButton+HPUtil.m in Sources */,
-				150D11B620DA51E300657506 /* MyCommentsViewController.m in Sources */,
 				B224C09B213CCD0600319FFB /* DZJSInteractiveRouter.m in Sources */,
 				15AB3FD520691AAB00A8447E /* NSObject+NSCoding.m in Sources */,
 				15C71CEB20CC1575001D32EB /* TakeawayBusinessListViewController.m in Sources */,
+				B2EF8FC3215CC5570049F714 /* MyOrdersViewController.m in Sources */,
+				B2EF8FC0215CC5570049F714 /* UsersAddressViewController.m in Sources */,
 				B224C06D213677BD00319FFB /* DZSeatSelectionView.m in Sources */,
 				1503588420DB4FA90080AFCA /* HPRequests.m in Sources */,
 				1515238B20E8722F00B4FBBB /* NSData+Encryption.m in Sources */,
 				B25C239720EF63200021F5ED /* MessageViewController.m in Sources */,
-				150D11B320DA517600657506 /* MyCollectsViewController.m in Sources */,
 				B27E607F20F5AC9E007C4FCC /* DZLoadingHoldView.m in Sources */,
 				150D118B20D9012100657506 /* PaymentSuccessfulViewController.m in Sources */,
 				B29ED15C20EDFA0100A1D044 /* DZLoadingView.m in Sources */,
+				B2EF8FC1215CC5570049F714 /* EditUserAddressViewController.m in Sources */,
 				150359A320DCD32F0080AFCA /* TKAlertCenter.m in Sources */,
 				1580302520E3EB9A00A16384 /* FoodsPayFailureViewController.m in Sources */,
 				15AB3FA52068EC4500A8447E /* UIBarButtonItem+HPUtil.m in Sources */,
@@ -1887,8 +1942,10 @@
 				B25C23AF20EF671A0021F5ED /* DZFriendModel.m in Sources */,
 				15AB3FB62068FC9800A8447E /* HPTabBarController.m in Sources */,
 				B29ED15620EDF9CD00A1D044 /* NSString+HPUtil.m in Sources */,
+				B2EF8FCE215CC5DA0049F714 /* DZOrderCommentViewController.m in Sources */,
 				B224C0A0213CD0B600319FFB /* DZJSActionRouter.m in Sources */,
 				B29ED15320EDF9CD00A1D044 /* NSString+BlockHelper.m in Sources */,
+				B211B2DA216AE5AB009E4A44 /* DZRedPackViewController.m in Sources */,
 				15AB3FD620691AAB00A8447E /* ClassProperty.m in Sources */,
 				15BB6DC3206CCEEC00B5A63D /* DZSearchNavigationBar.m in Sources */,
 				150D117F20D8116600657506 /* CommitOrderViewController.m in Sources */,
@@ -1911,7 +1968,7 @@
 				B27E5C2520F0BC79007C4FCC /* JXAlertview.m in Sources */,
 				B29ED0F920EC747100A1D044 /* DZSearchTipCollectionView.m in Sources */,
 				15BB6DD2206E881E00B5A63D /* DZFakeNavigationBar.m in Sources */,
-				B247737021536D5F0068B348 /* DZCameraViewController.m in Sources */,
+				B247737021536D5F0068B348 /* DZCameraViewController.mm in Sources */,
 				15AB3FAE2068EED300A8447E /* HPViewController.m in Sources */,
 				B27E5C2920F1C74D007C4FCC /* DZBaseDingingViewController.m in Sources */,
 				150359FF20DE03BE0080AFCA /* __FormatGoodsNode.m in Sources */,
@@ -1939,6 +1996,7 @@
 				150D231D20D40F1100A5B46D /* FoodsBusinessDetailsViewController.m in Sources */,
 				150B5F3420E3CBCB00484A5F /* DZStaticVariables.m in Sources */,
 				150B5F2520E29EDE00484A5F /* FoodsOrderViewController.m in Sources */,
+				B2EF8FCB215CC58E0049F714 /* MyCommentsViewController.m in Sources */,
 				15AB3FB92068FCD600A8447E /* UITabBarController+HPUtil.m in Sources */,
 				150B5F2820E336C100484A5F /* FoodsPaymentViewController.m in Sources */,
 				15035A1520E0D9640080AFCA /* HPConversationViewController.m in Sources */,
@@ -1951,13 +2009,11 @@
 				15035A0220DE41590080AFCA /* DZGoodsProfileView.m in Sources */,
 				B25C239620EF63200021F5ED /* DiscoverViewController.m in Sources */,
 				B2157A0F20FEE38F00218F51 /* DZPredicate.m in Sources */,
-				150D11AA20DA4E7500657506 /* NewlyAddAddressViewController.m in Sources */,
 				150D231420D16DE200A5B46D /* DZFakeSearchNavBar.m in Sources */,
 				150358AB20DCD0160080AFCA /* CompanyModel.m in Sources */,
 				150359F620DCE4EE0080AFCA /* ClassifyModel.m in Sources */,
 				1503589B20DB8A820080AFCA /* DZShoppingCartView.m in Sources */,
 				150D232020D40FE800A5B46D /* FoodsAccommodationsViewController.m in Sources */,
-				150D11A820DA4E7500657506 /* UsersAddressViewController.m in Sources */,
 				150B5F1B20E29D1500484A5F /* DiningHallViewController.m in Sources */,
 				1503588D20DB56580080AFCA /* DZRequests.m in Sources */,
 				150D11A020DA4A1D00657506 /* SellerBusinessViewController.m in Sources */,
@@ -2095,7 +2151,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FXFAY595D;
+				DEVELOPMENT_TEAM = 8C3X8SM23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2130,8 +2186,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
 					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
 					"\"${PODS_ROOT}/Headers/Public/pop\"",
-					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib\"",
-					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/include\"",
 				);
 				INFOPLIST_FILE = DZTakeout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2139,6 +2193,106 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DZTakeout/App/Camber/Lib",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"PGDatePicker\"",
+					"-l\"PGPickerView\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"TTGTagCollectionView\"",
+					"-l\"TYAlertController\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"YYCache\"",
+					"-l\"YYModel\"",
+					"-l\"c++\"",
+					"-l\"c++abi\"",
+					"-l\"jcore-ios-1.2.0\"",
+					"-l\"jpush-ios-3.0.9\"",
+					"-l\"opencore-amrnb\"",
+					"-l\"pop\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++\"",
+					"-l\"stdc++.6.0.9\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BMKLocationKit\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreAudio\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JYangToolKit\"",
+					"-framework",
+					"\"JrmfPacketKit\"",
+					"-framework",
+					"\"JrmfWalletKit\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RongIMKit\"",
+					"-framework",
+					"\"RongIMLib\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uioa.dz.takeout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2156,7 +2310,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8FXFAY595D;
+				DEVELOPMENT_TEAM = 8C3X8SM23N;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2191,8 +2345,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
 					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
 					"\"${PODS_ROOT}/Headers/Public/pop\"",
-					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib\"",
-					"\"$(SRCROOT)/DZTakeout/App/Camber/Lib/include\"",
 				);
 				INFOPLIST_FILE = DZTakeout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2200,6 +2352,106 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DZTakeout/App/Camber/Lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"PGDatePicker\"",
+					"-l\"PGPickerView\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"TTGTagCollectionView\"",
+					"-l\"TYAlertController\"",
+					"-l\"WeChatSDK\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"YYCache\"",
+					"-l\"YYModel\"",
+					"-l\"c++\"",
+					"-l\"c++abi\"",
+					"-l\"jcore-ios-1.2.0\"",
+					"-l\"jpush-ios-3.0.9\"",
+					"-l\"opencore-amrnb\"",
+					"-l\"pop\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"sqlite3.0\"",
+					"-l\"stdc++\"",
+					"-l\"stdc++.6.0.9\"",
+					"-l\"xml2\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AdSupport\"",
+					"-framework",
+					"\"AlipaySDK\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"BMKLocationKit\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreAudio\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreMotion\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"CoreVideo\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"JYangToolKit\"",
+					"-framework",
+					"\"JrmfPacketKit\"",
+					"-framework",
+					"\"JrmfWalletKit\"",
+					"-framework",
+					"\"MapKit\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RongIMKit\"",
+					"-framework",
+					"\"RongIMLib\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uioa.dz.takeout;
 				PRODUCT_NAME = "$(TARGET_NAME)";

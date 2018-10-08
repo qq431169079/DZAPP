@@ -16,6 +16,7 @@
 #import "DZLoadingView.h"
 #import "DZLoadingHoldView.h"
 #import "DZJSActionRouter.h"
+#import "DZRedPackViewController.h"
 @interface HomeViewController ()<
 DZFakeNavigationBarDelegate,
 UIScrollViewDelegate,
@@ -138,8 +139,20 @@ DZJSActionRouterDelegate
 
 - (void)valLink:(JSValue *)destn final:(JSValue *)param {
     _hy_dispatch_main_async_safe(^{
-        UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:[destn toString] param:[param toString]];
-        [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
+        if ([[destn toString] isEqualToString:@"redPack"]){
+            NSString *targetId;
+            if ([param isString]) {
+                targetId = [param toString];
+            }
+            //红包
+            DZRedPackViewController *chat = [[DZRedPackViewController alloc] initWithConversationType:ConversationType_GROUP targetId:targetId];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:chat];
+            [self presentViewController:nav animated:YES completion:nil];
+        }else{
+            UIViewController *controler = [DZJSInteractiveRouter instanceFromDestn:[destn toString] param:[param toString]];
+            [DZJSInteractiveRouter nav:self.navigationController needsPush:controler animated:YES];
+        }
+
     });
 }
 

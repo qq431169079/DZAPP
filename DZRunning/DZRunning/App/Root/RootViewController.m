@@ -14,8 +14,9 @@
 #import "HPMacro.h"
 #import "HPIMManager.h"
 
-@interface RootViewController ()
+@interface RootViewController ()<RCIMUserInfoDataSource>
 @property (nonatomic,assign) NSInteger reloadIMTime;             //尝试重复登陆次数
+@property (nonatomic,strong) RCUserInfo *currentUserInfo;
 @end
 
 @implementation RootViewController
@@ -62,12 +63,19 @@
     if (self.reloadIMTime < 3) {
         // 登录IM
         DZWeakSelf(self)
-        [HPIMManager connectWithToken:@"t3UwLk3xX2HdKPPTujISyK27jFyFYCGid8Bhacdkh36tCaeHVseIYmM+2IMksCgz+C7V/wHMCbM0E3UkmrFQwA==" success:^(NSString *userId) {
+        UserModel *model = [UserHelper userItem];
+
+        [RCIM sharedRCIM].userInfoDataSource = self;
+        [HPIMManager connectWithToken:[UserHelper userItem].coludtoken success:^(NSString *userId) {
             NSLog(@"userId ---- > %@", userId);
-            RCUserInfo *currentUserInfo = [[RCUserInfo alloc] initWithUserId:userId
-                                                                        name:[UserHelper userItem].name
-                                                                    portrait:@"http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIia8vDXHVeygRibKaIqk1ibyCQ5DGQiaVgQ2EiaiaUBKs4VdXNjznAicEMXcBzG6GsBZNyLvd4ma1LESxOw/132"];
-            [RCIM sharedRCIM].currentUserInfo = currentUserInfo;
+            NSString *img_url = @"http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIia8vDXHVeygRibKaIqk1ibyCQ5DGQiaVgQ2EiaiaUBKs4VdXNjznAicEMXcBzG6GsBZNyLvd4ma1LESxOw/132";
+            if (model.img_url) {
+                img_url = model.img_url;
+            }
+            weakSelf.currentUserInfo = [[RCUserInfo alloc] initWithUserId:userId
+                                                                     name:[UserHelper userItem].name
+                                                                 portrait:img_url];
+            [RCIM sharedRCIM].currentUserInfo = weakSelf.currentUserInfo;
         } error:^(RCConnectErrorCode status) {
             NSLog(@"error ---- > %zd", status);
         } tokenIncorrect:^{
@@ -78,6 +86,9 @@
     }
 }
 
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion{
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

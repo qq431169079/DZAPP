@@ -79,6 +79,7 @@
 
 - (void)requestLoginWithToken:(NSString *)token success:(void(^)(NSDictionary *record))success {
     NSDictionary *params = @{@"token":token};
+
     [DZRequests post:@"loginWithToken" parameters:params success:^(id record) {
         if ([record isKindOfClass:[NSDictionary class]]) {
             NSDictionary *recordDict = (NSDictionary *)record;
@@ -107,8 +108,17 @@
     @weakify(self);
     [self requestLoginSuccess:^(NSDictionary *record) {
         if ([[record allKeys] containsObject:@"token"]) {
+            NSString *rcloudToken;
+            if ([[record allKeys] containsObject:@"RcloudToken"]) {
+                rcloudToken = record[@"RcloudToken"];
+            }
             [__weak_self__ requestLoginWithToken:record[@"token"] success:^(NSDictionary *record) {
-                [__weak_self__ loginSuccess:record];
+                NSMutableDictionary *recordM = [NSMutableDictionary dictionaryWithDictionary:record];
+                if (rcloudToken.length > 0) {
+                     [recordM setObject:rcloudToken forKey:@"coludtoken"];
+                }
+               
+                [__weak_self__ loginSuccess:recordM];
 
             }];
         }

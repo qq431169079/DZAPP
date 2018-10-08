@@ -148,8 +148,10 @@
     }];
 }
 #pragma mark 代理
--(void)continueReserve{
+-(void)continueReserve:(DZSeatReserveView *)seatReserveView{
+
     [self requestSeatInfo];
+    [seatReserveView removeFromSuperview];
 }
 #pragma mark - 其他
 //进点菜界面

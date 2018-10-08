@@ -8,9 +8,10 @@
 
 
 #import <UIKit/UIKit.h>
+@class DZSeatReserveView;
 @protocol DZSeatReserveViewDelegate<NSObject>
 @optional
--(void)continueReserve;
+-(void)continueReserve:(DZSeatReserveView *)seatReserveView;
 
 @end
 @interface DZSeatReserveView : UIView

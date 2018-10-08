@@ -24,6 +24,8 @@
 #import "DZMapViewController.h"
 #import "HPPayment.h"
 #import "DZCameraViewController.h"
+#import "DZOrderCommentViewController.h"
+
 /// 美食模块
 #import "SelectSeatViewController.h"
 #import "FoodsPaymentViewController.h"
@@ -193,6 +195,16 @@
         //后厨
         DZCameraViewController *cameraViewController = [DZCameraViewController controller];
         return cameraViewController;
+    }
+    else if ([destn isEqualToString:@"sComment"]){
+        //评论
+        DZOrderCommentViewController *orderCommentViewController = [DZOrderCommentViewController controller];
+        if (params.count == 3) {
+            orderCommentViewController.cid = params[0];
+            orderCommentViewController.orderId = params[1];
+            orderCommentViewController.status = params[2];
+        }
+        return orderCommentViewController;
     }
 
     return nil;

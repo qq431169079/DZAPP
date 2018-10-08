@@ -1,8 +1,12 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+workspace 'DZTakeout.xcworkspace'
+
+project 'DZTakeout.xcodeproj'
 inhibit_all_warnings!
 target 'DZTakeout' do
-  
+  platform :ios, '9.0'
+  project 'DZTakeout.xcodeproj'
   pod 'YYModel',                  '~> 1.0.4'
   pod 'AFNetworking',             '~> 3.2.0'
   pod 'Masonry',                  '~> 1.1.0'
@@ -24,3 +28,8 @@ target 'DZTakeout' do
   pod 'BMKLocationKit'
   pod 'JPush'
 end
+#target 'ismartsee-A ' do
+#  platform :ios, '8.0'
+#  project 'PnPCam/P2PCamera.xcodeproj'
+#end
+

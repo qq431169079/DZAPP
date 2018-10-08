@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8bcc2bd3-09a8-cf4f-a5c2-54eec4bb13ab++5673",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8bcc2bd3-09a8-cf4f-a5c2-54eec4bb13ab++5673" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8bcc2bd3-09a8-cf4f-a5c2-54eec4bb13ab++5673" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C9BC7A07-9F49-461B-B420-1FD8E48454DE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8bcc2bd3-09a8-cf4f-a5c2-54eec4bb13ab++5673" : "PnPCam\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "P2PCamera",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "P2PCamera.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.253.2\/svn\/ios_eye4",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8bcc2bd3-09a8-cf4f-a5c2-54eec4bb13ab++5673"
+    }
+  ]
+}
